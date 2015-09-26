@@ -1,26 +1,47 @@
-require "rubygems"
-require "sequel"
+module Database
 
-# connect to an in-memory database
-DB = Sequel.connect('sqlite://MyTV.db')
+	# DATABASE_NAME = "MyTV.db"
+	# DB = Sequel.connect('sqlite://MyTV.db')
 
-# create an items table
-DB.create_table :Shows do
-  primary_key :id
-  String :name
-  Float :price
+	# Add a new show and its episodes. Receives a string and the dataset myShows and episodes as parameters
+	def Database.addShow(showName, dataset1, dataset2)
+		# Finding the show
+		obj = Web.searchShowFast(showName)
+		newshow = TVShow.new(obj['name'], obj['id'])
+		dataset1.insert(:name => newshow.getName())
+		Database.addEpisodes(newshow, dataset2)
+	end
+
+	# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
+	def Database.addEpisodes (show, dataset)
+		show.getEpisodes().each do |i|
+	 		dataset.insert(:title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate)
+	 	end
+	end
+
+	# Creates the TVShows and Episodes tables
+	def Database.createTables
+
+		DB.create_table :TVShows do
+  		primary_key :id #REPLACE BY TVMAZE ID? ALTERNATIVE PRIMARY KEY
+  		String :name
+		end
+
+		DB.create_table :Episodes do
+		  primary_key :id
+		  String :title
+		  Integer :seasonNumber
+		  Integer :episodeNumber
+		  Date :airdate
+		  Boolean :watched
+		  Integer :show_id #FOREIGN KEY REFERENCES TVSHOWS ID
+		end
+
+	end
+
+	# Returns the current number of entries in the given dataset
+	def Database.numberOfEntries (dataset)
+		dataset.count
+	end
+
 end
-
-# create a dataset from the items table
-items = DB[:items]
-
-# populate the table
-items.insert(:name => 'abc', :price => rand * 100)
-items.insert(:name => 'def', :price => rand * 100)
-items.insert(:name => 'ghi', :price => rand * 100)
-
-# print out the number of records
-puts "Item count: #{items.count}"
-
-# print out the average price
-puts "The average price is: #{items.avg(:price)}"

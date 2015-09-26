@@ -1,6 +1,10 @@
 class TVShow
-	def initialize(n, e, s)
-		@name, @episodes, @status = n, e, s #episodes array/list
+
+	def initialize(n, id)
+		@name = n
+		loadEpisodes(id) #episodes array/list
+		#@last_watched = last
+		#loadEpisodes(episodeList)
 	end
 
 	def getName
@@ -15,11 +19,19 @@ class TVShow
 		@status #watched, pending...?
 	end
 
-	def loadEpisodes(episodeList)
-		@episodes = episodeList
+	def setStatus(st)
+		@status = st #watched, pending...?
+	end
+
+	def loadEpisodes(id)
+		@episodes = Array.new()
+		episodelist = Web.getEpisodes(id)
+		episodelist.each do |i|
+   		@episodes << Episode.new(i['name'], i['season'], i['number'], i['airdate'])
+		end
 	end
 
 	def to_s # use these methods to create a hash for the DB?
-		
+		puts "This is the TV show named " + @name + " which has " + @episodes.size.to_s + " episodes"
 	end
 end

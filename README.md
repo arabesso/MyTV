@@ -2,7 +2,9 @@
 Idea: Local myepisodes
 http://TVMaze.com/api
 
-- Local database
+- Local database of the shows I follow
+- Only stores unwatched episodes
+- Watching an episode removes it from the database
 - Adding and removing shows
 - Filter (N/A, ignored)
 - Ignore shows (dropped)
