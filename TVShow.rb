@@ -2,6 +2,7 @@ class TVShow
 
 	def initialize(n, id)
 		@name = n
+		@id = id
 		loadEpisodes(id) #episodes array/list
 		#@last_watched = last
 		#loadEpisodes(episodeList)
@@ -13,6 +14,10 @@ class TVShow
 
 	def getEpisodes
 		@episodes
+	end
+
+	def getID
+		@id
 	end
 
 	def getStatus
@@ -27,7 +32,7 @@ class TVShow
 		@episodes = Array.new()
 		episodelist = Web.getEpisodes(id)
 		episodelist.each do |i|
-   		@episodes << Episode.new(i['name'], i['season'], i['number'], i['airdate'])
+   		@episodes << Episode.new(i['name'], i['season'], i['number'], i['airdate'], i['id'])
 		end
 	end
 

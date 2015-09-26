@@ -1,7 +1,7 @@
 class Episode
-	def initialize (n, s, e, air)
+	def initialize (n, s, e, air, id)
 		@title, @seasonNumber, @episodeNumber = n, s, e
-		
+		@id = id
 		@airdate = Date.parse(air)#.next  # YYYY-MM-DD
 		@watched = false
 		
@@ -15,6 +15,10 @@ class Episode
 		@seasonNumber
 	end
 
+	def getID
+		@id
+	end
+
 	def getNumber
 		@episodeNumber
 	end
@@ -24,8 +28,7 @@ class Episode
 	end
 
 	def watched
-		 @watched=true
-		
+		@watched=true
 	end
 
 end
