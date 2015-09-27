@@ -11,7 +11,7 @@ module Database
 
 		# Checks it's not in the database already
 		if dataset1.where(:id => obj['id']).count == 1
-			$logger.info "The show <" + obj['name'] + "> is already in the database"
+			$logger.warn "The show <" + obj['name'] + "> is already in the database"
 		else
 			newshow = TVShow.new(obj['name'], obj['id'])
 			dataset1.insert(:id => newshow.getID, :name => newshow.getName)
@@ -24,12 +24,13 @@ module Database
 	end
 
 	# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
+	# PRIVATE?
 	def Database.addEpisodes (show, dataset)
 		id = show.getID
 		show.getEpisodes().each do |i|
 
 			if dataset.where(:id => i.getID).count == 1
-				$logger.info "The episode <" + i.getTitle + "> is already in the database"
+				$logger.warn "The episode <" + i.getTitle + "> is already in the database"
 			else
 	 			dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
@@ -38,13 +39,77 @@ module Database
 	 	end
 	end
 
+	# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
+	# PRIVATE=
+	def Database.addNewEpisodes (show, dataset, lastEpisodeS, lastEpisodeN)
+		id = show.getID
+		episodes = show.getEpisodes
+
+		# Quick check if there are new episodes
+		if (episodes[-1].getSeason > lastEpisodeS)
+		elsif lastEpisodeS == episodes[-1].getSeason and episodes[-1].getNumber > lastEpisodeN
+		else
+			$logger.info "No new episodes to add to <" + show.getName + ">"
+			return
+		end
+			
+
+		# New episodes to add, full iteration:
+		episodes.each do |i|
+			if (i.getSeason > lastEpisodeS)
+				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
+				$logger.info "Added episode <" + i.getTitle + ">"
+			elsif lastEpisodeS == i.getSeason and i.getNumber > lastEpisodeS
+				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
+				$logger.info "Added episode <" + i.getTitle + ">"
+	 		end
+	 	end
+
+	end
+
 	# Removes an episodes from the database.
+	# PRIVATE?
 	def Database.removeEntry (dataset, id)
 		if dataset.where(:id => id).count == 1
 			dataset.where(:id => id).delete
 			$logger.info "Deleting entry with id <" + id.to_s + "> from dataset "
 		else
-			$logger.info "Couldn't delete entry with id <" + id.to_s + ">. Entry not found."
+			$logger.warn "Couldn't delete entry with id <" + id.to_s + ">. Entry not found."
+		end
+		
+	end
+
+	# Performs all the updates to the DB
+	def Database.update(dataset1, dataset2)
+		# scan database for watched=true
+		# once found one, check if the count of episodes where show_id is the same as the watched is higher than 1
+		# if it is higher, delete watched=true episode
+		dataset2.where(:watched => true).each do |i|
+			if dataset2.where(:show_id => i[:show_id]).count > 1
+				Database.removeEntry(dataset2, i[:id])
+			else
+				$logger.info "The episode id " + i[:id].to_s + "wasn't deleted because it's the last one."
+			end
+		end
+
+		# Storing the "update" and only calling addEpisodes when the update field changes would make this much faster
+		# Adds the new episodes of every tvshow checking the last season and episode numbers stored in the DB
+		dataset1.each do |i|
+			show = TVShow.new(i[:name], i[:id])
+			lasteps = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:seasonNumber]
+			lastepn = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:episodeNumber]
+			puts i[:name]
+			puts lasteps.to_s + " x " + lastepn.to_s
+			Database.addNewEpisodes(show, dataset2, lasteps, lastepn)
+		end
+		
+	end
+
+	def Database.setWatched(dataset, episodeid)
+		if dataset.where(:id => episodeid, :watched => false)
+			dataset.where(:id => episodeid).update(:watched => true)
+		else
+			$logger.warn "The episode with id " + episodeid.to_s + "is already marked as watched"
 		end
 		
 	end
@@ -84,6 +149,30 @@ module Database
 	# Returns the current number of entries in the given dataset
 	def Database.numberOfEntries (dataset)
 		dataset.count
+	end
+
+	# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
+	def Database.printShows(dataset1, dataset2)
+		dataset1.each do |i|
+			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ") " + "- " + dataset2.where(:show_id => i[:id]).count.to_s + " episodes stored"
+		end
+		
+	end
+
+	# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
+	def Database.printFull(dataset1, dataset2)
+		dataset1.each do |i|
+			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ")"
+			dataset2.where(:show_id => i[:id]).each do |j|
+				if j[:seasonNumber]<10
+					seasonNumber = "0" + j[:seasonNumber].to_s
+				end
+				if j[:episodeNumber]<10
+					episodeNumber = "0" + j[:episodeNumber].to_s
+				end
+				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title]
+			end
+		end
 	end
 
 end
