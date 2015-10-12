@@ -28,6 +28,13 @@ else
 end
 $logger.debug "...completed"
 
+Database.update(myShows, episodes)
+
+# Import from a csv/file
+
+# Using removeEntry on a show doesn't delete all the episodes
+# Another method removeShow calling removeEntry?
+
 #episodes.where(:show_id => 69).to_a.each do |i|
 #	Database.setWatched(episodes, i[:id])
 #end

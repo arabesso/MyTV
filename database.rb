@@ -59,7 +59,7 @@ module Database
 			if (i.getSeason > lastEpisodeS)
 				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
-			elsif lastEpisodeS == i.getSeason and i.getNumber > lastEpisodeS
+			elsif lastEpisodeS == i.getSeason and i.getNumber > lastEpisodeN
 				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
 	 		end
@@ -98,8 +98,8 @@ module Database
 			show = TVShow.new(i[:name], i[:id])
 			lasteps = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:seasonNumber]
 			lastepn = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:episodeNumber]
-			puts i[:name]
-			puts lasteps.to_s + " x " + lastepn.to_s
+			#puts i[:name]
+			#puts lasteps.to_s + " x " + lastepn.to_s
 			Database.addNewEpisodes(show, dataset2, lasteps, lastepn)
 		end
 		

@@ -14,3 +14,48 @@ I, [2015-09-27T22:29:53.138692 #14591]  INFO -- : Added episode <Cover>
 I, [2015-09-27T22:29:53.247567 #14591]  INFO -- : Added episode <Kill>
 I, [2015-09-27T22:29:53.339490 #14591]  INFO -- : Added episode <Found>
 I, [2015-09-27T22:29:53.339577 #14591]  INFO -- : ...completed
+D, [2015-10-11T20:16:47.835865 #3745] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:16:47.982723 #3745] DEBUG -- : ...completed
+D, [2015-10-11T20:17:07.235030 #3764] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:17:07.260234 #3764] DEBUG -- : ...completed
+I, [2015-10-11T20:17:07.355057 #3764]  INFO -- : Deleting entry with id <69> from dataset 
+D, [2015-10-11T20:17:15.782402 #3786] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:17:15.808400 #3786] DEBUG -- : ...completed
+W, [2015-10-11T20:17:15.808739 #3786]  WARN -- : Couldn't delete entry with id <69>. Entry not found.
+I, [2015-10-11T20:17:15.810112 #3786]  INFO -- : The episode id 215191wasn't deleted because it's the last one.
+D, [2015-10-11T20:18:16.876659 #3794] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:18:16.901686 #3794] DEBUG -- : ...completed
+I, [2015-10-11T20:18:16.902853 #3794]  INFO -- : The episode id 215191wasn't deleted because it's the last one.
+D, [2015-10-11T20:19:59.942317 #4163] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:19:59.968460 #4163] DEBUG -- : ...completed
+I, [2015-10-11T20:20:00.058933 #4163]  INFO -- : Deleting entry with id <215191> from dataset 
+D, [2015-10-11T20:22:29.494830 #4208] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:22:29.519952 #4208] DEBUG -- : ...completed
+W, [2015-10-11T20:22:29.520278 #4208]  WARN -- : Couldn't delete entry with id <215191>. Entry not found.
+D, [2015-10-11T20:23:20.717109 #4236] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:23:20.742055 #4236] DEBUG -- : ...completed
+W, [2015-10-11T20:23:20.742361 #4236]  WARN -- : Couldn't delete entry with id <215191>. Entry not found.
+D, [2015-10-11T20:24:53.673121 #4284] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:24:53.698413 #4284] DEBUG -- : ...completed
+W, [2015-10-11T20:24:53.698733 #4284]  WARN -- : Couldn't delete entry with id <215191>. Entry not found.
+I, [2015-10-11T20:24:54.096960 #4284]  INFO -- : Added episode <God>
+I, [2015-10-11T20:24:54.480708 #4284]  INFO -- : Added episode <House Rules>
+I, [2015-10-11T20:24:54.556054 #4284]  INFO -- : Added episode <The Norseman>
+D, [2015-10-11T20:26:41.468257 #4367] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:26:41.493709 #4367] DEBUG -- : ...completed
+I, [2015-10-11T20:26:42.203250 #4367]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-10-11T20:26:42.320076 #4367]  INFO -- : Deleting entry with id <182003> from dataset 
+I, [2015-10-11T20:26:42.403790 #4367]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-10-11T20:26:42.504166 #4367]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-10-11T20:26:42.587984 #4367]  INFO -- : Deleting entry with id <215496> from dataset 
+I, [2015-10-11T20:26:42.688155 #4367]  INFO -- : Deleting entry with id <215497> from dataset 
+I, [2015-10-11T20:26:42.771965 #4367]  INFO -- : Deleting entry with id <250037> from dataset 
+I, [2015-10-11T20:26:43.056515 #4367]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-11T20:26:43.410186 #4367]  INFO -- : No new episodes to add to <The Player>
+D, [2015-10-11T20:27:30.887710 #4390] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:27:30.912636 #4390] DEBUG -- : ...completed
+D, [2015-10-11T20:27:55.054148 #4401] DEBUG -- : Connecting to the database
+D, [2015-10-11T20:27:55.079067 #4401] DEBUG -- : ...completed
+I, [2015-10-11T20:27:55.174690 #4401]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-10-11T20:27:55.476639 #4401]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-11T20:27:55.793674 #4401]  INFO -- : No new episodes to add to <The Player>
