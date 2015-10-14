@@ -4,7 +4,7 @@ module Database
 	# DB = Sequel.connect('sqlite://MyTV.db')
 
 	# Add a new show and its episodes. Receives a string and the dataset myShows and episodes as parameters
-	def Database.addShow(showName, dataset1, dataset2)
+	def Database.addShow(dataset1, dataset2, showName)
 		# Finding the show
 		obj = Web.searchShowFast(showName)
 		$logger.info "Trying to add show <" + obj['name'] + ">"
@@ -15,7 +15,7 @@ module Database
 		else
 			newshow = TVShow.new(obj['name'], obj['id'])
 			dataset1.insert(:id => newshow.getID, :name => newshow.getName)
-			Database.addEpisodes(newshow, dataset2)
+			Database.addEpisodes(dataset2, newshow)
 			$logger.info "...completed"
 		end
 
@@ -25,7 +25,12 @@ module Database
 
 	# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
 	# PRIVATE?
-	def Database.addEpisodes (show, dataset)
+	# SLOW METHOD?
+	# Since it's only called from addShow, maybe we could remove the first conditional to make it faster. addShow already checks if it's in the DB
+	# And we don't call addEpisodes if the show is already added, we have addNewEpisodes for that.
+	# 
+
+	def Database.addEpisodes (dataset, show)
 		id = show.getID
 		show.getEpisodes().each do |i|
 
@@ -41,7 +46,8 @@ module Database
 
 	# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
 	# PRIVATE=
-	def Database.addNewEpisodes (show, dataset, lastEpisodeS, lastEpisodeN)
+	# SLOW METHOD?
+	def Database.addNewEpisodes (dataset, show, lastEpisodeS, lastEpisodeN)
 		id = show.getID
 		episodes = show.getEpisodes
 
@@ -80,6 +86,7 @@ module Database
 	end
 
 	# Performs all the updates to the DB
+	# SLOW METHOD?
 	def Database.update(dataset1, dataset2)
 		# scan database for watched=true
 		# once found one, check if the count of episodes where show_id is the same as the watched is higher than 1
@@ -100,10 +107,25 @@ module Database
 			lastepn = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:episodeNumber]
 			#puts i[:name]
 			#puts lasteps.to_s + " x " + lastepn.to_s
-			Database.addNewEpisodes(show, dataset2, lasteps, lastepn)
+			Database.addNewEpisodes(dataset2, show, lasteps, lastepn)
 		end
 		
 	end
+
+	# Removes a TVShow and all its episodes
+	# SLOW METHOD?
+	def Database.removeShow(dataset1, dataset2, showid)
+
+		# Remove episodes of that show
+		dataset2.where(:show_id => showid).each do |i|
+			Database.removeEntry(dataset2, i[:id])
+		end
+
+		# Removing the show
+		Database.removeEntry(dataset1, showid)
+		
+	end
+
 
 	def Database.setWatched(dataset, episodeid)
 		if dataset.where(:id => episodeid, :watched => false)
@@ -151,7 +173,18 @@ module Database
 		dataset.count
 	end
 
+	# Sets all the episodes of a tv show as watched
+	# SLOW METHOD?
+	def Database.setShowWatched(dataset1, dataset2, showid)
+
+		dataset2.where(:show_id => showid).to_a.each do |i|
+			Database.setWatched(dataset2, i[:id])
+		end
+
+	end
+
 	# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
+	# SLOW METHOD?
 	def Database.printShows(dataset1, dataset2)
 		dataset1.each do |i|
 			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ") " + "- " + dataset2.where(:show_id => i[:id]).count.to_s + " episodes stored"

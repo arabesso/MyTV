@@ -28,33 +28,27 @@ else
 end
 $logger.debug "...completed"
 
-Database.update(myShows, episodes)
+puts a[]]
 
-# Import from a csv/file
 
-# Using removeEntry on a show doesn't delete all the episodes
-# Another method removeShow calling removeEntry?
-
-#episodes.where(:show_id => 69).to_a.each do |i|
-#	Database.setWatched(episodes, i[:id])
-#end
-
+# Main code here:
 #Database.update(myShows, episodes)
 
-#Database.addShow("The Player", myShows, episodes)
-#Database.addShow("Quantico", myShows, episodes)
-#Database.setWatched(episodes, 167671)
-
-#puts Database.getShow(myShows, 2244)
-#Database.addEpisodes(TVShow.new("The Player", "2244"), episodes)
-
-#puts Database.numberOfEntries(myShows).to_s + " shows"
-#puts Database.numberOfEntries(episodes).to_s + " episodes"
-
-#puts Database.getEpisodes(episodes, 2244).to_a #[0]
-#puts Database.getEpisodes(episodes, 2244).to_a[0][:airdate]
 
 =begin
+
+Full console: NO GUI
+Decide how to use the program
+	a. commandline arguments (Trollops vs OptionParser)
+		+ http://www.rubyinside.com/trollop-command-line-option-parser-for-ruby-944.html
+		+ http://stackoverflow.com/questions/897630/really-cheap-command-line-option-parsing-in-ruby/1012930#1012930
+		* http://ruby.about.com/od/advancedruby/a/optionparser.htm
+		* http://ruby-doc.org/stdlib-2.2.3/libdoc/optparse/rdoc/OptionParser.html
+	b. interactive console (REPL)
+		+ http://stackoverflow.com/questions/9853853/creating-interactive-ruby-console-application
+
+ALL THE METHODS IN DATABASE MUST HAVE THE SAME STYLE
+(DATASET1, DATASET2, PARAM1, PARAM2,...)
 
 Marking an episode as watched twice doesn't log properly, takes too long
 
@@ -64,18 +58,13 @@ if it doesnt find anything -> try Web.searchShowFast
 
 # Ruby classes are only used to serve as a bridge between the API-database or the user-database
 
-# SQL pseudocode to remove episodes from the db once watched
-WATCHED EPISODE --> DROP EPISODE
+# Import from a csv/file
 
+# Method that gives you ID of a show passing its name? Necessary?
 
-# compares the last episode stored with the last episode in the API for every show in the database
-def updateShows()
-	
-end
+#Database.addEpisodes(TVShow.new("The Player", "2244"), episodes)
 
-# Setting episode as watched should remove the episode from the database
-# What if it's the last episode, for example? If i remove it,
-# new updates would pull it again.
-# Maybe keeping always at least1 episode, even if it's watched
+#puts Database.getEpisodes(episodes, 2244).to_a #[0]
+#puts Database.getEpisodes(episodes, 2244).to_a[0][:airdate]
 
 =end
