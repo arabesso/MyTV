@@ -88,3 +88,53 @@ D, [2015-10-13T01:22:45.361133 #4231] DEBUG -- : Connecting to the database
 D, [2015-10-13T01:22:45.386750 #4231] DEBUG -- : ...completed
 I, [2015-10-13T01:22:45.484097 #4231]  INFO -- : Deleting entry with id <350678> from dataset 
 I, [2015-10-13T01:22:45.592970 #4231]  INFO -- : Deleting entry with id <1855> from dataset 
+D, [2015-10-14T23:08:05.169766 #979] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:08:05.627987 #979] DEBUG -- : ...completed
+D, [2015-10-14T23:08:18.831899 #988] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:08:18.995187 #988] DEBUG -- : ...completed
+D, [2015-10-14T23:09:11.641620 #1001] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:09:11.791796 #1001] DEBUG -- : ...completed
+D, [2015-10-14T23:09:25.370775 #1007] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:09:25.528482 #1007] DEBUG -- : ...completed
+D, [2015-10-14T23:09:54.349332 #1087] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:09:54.499017 #1087] DEBUG -- : ...completed
+D, [2015-10-14T23:11:39.434613 #1115] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:11:39.654653 #1115] DEBUG -- : ...completed
+D, [2015-10-14T23:16:56.461011 #1243] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:16:56.609832 #1243] DEBUG -- : ...completed
+D, [2015-10-14T23:25:49.971424 #1563] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:25:50.162503 #1563] DEBUG -- : ...completed
+D, [2015-10-14T23:28:24.656720 #1750] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:28:24.805900 #1750] DEBUG -- : ...completed
+D, [2015-10-14T23:28:57.260113 #1756] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:28:57.410243 #1756] DEBUG -- : ...completed
+D, [2015-10-14T23:29:18.561664 #1771] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:29:18.715535 #1771] DEBUG -- : ...completed
+D, [2015-10-14T23:31:01.086838 #1790] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:31:01.236465 #1790] DEBUG -- : ...completed
+D, [2015-10-14T23:39:29.480870 #2168] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:39:29.629693 #2168] DEBUG -- : ...completed
+D, [2015-10-14T23:45:22.021260 #2279] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:45:22.189155 #2279] DEBUG -- : ...completed
+D, [2015-10-14T23:45:33.690239 #2287] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:45:33.838541 #2287] DEBUG -- : ...completed
+D, [2015-10-14T23:45:56.511544 #2297] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:45:56.662284 #2297] DEBUG -- : ...completed
+D, [2015-10-14T23:46:20.052361 #2310] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:46:20.202644 #2310] DEBUG -- : ...completed
+D, [2015-10-14T23:46:42.448078 #2315] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:46:42.595886 #2315] DEBUG -- : ...completed
+D, [2015-10-14T23:47:41.036841 #2326] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:47:41.187328 #2326] DEBUG -- : ...completed
+D, [2015-10-14T23:48:16.502168 #2368] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:48:16.650867 #2368] DEBUG -- : ...completed
+I, [2015-10-14T23:48:19.094297 #2368]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-14T23:48:19.399952 #2368]  INFO -- : No new episodes to add to <The Player>
+D, [2015-10-14T23:49:14.319178 #2373] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:49:14.467327 #2373] DEBUG -- : ...completed
+I, [2015-10-14T23:49:18.045090 #2373]  INFO -- : Trying to add show <Quantico>
+W, [2015-10-14T23:49:18.047840 #2373]  WARN -- : The show <Quantico> is already in the database
+D, [2015-10-14T23:52:03.479587 #2462] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:52:03.627455 #2462] DEBUG -- : ...completed
+D, [2015-10-14T23:53:21.846729 #2548] DEBUG -- : Connecting to the database
+D, [2015-10-14T23:53:21.994811 #2548] DEBUG -- : ...completed

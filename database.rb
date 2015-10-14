@@ -37,11 +37,11 @@ module Database
 			if dataset.where(:id => i.getID).count == 1
 				$logger.warn "The episode <" + i.getTitle + "> is already in the database"
 			else
-	 			dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
+				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
-	 		end
+			end
 
-	 	end
+		end
 	end
 
 	# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -58,7 +58,7 @@ module Database
 			$logger.info "No new episodes to add to <" + show.getName + ">"
 			return
 		end
-			
+		
 
 		# New episodes to add, full iteration:
 		episodes.each do |i|
@@ -68,8 +68,8 @@ module Database
 			elsif lastEpisodeS == i.getSeason and i.getNumber > lastEpisodeN
 				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
-	 		end
-	 	end
+			end
+		end
 
 	end
 
@@ -128,11 +128,11 @@ module Database
 
 
 	def Database.setWatched(dataset, episodeid)
-		if dataset.where(:id => episodeid, :watched => false)
-			dataset.where(:id => episodeid).update(:watched => true)
-		else
-			$logger.warn "The episode with id " + episodeid.to_s + "is already marked as watched"
-		end
+		#if dataset.where(:id => episodeid, :watched => false)
+		dataset.where(:id => episodeid).update(:watched => true)
+		#else
+		#	$logger.warn "The episode with id " + episodeid.to_s + "is already marked as watched"
+		#end
 		
 	end
 
@@ -142,9 +142,9 @@ module Database
 		DB.create_table :TVShows do
   		Integer :id, :primary_key=>true #TVMAZE ID
   		String :name
-		end
+  	end
 
-		DB.create_table :Episodes do
+  	DB.create_table :Episodes do
 		  Integer :id, :primary_key=>true #tvmaze id
 		  String :title
 		  Integer :seasonNumber

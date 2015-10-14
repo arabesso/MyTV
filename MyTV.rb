@@ -11,6 +11,8 @@ require_relative 'TVShow'
 require_relative 'Episode'
 require_relative 'database'
 
+PROMPT = 'MyTV > '
+
 $logger = Logger.new('test.log', 'daily')
 $logger.level = Logger::DEBUG
 
@@ -28,24 +30,72 @@ else
 end
 $logger.debug "...completed"
 
-puts a[]]
+def help_text
+	puts
+	puts "Usage: <command> [<args>]"
+	puts "Common commands:"
+	puts "\taddshow\t\tAdds a show to the database."
+	puts "\tupdate\t\tUpdates the database"
+	puts "\twatched\t\tSets an episode as watched."
+	puts
+
+end
+
+def help(command)
+	case command
+	when "addshow"
+		puts
+		puts "NAME"
+		puts "\taddshow - Adds a show and all its episodes to the database."
+		puts "SYNTAX"
+		puts "\taddshow <show name>"
+		puts "ARGUMENTS"
+		puts "\t<show name> - Name of the show to add."
+		puts
+	when "watched"
+		puts
+		puts "Sets an episode as watched."
+		puts "Receives as arguments season number, episode number and show name"
+		puts
+	end
+	
+end
 
 
-# Main code here:
-#Database.update(myShows, episodes)
+loop do
+
+	PROMPT.display
+	input = gets.chomp
+
+	command, *params = input.split(/\s/)
+
+	case command
+	when /\Ahelp\z/i
+		if params.size == 0
+			help_text
+		else
+			help(params.first)
+		end
+
+	when /\Aaddshow\z/i
+		Database.addShow(myShows, episodes, params.join(" "))
+
+	when /\Aupdate\z/i
+		Database.update(myShows, episodes)
+
+	when /\Aprint\z/i
+		(params.first == "-a")?Database.printFull(myShows, episodes):Database.printShows(myShows, episodes)
+
+	when /\Aexit\z/i
+		break
+	else
+		puts 'Invalid command'
+	end
+
+end
 
 
 =begin
-
-Full console: NO GUI
-Decide how to use the program
-	a. commandline arguments (Trollops vs OptionParser)
-		+ http://www.rubyinside.com/trollop-command-line-option-parser-for-ruby-944.html
-		+ http://stackoverflow.com/questions/897630/really-cheap-command-line-option-parsing-in-ruby/1012930#1012930
-		* http://ruby.about.com/od/advancedruby/a/optionparser.htm
-		* http://ruby-doc.org/stdlib-2.2.3/libdoc/optparse/rdoc/OptionParser.html
-	b. interactive console (REPL)
-		+ http://stackoverflow.com/questions/9853853/creating-interactive-ruby-console-application
 
 ALL THE METHODS IN DATABASE MUST HAVE THE SAME STYLE
 (DATASET1, DATASET2, PARAM1, PARAM2,...)
@@ -54,15 +104,12 @@ Marking an episode as watched twice doesn't log properly, takes too long
 
 # Method getShowID (showName)
 myShows.where(:name => "The Blacklist").to_a[0][:id]
-if it doesnt find anything -> try Web.searchShowFast
-
-# Ruby classes are only used to serve as a bridge between the API-database or the user-database
+if it doesnt find anything -> try Web.searchShowFast //FASTER?
 
 # Import from a csv/file
 
 # Method that gives you ID of a show passing its name? Necessary?
-
-#Database.addEpisodes(TVShow.new("The Player", "2244"), episodes)
+# Method that gives you ID of an episode passing season, num and show? Necessary?
 
 #puts Database.getEpisodes(episodes, 2244).to_a #[0]
 #puts Database.getEpisodes(episodes, 2244).to_a[0][:airdate]

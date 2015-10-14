@@ -32,7 +32,7 @@ class TVShow
 		@episodes = Array.new()
 		episodelist = Web.getEpisodes(id)
 		episodelist.each do |i|
-   		@episodes << Episode.new(i['name'], i['season'], i['number'], i['airdate'], i['id'])
+			@episodes << Episode.new(i['name'], i['season'], i['number'], i['airdate'], i['id'])
 		end
 	end
 
