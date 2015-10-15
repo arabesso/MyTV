@@ -138,3 +138,78 @@ D, [2015-10-14T23:52:03.479587 #2462] DEBUG -- : Connecting to the database
 D, [2015-10-14T23:52:03.627455 #2462] DEBUG -- : ...completed
 D, [2015-10-14T23:53:21.846729 #2548] DEBUG -- : Connecting to the database
 D, [2015-10-14T23:53:21.994811 #2548] DEBUG -- : ...completed
+D, [2015-10-15T17:12:35.589198 #7176] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:12:36.018204 #7176] DEBUG -- : ...completed
+D, [2015-10-15T17:14:29.952974 #7183] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:14:30.099692 #7183] DEBUG -- : ...completed
+W, [2015-10-15T17:14:34.311310 #7183]  WARN -- : Couldn't delete entry with id <The Player>. Entry not found.
+D, [2015-10-15T17:20:36.966327 #7337] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:20:37.119014 #7337] DEBUG -- : ...completed
+W, [2015-10-15T17:20:42.034894 #7337]  WARN -- : Couldn't delete entry with id <>. Entry not found.
+D, [2015-10-15T17:21:10.562651 #7358] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:21:10.715873 #7358] DEBUG -- : ...completed
+D, [2015-10-15T17:23:01.660822 #7385] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:23:01.815885 #7385] DEBUG -- : ...completed
+D, [2015-10-15T17:23:08.731853 #7393] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:23:08.884360 #7393] DEBUG -- : ...completed
+D, [2015-10-15T17:23:25.617541 #7400] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:23:25.773411 #7400] DEBUG -- : ...completed
+D, [2015-10-15T17:24:32.918805 #7413] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:24:33.071706 #7413] DEBUG -- : ...completed
+I, [2015-10-15T17:24:55.571234 #7413]  INFO -- : Deleting entry with id <334528> from dataset 
+I, [2015-10-15T17:24:55.648726 #7413]  INFO -- : Deleting entry with id <365306> from dataset 
+I, [2015-10-15T17:24:55.726535 #7413]  INFO -- : Deleting entry with id <2244> from dataset 
+D, [2015-10-15T17:28:19.215013 #7524] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:28:19.367863 #7524] DEBUG -- : ...completed
+D, [2015-10-15T17:28:41.628502 #7534] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:28:41.781180 #7534] DEBUG -- : ...completed
+D, [2015-10-15T17:33:35.070052 #7669] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:33:35.227295 #7669] DEBUG -- : ...completed
+D, [2015-10-15T17:33:46.678633 #7680] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:33:46.830271 #7680] DEBUG -- : ...completed
+D, [2015-10-15T17:34:40.513240 #7690] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:34:40.669407 #7690] DEBUG -- : ...completed
+D, [2015-10-15T17:37:02.093764 #7754] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:37:02.247120 #7754] DEBUG -- : ...completed
+D, [2015-10-15T17:43:00.231275 #8023] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:43:00.385962 #8023] DEBUG -- : ...completed
+D, [2015-10-15T17:43:06.462880 #8026] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:43:06.615427 #8026] DEBUG -- : ...completed
+D, [2015-10-15T17:44:13.330838 #8030] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:44:13.508784 #8030] DEBUG -- : ...completed
+I, [2015-10-15T17:44:44.742712 #8030]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-10-15T17:44:44.745009 #8030]  INFO -- : The episode id 365300wasn't deleted because it's the last one.
+D, [2015-10-15T17:45:16.770627 #8064] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:45:16.922842 #8064] DEBUG -- : ...completed
+D, [2015-10-15T17:45:48.058018 #8072] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:45:48.211206 #8072] DEBUG -- : ...completed
+D, [2015-10-15T17:46:14.531397 #8087] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:46:14.686469 #8087] DEBUG -- : ...completed
+D, [2015-10-15T17:46:42.683248 #8101] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:46:42.835347 #8101] DEBUG -- : ...completed
+D, [2015-10-15T17:47:07.702123 #8103] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:47:07.855705 #8103] DEBUG -- : ...completed
+D, [2015-10-15T17:48:08.562780 #8127] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:48:08.783578 #8127] DEBUG -- : ...completed
+D, [2015-10-15T17:49:35.652443 #8152] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:49:35.805861 #8152] DEBUG -- : ...completed
+D, [2015-10-15T17:50:33.872691 #8236] DEBUG -- : Connecting to the database
+D, [2015-10-15T17:50:34.031221 #8236] DEBUG -- : ...completed
+D, [2015-10-15T20:38:36.142644 #1169] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:38:36.617709 #1169] DEBUG -- : ...completed
+D, [2015-10-15T20:38:50.304932 #1181] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:38:50.454320 #1181] DEBUG -- : ...completed
+D, [2015-10-15T20:39:12.176207 #1221] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:39:12.330817 #1221] DEBUG -- : ...completed
+D, [2015-10-15T20:39:25.843777 #1230] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:39:25.991608 #1230] DEBUG -- : ...completed
+D, [2015-10-15T20:39:29.135079 #1236] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:39:29.284494 #1236] DEBUG -- : ...completed
+D, [2015-10-15T20:44:29.584882 #1401] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:44:29.746698 #1401] DEBUG -- : ...completed
+D, [2015-10-15T20:45:29.731973 #1412] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:45:29.883460 #1412] DEBUG -- : ...completed
+D, [2015-10-15T20:47:44.591571 #1502] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:47:44.742057 #1502] DEBUG -- : ...completed
+D, [2015-10-15T20:48:38.448495 #1578] DEBUG -- : Connecting to the database
+D, [2015-10-15T20:48:38.594501 #1578] DEBUG -- : ...completed

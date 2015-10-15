@@ -34,31 +34,12 @@ def help_text
 	puts
 	puts "Usage: <command> [<args>]"
 	puts "Common commands:"
-	puts "\taddshow\t\tAdds a show to the database."
+	puts "\taddshow <showname>\t\tAdds a show to the database."
+	puts "\tremoveshow <showname>\t\tRemoves a show from the database."
 	puts "\tupdate\t\tUpdates the database"
 	puts "\twatched\t\tSets an episode as watched."
 	puts
 
-end
-
-def help(command)
-	case command
-	when "addshow"
-		puts
-		puts "NAME"
-		puts "\taddshow - Adds a show and all its episodes to the database."
-		puts "SYNTAX"
-		puts "\taddshow <show name>"
-		puts "ARGUMENTS"
-		puts "\t<show name> - Name of the show to add."
-		puts
-	when "watched"
-		puts
-		puts "Sets an episode as watched."
-		puts "Receives as arguments season number, episode number and show name"
-		puts
-	end
-	
 end
 
 
@@ -71,17 +52,32 @@ loop do
 
 	case command
 	when /\Ahelp\z/i
-		if params.size == 0
-			help_text
-		else
-			help(params.first)
-		end
-
+		help_text
+		
 	when /\Aaddshow\z/i
 		Database.addShow(myShows, episodes, params.join(" "))
 
+	when /\Aremoveshow\z/i
+		Database.removeShow(myShows, episodes, Database.getShowID(myShows, params.join(" ")))
+
 	when /\Aupdate\z/i
 		Database.update(myShows, episodes)
+
+	when /\Awatch\z/i
+		if params.first == "-s" && params.size >=2 # watch -s Quantico 
+			showid = Database.getShowID(myShows, params.slice(1,params.size).join(" "))
+			Database.setShowWatched(myShows, episodes, showid)
+			next
+		elsif params.first == "-e" && params.size >= 4# watch -e 1 2 Quantico
+			showname = params.slice(3, params.size).join(" ")
+			epid = Database.getEpisodeID(myShows, episodes, params[1], params [2], showname)
+			puts epid
+			Database.setWatched(episodes, epid)
+			next
+		end
+
+		puts "Invalid/insufficient arguments."
+		help_text
 
 	when /\Aprint\z/i
 		(params.first == "-a")?Database.printFull(myShows, episodes):Database.printShows(myShows, episodes)
@@ -90,6 +86,7 @@ loop do
 		break
 	else
 		puts 'Invalid command'
+		help_text
 	end
 
 end
@@ -97,14 +94,18 @@ end
 
 =begin
 
+TODO:
+Readline support
+Implementation of getShowID and getEpisodeID using web
+
+Exceptios:
+Web module throws exceptions when it can't connect. Show message and move on
+Catch console interrupts (Ctrl D, Ctrl C)
+Trying to remove a show that's not in the database
+Trying to set as watched episode/show not in the DB
+
 ALL THE METHODS IN DATABASE MUST HAVE THE SAME STYLE
 (DATASET1, DATASET2, PARAM1, PARAM2,...)
-
-Marking an episode as watched twice doesn't log properly, takes too long
-
-# Method getShowID (showName)
-myShows.where(:name => "The Blacklist").to_a[0][:id]
-if it doesnt find anything -> try Web.searchShowFast //FASTER?
 
 # Import from a csv/file
 

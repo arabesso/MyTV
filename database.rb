@@ -127,12 +127,25 @@ module Database
 	end
 
 
+	# Returns the ID of a show stored in the database. Receives a string with the show name
+	# Would it be faster using the tvmaze api?
+	# Initially trying to do it with web, do this if connection problem?
+	# Initially doing this here, do it with Web if show isn't found?
+	# Watch the infinite loop
+	def Database.getShowID(dataset, showname)
+		dataset.where(:name => showname).to_a[0][:id]
+	
+	end
+
+	def Database.getEpisodeID(dataset1, dataset2, season, episode, show)
+		showid = Database.getShowID(dataset1, show)
+		dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
+	
+	end
+
+
 	def Database.setWatched(dataset, episodeid)
-		#if dataset.where(:id => episodeid, :watched => false)
 		dataset.where(:id => episodeid).update(:watched => true)
-		#else
-		#	$logger.warn "The episode with id " + episodeid.to_s + "is already marked as watched"
-		#end
 		
 	end
 
@@ -203,7 +216,7 @@ module Database
 				if j[:episodeNumber]<10
 					episodeNumber = "0" + j[:episodeNumber].to_s
 				end
-				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title]
+				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title] + " - " + (j[:watched]?"watched":"not watched")
 			end
 		end
 	end
