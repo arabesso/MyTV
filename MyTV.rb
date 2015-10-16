@@ -42,6 +42,28 @@ def help_text
 
 end
 
+def printNextEpisodes(dataset1, nextEpisodes)
+	nextEpisodes.sort_by { |hsh| hsh[:airdate] }
+
+	nextEpisodes.each do |i|
+		if i[:seasonNumber]<10
+			seasonNumber = "0" + i[:seasonNumber].to_s
+		end
+		if i[:episodeNumber]<10
+			episodeNumber = "0" + i[:episodeNumber].to_s
+		end
+		
+		showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
+
+		puts showname + "\tS" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+
+	end
+	
+	puts
+
+end
+
+#main
 
 loop do
 
@@ -56,23 +78,31 @@ loop do
 		
 	when /\Aaddshow\z/i
 		Database.addShow(myShows, episodes, params.join(" "))
+		puts
 
 	when /\Aremoveshow\z/i
 		Database.removeShow(myShows, episodes, Database.getShowID(myShows, params.join(" ")))
+		puts
 
 	when /\Aupdate\z/i
 		Database.update(myShows, episodes)
+		puts
+
+	when /\Anextepisodes\z/i
+		printNextEpisodes(myShows, Database.nextEpisodes(myShows, episodes))
 
 	when /\Awatch\z/i
 		if params.first == "-s" && params.size >=2 # watch -s Quantico 
 			showid = Database.getShowID(myShows, params.slice(1,params.size).join(" "))
 			Database.setShowWatched(myShows, episodes, showid)
+			puts
 			next
 		elsif params.first == "-e" && params.size >= 4# watch -e 1 2 Quantico
 			showname = params.slice(3, params.size).join(" ")
 			epid = Database.getEpisodeID(myShows, episodes, params[1], params [2], showname)
 			puts epid
 			Database.setWatched(episodes, epid)
+			puts
 			next
 		end
 
@@ -84,6 +114,7 @@ loop do
 
 	when /\Aexit\z/i
 		break
+		
 	else
 		puts 'Invalid command'
 		help_text
@@ -96,23 +127,37 @@ end
 
 TODO:
 Readline support
-Implementation of getShowID and getEpisodeID using web
+Import shows from a file
+Add exceptions raising and handling (logger error level)
+Show feedback to the user ("Completed, etc")
+Better logging
+Gem structure
+Do I need TVShow.rb and Episode.rb? I can simulate the classes
+(Find torrent link and subtitles)
+#!/usr/bin/env ruby
 
 Exceptios:
 Web module throws exceptions when it can't connect. Show message and move on
 Catch console interrupts (Ctrl D, Ctrl C)
+Ctrl c --> Interrupt
+Ctrl D --> NoMethodError if prompt is empty. Screws up formatting if using a command 
 Trying to remove a show that's not in the database
 Trying to set as watched episode/show not in the DB
 
-ALL THE METHODS IN DATABASE MUST HAVE THE SAME STYLE
-(DATASET1, DATASET2, PARAM1, PARAM2,...)
+Good practices
+* Change and for &&
+* Remove parenthesis from if
+* Add spaces in blocks like
+array.each { |i| do ... end }
 
-# Import from a csv/file
 
-# Method that gives you ID of a show passing its name? Necessary?
-# Method that gives you ID of an episode passing season, num and show? Necessary?
-
-#puts Database.getEpisodes(episodes, 2244).to_a #[0]
-#puts Database.getEpisodes(episodes, 2244).to_a[0][:airdate]
+# returns an array of Episodes, one per show
+Database.netEpisodes(dataset1, dataset2)
+get next non watched episode from each show
+ordering those by airdate
+returning that array
+method in MyTV.rb that receives that array and prints it properly
+(distinction before episodes that haven't aired yet)
+(distinction for shows airing that day?)
 
 =end

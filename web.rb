@@ -10,6 +10,17 @@ module Web
 		obj = JSON.parse(resp_text)
 	end
 
+	def Web.getShowID(showName)
+		url = BASE_URL + "/singlesearch/shows?q=" + showName
+		resp = Net::HTTP.get_response(URI.parse(url))
+		resp_text = resp.body
+
+		obj = JSON.parse(resp_text)
+
+		obj['id']
+	
+	end
+
 	##
 	# "id"=>2244
 	# "status"=>"Running"

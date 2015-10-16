@@ -133,14 +133,19 @@ module Database
 	# Initially doing this here, do it with Web if show isn't found?
 	# Watch the infinite loop
 	def Database.getShowID(dataset, showname)
-		dataset.where(:name => showname).to_a[0][:id]
-	
+		var = dataset.where(:name => showname).to_a[0]
+		if var != nil # Found in the database
+			var[:id]
+		else # Search online
+			$logger.warn("Show wasn't found in the database. Searching online.")
+			Web.getShowID(showname)
+		end
 	end
 
 	def Database.getEpisodeID(dataset1, dataset2, season, episode, show)
 		showid = Database.getShowID(dataset1, show)
 		dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
-	
+
 	end
 
 
@@ -196,13 +201,24 @@ module Database
 
 	end
 
+	# Returns an array of non-watched episodes, one per show.
+	def Database.nextEpisodes(dataset1, dataset2)
+		nextEpisodes = Array.new
+		dataset1.each do |i|
+			nextEpisodes <<  dataset2.where(:show_id => i[:id], :watched => false).order(:airdate).to_a[0]
+		end
+
+		return nextEpisodes
+
+	end
+
 	# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
 	# SLOW METHOD?
 	def Database.printShows(dataset1, dataset2)
 		dataset1.each do |i|
 			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ") " + "- " + dataset2.where(:show_id => i[:id]).count.to_s + " episodes stored"
 		end
-		
+		puts
 	end
 
 	# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
@@ -219,6 +235,8 @@ module Database
 				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title] + " - " + (j[:watched]?"watched":"not watched")
 			end
 		end
+		puts
+
 	end
 
 end

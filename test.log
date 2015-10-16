@@ -213,3 +213,99 @@ D, [2015-10-15T20:47:44.591571 #1502] DEBUG -- : Connecting to the database
 D, [2015-10-15T20:47:44.742057 #1502] DEBUG -- : ...completed
 D, [2015-10-15T20:48:38.448495 #1578] DEBUG -- : Connecting to the database
 D, [2015-10-15T20:48:38.594501 #1578] DEBUG -- : ...completed
+D, [2015-10-16T16:10:58.930768 #10323] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:10:59.425523 #10323] DEBUG -- : ...completed
+D, [2015-10-16T16:11:20.521551 #10327] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:11:20.669593 #10327] DEBUG -- : ...completed
+D, [2015-10-16T16:11:29.889725 #10329] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:11:30.037528 #10329] DEBUG -- : ...completed
+D, [2015-10-16T16:46:43.261856 #11267] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:46:43.491251 #11267] DEBUG -- : ...completed
+D, [2015-10-16T16:47:18.016071 #11278] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:47:18.176358 #11278] DEBUG -- : ...completed
+D, [2015-10-16T16:47:42.210310 #11284] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:47:42.380762 #11284] DEBUG -- : ...completed
+D, [2015-10-16T16:47:52.898302 #11290] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:47:53.057812 #11290] DEBUG -- : ...completed
+D, [2015-10-16T16:48:52.779422 #11298] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:48:52.943410 #11298] DEBUG -- : ...completed
+D, [2015-10-16T16:49:59.115051 #11307] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:49:59.275158 #11307] DEBUG -- : ...completed
+D, [2015-10-16T16:50:13.727433 #11317] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:50:13.901082 #11317] DEBUG -- : ...completed
+D, [2015-10-16T16:50:44.088472 #11323] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:50:44.247393 #11323] DEBUG -- : ...completed
+D, [2015-10-16T16:52:40.917593 #11337] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:52:41.110849 #11337] DEBUG -- : ...completed
+D, [2015-10-16T16:53:12.483284 #11347] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:53:12.669032 #11347] DEBUG -- : ...completed
+D, [2015-10-16T16:55:24.593560 #11358] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:55:24.767322 #11358] DEBUG -- : ...completed
+D, [2015-10-16T16:57:13.390436 #11372] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:57:13.548052 #11372] DEBUG -- : ...completed
+D, [2015-10-16T16:57:24.533950 #11378] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:57:24.696311 #11378] DEBUG -- : ...completed
+D, [2015-10-16T16:58:42.147250 #11388] DEBUG -- : Connecting to the database
+D, [2015-10-16T16:58:42.310739 #11388] DEBUG -- : ...completed
+D, [2015-10-16T17:00:54.977533 #11412] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:00:55.331168 #11412] DEBUG -- : ...completed
+D, [2015-10-16T17:02:50.272423 #11428] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:02:50.431838 #11428] DEBUG -- : ...completed
+D, [2015-10-16T17:03:31.820527 #11444] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:03:31.977847 #11444] DEBUG -- : ...completed
+D, [2015-10-16T17:09:32.034132 #11546] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:09:32.215946 #11546] DEBUG -- : ...completed
+D, [2015-10-16T17:10:10.784013 #11553] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:10:10.968211 #11553] DEBUG -- : ...completed
+D, [2015-10-16T17:10:30.811750 #11557] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:10:30.968574 #11557] DEBUG -- : ...completed
+D, [2015-10-16T17:12:12.285869 #11566] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:12:12.459787 #11566] DEBUG -- : ...completed
+D, [2015-10-16T17:13:12.472385 #11574] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:13:12.648703 #11574] DEBUG -- : ...completed
+D, [2015-10-16T17:13:40.106515 #11578] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:13:40.264070 #11578] DEBUG -- : ...completed
+D, [2015-10-16T17:14:59.315784 #11584] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:14:59.472624 #11584] DEBUG -- : ...completed
+D, [2015-10-16T17:15:13.937834 #11592] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:15:14.098730 #11592] DEBUG -- : ...completed
+D, [2015-10-16T17:15:45.551178 #11596] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:15:45.712051 #11596] DEBUG -- : ...completed
+D, [2015-10-16T17:16:38.214318 #11604] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:16:38.370993 #11604] DEBUG -- : ...completed
+D, [2015-10-16T17:17:18.495659 #11610] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:17:18.775318 #11610] DEBUG -- : ...completed
+D, [2015-10-16T17:17:29.399855 #11616] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:17:29.562427 #11616] DEBUG -- : ...completed
+D, [2015-10-16T17:17:41.520817 #11622] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:17:41.682572 #11622] DEBUG -- : ...completed
+D, [2015-10-16T17:17:51.686010 #11629] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:17:51.844123 #11629] DEBUG -- : ...completed
+D, [2015-10-16T17:18:25.578303 #11642] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:18:25.793376 #11642] DEBUG -- : ...completed
+D, [2015-10-16T17:18:48.212221 #11646] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:18:48.369158 #11646] DEBUG -- : ...completed
+D, [2015-10-16T17:19:10.417420 #11652] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:19:10.574144 #11652] DEBUG -- : ...completed
+D, [2015-10-16T17:19:28.731109 #11656] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:19:28.888710 #11656] DEBUG -- : ...completed
+D, [2015-10-16T17:29:06.192377 #11727] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:29:06.351154 #11727] DEBUG -- : ...completed
+D, [2015-10-16T17:31:02.592463 #11741] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:31:02.751576 #11741] DEBUG -- : ...completed
+D, [2015-10-16T17:31:29.698772 #11751] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:31:29.882200 #11751] DEBUG -- : ...completed
+D, [2015-10-16T17:31:49.134517 #11757] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:31:49.297645 #11757] DEBUG -- : ...completed
+D, [2015-10-16T17:32:05.676840 #11764] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:32:05.837350 #11764] DEBUG -- : ...completed
+D, [2015-10-16T17:32:22.142884 #11777] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:32:22.305988 #11777] DEBUG -- : ...completed
+D, [2015-10-16T17:33:09.438725 #11801] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:33:09.642327 #11801] DEBUG -- : ...completed
+D, [2015-10-16T17:33:28.851842 #11807] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:33:29.010758 #11807] DEBUG -- : ...completed
+D, [2015-10-16T17:33:34.990634 #11813] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:33:35.157672 #11813] DEBUG -- : ...completed
+D, [2015-10-16T17:33:46.481014 #11819] DEBUG -- : Connecting to the database
+D, [2015-10-16T17:33:46.640280 #11819] DEBUG -- : ...completed
