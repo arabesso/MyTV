@@ -92,3 +92,16 @@ I, [2015-10-17T22:05:41.344050 #2328]  INFO -- : Added episode <June 13th (2)>
 I, [2015-10-17T22:05:41.421775 #2328]  INFO -- : Added episode <Sundae, Bloody Sundae>
 I, [2015-10-17T22:05:41.499415 #2328]  INFO -- : Added episode <11:53 to Odessa>
 I, [2015-10-17T22:05:41.499647 #2328]  INFO -- : ...completed
+D, [2015-10-17T22:15:57.777347 #2644] DEBUG -- : Connecting to the database
+D, [2015-10-17T22:15:57.935439 #2644] DEBUG -- : ...completed
+I, [2015-10-17T22:16:09.645154 #2644]  INFO -- : Deleting entry with id <181926> from dataset 
+I, [2015-10-17T22:16:09.722995 #2644]  INFO -- : Deleting entry with id <215345> from dataset 
+I, [2015-10-17T22:16:09.804477 #2644]  INFO -- : Deleting entry with id <215346> from dataset 
+I, [2015-10-17T22:16:09.878566 #2644]  INFO -- : Deleting entry with id <250057> from dataset 
+I, [2015-10-17T22:16:09.956306 #2644]  INFO -- : Deleting entry with id <266937> from dataset 
+I, [2015-10-17T22:16:10.034029 #2644]  INFO -- : Deleting entry with id <266938> from dataset 
+I, [2015-10-17T22:16:10.100648 #2644]  INFO -- : Deleting entry with id <266939> from dataset 
+I, [2015-10-17T22:16:10.178578 #2644]  INFO -- : Deleting entry with id <331455> from dataset 
+I, [2015-10-17T22:16:10.256229 #2644]  INFO -- : Deleting entry with id <339864> from dataset 
+I, [2015-10-17T22:16:10.334190 #2644]  INFO -- : Deleting entry with id <339873> from dataset 
+I, [2015-10-17T22:16:10.411931 #2644]  INFO -- : Deleting entry with id <1415> from dataset 

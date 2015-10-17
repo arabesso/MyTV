@@ -1,9 +1,3 @@
-# require 'mytv/version'
-# require "mytv/web"
-# require "mytv/TVShow"
-# require "mytv/Episode"
-# require "mytv/database"
-
 require "rubygems"
 require "sequel"
 require "date"
@@ -12,10 +6,10 @@ require 'digest'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
 
-require_relative "mytv/web"
-require_relative "mytv/TVShow"
-require_relative "mytv/Episode"
-require_relative "mytv/database"
+require_relative "web"
+require_relative "TVShow"
+require_relative "Episode"
+require_relative "database"
 
 module MyTV
 	class Cli
@@ -148,11 +142,11 @@ end
 =begin
 
 TODO:
-Readline support
+Heroes Reborn 1x10 has an error when doing print -a
 Better Exception description and user feedback (explaining error, different error types)
 Import shows from a file
 Show feedback to the user ("Completed, etc")
-Gem structure
+(Gem structure) / ship as a normal app
 Do I need TVShow.rb and Episode.rb? I can simulate the classes
 (Find torrent link and subtitles)
 #!/usr/bin/env ruby
@@ -163,9 +157,7 @@ end
 raise MyError
 Differenciate errors (no connection, show not found...)
 
-ordering those by airdate
-returning that array
-method in MyTV.rb that receives that array and prints it properly
+nexteps:
 (distinction before @episodes that haven't aired yet)
 (distinction for shows airing that day?)
 
