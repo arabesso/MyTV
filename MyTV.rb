@@ -38,6 +38,7 @@ def help_text
 	puts "\tremoveshow <showname>\t\tRemoves a show from the database."
 	puts "\tupdate\t\tUpdates the database"
 	puts "\twatched\t\tSets an episode as watched."
+	puts "\tnexteps\t\tShows the episodes airing soon."
 	puts
 
 end
@@ -88,7 +89,7 @@ loop do
 		Database.update(myShows, episodes)
 		puts
 
-	when /\Anextepisodes\z/i
+	when /\Anexteps\z/i
 		printNextEpisodes(myShows, Database.nextEpisodes(myShows, episodes))
 
 	when /\Awatch\z/i
@@ -143,6 +144,10 @@ Ctrl c --> Interrupt
 Ctrl D --> NoMethodError if prompt is empty. Screws up formatting if using a command 
 Trying to remove a show that's not in the database
 Trying to set as watched episode/show not in the DB
+class MyCrazyError < StandardError
+end
+raise MyCrazyError
+Differenciate errors (no connection, show not found...)
 
 Good practices
 * Change and for &&

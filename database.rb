@@ -19,17 +19,15 @@ module Database
 			$logger.info "...completed"
 		end
 
-
-
+	rescue => e
+		$logger.error("Exception in addShow trying to add <" + showName + "> : " + e.message)
+		puts "Error."
 	end
 
 	# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
 	# PRIVATE?
 	# SLOW METHOD?
-	# Since it's only called from addShow, maybe we could remove the first conditional to make it faster. addShow already checks if it's in the DB
-	# And we don't call addEpisodes if the show is already added, we have addNewEpisodes for that.
 	# 
-
 	def Database.addEpisodes (dataset, show)
 		id = show.getID
 		show.getEpisodes().each do |i|
@@ -42,6 +40,10 @@ module Database
 			end
 
 		end
+
+	rescue => e
+		$logger.error("Exception in addEpisodes : " + e.message)
+		puts "Error."
 	end
 
 	# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -71,6 +73,9 @@ module Database
 			end
 		end
 
+	rescue => e
+		puts "Error"
+		$logger.error("Exception in addNewEpisodes trying to add episodes for <" + show.getName + "> : " + e.message)
 	end
 
 	# Removes an episodes from the database.
@@ -82,7 +87,11 @@ module Database
 		else
 			$logger.warn "Couldn't delete entry with id <" + id.to_s + ">. Entry not found."
 		end
-		
+	
+	rescue => e
+		puts "Error"
+		$logger.error("Exception in removeEntry trying to remove item <" + id + "> : " + e.message)
+	
 	end
 
 	# Performs all the updates to the DB
@@ -110,6 +119,10 @@ module Database
 			Database.addNewEpisodes(dataset2, show, lasteps, lastepn)
 		end
 		
+	rescue => e
+		$logger.error("Exception in update : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Removes a TVShow and all its episodes
@@ -124,6 +137,10 @@ module Database
 		# Removing the show
 		Database.removeEntry(dataset1, showid)
 		
+	rescue => e
+		$logger.error("Exception in removeShow trying to remove show <" + showid + "> : " + e.message)
+		puts "Error."
+	
 	end
 
 
@@ -140,17 +157,30 @@ module Database
 			$logger.warn("Show wasn't found in the database. Searching online.")
 			Web.getShowID(showname)
 		end
+
+	rescue => e
+		$logger.error("Exception in getShowID trying to get <" + showname + ">'s id : " + e.message)
+		puts "Error."
+	
 	end
 
 	def Database.getEpisodeID(dataset1, dataset2, season, episode, show)
 		showid = Database.getShowID(dataset1, show)
 		dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
 
+	rescue => e
+		$logger.error("Exception in getEpisodeID trying to get <" + showname + ">'s id : " + e.message)
+		puts "Error."
+	
 	end
 
 
 	def Database.setWatched(dataset, episodeid)
 		dataset.where(:id => episodeid).update(:watched => true)
+	
+	rescue => e
+		$logger.error("Exception in setWatched trying to set episode <" + episodeid + "> as watched : " + e.message)
+		puts "Error."
 		
 	end
 
@@ -172,23 +202,41 @@ module Database
 		  Integer :show_id #FOREIGN KEY REFERENCES TVSHOWS ID
 		end
 
+	rescue => e
+		$logger.error("Exception in createTables : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Returns a TVShow object. Receives the myShows dataset and the show id
 	def Database.getShow (dataset, id)
 		tvshowdata = dataset.where(:id => id).to_a
 		TVShow.new(tvshowdata[0][:name], tvshowdata[0][:id])
+
+	rescue => e
+		$logger.error("Exception in getShow trying to get id <" + id + "> : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Returns the episodes of a specific show id. Receives the episodes dataset and a showid as parameters
 	def Database.getEpisodes(dataset, showID)
 		dataset.where(:show_id => showID)
 		
+	rescue => e
+		$logger.error("Exception in getEpisodes trying to get episodes for show <" + showID + "> : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Returns the current number of entries in the given dataset
 	def Database.numberOfEntries (dataset)
 		dataset.count
+
+	rescue => e
+		$logger.error("Exception in numberOfEntries : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Sets all the episodes of a tv show as watched
@@ -199,6 +247,10 @@ module Database
 			Database.setWatched(dataset2, i[:id])
 		end
 
+	rescue => e
+		$logger.error("Exception in setShowWatched with show <" + showid + "> : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Returns an array of non-watched episodes, one per show.
@@ -208,8 +260,12 @@ module Database
 			nextEpisodes <<  dataset2.where(:show_id => i[:id], :watched => false).order(:airdate).to_a[0]
 		end
 
-		return nextEpisodes
+	return nextEpisodes
 
+	rescue => e
+		$logger.error("Exception in nextEpisodes : " + e.message)
+		puts "Error."
+	
 	end
 
 	# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
