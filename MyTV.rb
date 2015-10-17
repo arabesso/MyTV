@@ -66,7 +66,7 @@ end
 
 #main
 
-#puts Web.getMagnetLink("Quantico", 1, 2)
+puts Web.getMagnetLink("Quantico", 1, 2)
 
 loop do
 

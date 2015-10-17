@@ -23,3 +23,9 @@ D, [2015-10-17T03:10:36.427344 #1516] DEBUG -- : Connecting to the database
 D, [2015-10-17T03:10:36.584932 #1516] DEBUG -- : ...completed
 D, [2015-10-17T03:12:02.725514 #1531] DEBUG -- : Connecting to the database
 D, [2015-10-17T03:12:02.896826 #1531] DEBUG -- : ...completed
+D, [2015-10-17T03:17:47.198673 #1797] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:17:47.392362 #1797] DEBUG -- : ...completed
+D, [2015-10-17T03:18:08.658281 #1835] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:18:08.815574 #1835] DEBUG -- : ...completed
+I, [2015-10-17T03:18:30.559073 #1835]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-17T03:18:30.864301 #1835]  INFO -- : No new episodes to add to <The Player>
