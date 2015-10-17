@@ -1,40 +1,41 @@
-# MyTV
+# Mytv
 
-## What is MyTV?
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mytv`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-MyTV allows you to manage a local database of the shows you follow.
-
-It keeps track of the episodes you watch and synchronises with the TVMaze API in order to keep the information updated.
-
-MyTV will only keep in the database those episodes you haven't watched yet in order to save up space, with one exception. If you have watched all the episodes of a show, we'll keep the last one in order to make future updates faster.
+TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-1. Install prerequisites (ruby)
-2. Download the files from GitHub.
-3. Open the terminal and move to the folder where you placed the files.
-4. Run ruby MyTV.rb
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'mytv'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install mytv
 
 ## Usage
 
-| Command       | Description   |
-| ------------- | ------------- |
-| print         | Content Cell  |
-| Content Cell  | Content Cell  |
+TODO: Write usage instructions here
 
-## Important files
-MyTV.rb: Main program.
-MyTV.db: This is the database where shows are stored.
-README.md: This file
-test.log: MyTV's log
+## Development
 
-## Log
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-MyTV comes with a log that's tasked with recording almost everything the program does.
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-By default, only the events with a priority of "warn" or higher are stored. You can change this by editing MyTV.rb, and changing the line:
+## Contributing
 
-$logger.level = Logger::LEVEL
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mytv.
 
-Where LEVEL is one of the following:
-DEBUG, INFO, WARN, ERROR, FATAL
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
