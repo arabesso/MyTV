@@ -1,0 +1,12 @@
+--- !ruby/object:VR_ENV
+current_file: "/home/guille/visualruby/examples/simple_ruby_gui/Untitled"
+height: 600
+open_files:
+- "/home/guille/visualruby/examples/simple_ruby_gui/Untitled"
+open_folders:
+- "/home/guille/MyTV"
+panel_pos: 360
+rdoc_command_line: rdoc -x README
+run_command_line: ruby main.rb
+width: 800
+settings_file_version: 1
