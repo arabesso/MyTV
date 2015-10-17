@@ -7,3 +7,19 @@ D, [2015-10-16T20:16:55.262935 #1535] DEBUG -- : ...completed
 E, [2015-10-16T20:16:58.768631 #1535] ERROR -- : Exception in addShow trying to add <xd> : getaddrinfo: Name or service not known
 D, [2015-10-16T20:24:24.778820 #1647] DEBUG -- : Connecting to the database
 D, [2015-10-16T20:24:24.939326 #1647] DEBUG -- : ...completed
+D, [2015-10-17T02:37:12.077539 #1159] DEBUG -- : Connecting to the database
+D, [2015-10-17T02:37:12.415622 #1159] DEBUG -- : ...completed
+D, [2015-10-17T03:03:53.001841 #1418] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:03:53.264192 #1418] DEBUG -- : ...completed
+D, [2015-10-17T03:04:22.108698 #1428] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:04:22.269384 #1428] DEBUG -- : ...completed
+D, [2015-10-17T03:05:37.576350 #1447] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:05:37.838425 #1447] DEBUG -- : ...completed
+D, [2015-10-17T03:07:14.379697 #1466] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:07:14.557582 #1466] DEBUG -- : ...completed
+D, [2015-10-17T03:09:25.144419 #1502] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:09:25.398526 #1502] DEBUG -- : ...completed
+D, [2015-10-17T03:10:36.427344 #1516] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:10:36.584932 #1516] DEBUG -- : ...completed
+D, [2015-10-17T03:12:02.725514 #1531] DEBUG -- : Connecting to the database
+D, [2015-10-17T03:12:02.896826 #1531] DEBUG -- : ...completed

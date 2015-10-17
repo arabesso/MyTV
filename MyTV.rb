@@ -66,11 +66,17 @@ end
 
 #main
 
+#puts Web.getMagnetLink("Quantico", 1, 2)
+
 loop do
 
 	PROMPT.display
-	input = gets.chomp
-
+	begin
+		input = gets.chomp
+	rescue NoMethodError # Solves NoMethodError when doing Ctrl D without typing anything
+		puts
+		next
+	end
 	command, *params = input.split(/\s/)
 
 	case command
@@ -128,37 +134,20 @@ end
 
 TODO:
 Readline support
+Better Exception description and user feedback (explaining error, different error types)
 Import shows from a file
-Add exceptions raising and handling (logger error level)
 Show feedback to the user ("Completed, etc")
-Better logging
 Gem structure
 Do I need TVShow.rb and Episode.rb? I can simulate the classes
 (Find torrent link and subtitles)
 #!/usr/bin/env ruby
 
-Exceptios:
-Web module throws exceptions when it can't connect. Show message and move on
-Catch console interrupts (Ctrl D, Ctrl C)
-Ctrl c --> Interrupt
-Ctrl D --> NoMethodError if prompt is empty. Screws up formatting if using a command 
-Trying to remove a show that's not in the database
-Trying to set as watched episode/show not in the DB
-class MyCrazyError < StandardError
+Exceptions:
+class MyError < StandardError
 end
-raise MyCrazyError
+raise MyError
 Differenciate errors (no connection, show not found...)
 
-Good practices
-* Change and for &&
-* Remove parenthesis from if
-* Add spaces in blocks like
-array.each { |i| do ... end }
-
-
-# returns an array of Episodes, one per show
-Database.netEpisodes(dataset1, dataset2)
-get next non watched episode from each show
 ordering those by airdate
 returning that array
 method in MyTV.rb that receives that array and prints it properly

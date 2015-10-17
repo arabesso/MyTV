@@ -54,8 +54,8 @@ module Database
 		episodes = show.getEpisodes
 
 		# Quick check if there are new episodes
-		if (episodes[-1].getSeason > lastEpisodeS)
-		elsif lastEpisodeS == episodes[-1].getSeason and episodes[-1].getNumber > lastEpisodeN
+		if episodes[-1].getSeason > lastEpisodeS
+		elsif lastEpisodeS == episodes[-1].getSeason && episodes[-1].getNumber > lastEpisodeN
 		else
 			$logger.info "No new episodes to add to <" + show.getName + ">"
 			return
@@ -64,10 +64,10 @@ module Database
 
 		# New episodes to add, full iteration:
 		episodes.each do |i|
-			if (i.getSeason > lastEpisodeS)
+			if i.getSeason > lastEpisodeS
 				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
-			elsif lastEpisodeS == i.getSeason and i.getNumber > lastEpisodeN
+			elsif lastEpisodeS == i.getSeason && i.getNumber > lastEpisodeN
 				dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
 				$logger.info "Added episode <" + i.getTitle + ">"
 			end
