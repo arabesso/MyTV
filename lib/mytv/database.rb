@@ -288,7 +288,7 @@ module Database
 				if j[:episodeNumber]<10
 					episodeNumber = "0" + j[:episodeNumber].to_s
 				end
-				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title] + " - " + (j[:watched]?"watched":"not watched")
+				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title].to_s + " - " + (j[:watched]?"watched":"not watched")
 			end
 		end
 		puts

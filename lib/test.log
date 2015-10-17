@@ -35,3 +35,60 @@ D, [2015-10-17T18:59:38.138923 #2147] DEBUG -- : Connecting to the database
 D, [2015-10-17T18:59:38.290566 #2147] DEBUG -- : ...completed
 D, [2015-10-17T21:34:19.628345 #1536] DEBUG -- : Connecting to the database
 D, [2015-10-17T21:34:19.942351 #1536] DEBUG -- : ...completed
+D, [2015-10-17T21:48:17.582317 #1901] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:48:17.739773 #1901] DEBUG -- : ...completed
+D, [2015-10-17T21:49:14.273327 #1990] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:49:14.429104 #1990] DEBUG -- : ...completed
+D, [2015-10-17T21:49:31.496037 #1994] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:49:31.650902 #1994] DEBUG -- : ...completed
+D, [2015-10-17T21:51:14.940968 #2009] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:51:15.096106 #2009] DEBUG -- : ...completed
+D, [2015-10-17T21:54:53.834006 #2033] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:54:53.989254 #2033] DEBUG -- : ...completed
+D, [2015-10-17T21:56:23.429078 #2130] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:56:23.583304 #2130] DEBUG -- : ...completed
+D, [2015-10-17T21:56:57.912392 #2136] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:56:58.068016 #2136] DEBUG -- : ...completed
+D, [2015-10-17T21:58:39.936617 #2165] DEBUG -- : Connecting to the database
+D, [2015-10-17T21:58:39.941857 #2165] DEBUG -- : ...completed
+D, [2015-10-17T22:00:46.621652 #2178] DEBUG -- : Connecting to the database
+D, [2015-10-17T22:00:46.774854 #2178] DEBUG -- : ...completed
+I, [2015-10-17T22:01:01.225126 #2178]  INFO -- : Trying to add show <Heroes Reborn>
+I, [2015-10-17T22:01:03.073625 #2178]  INFO -- : Added episode <Brave New World>
+I, [2015-10-17T22:01:03.162552 #2178]  INFO -- : Added episode <Odessa>
+I, [2015-10-17T22:01:03.251335 #2178]  INFO -- : Added episode <Under the Mask>
+I, [2015-10-17T22:01:03.329119 #2178]  INFO -- : Added episode <The Needs of the Many>
+I, [2015-10-17T22:01:03.418144 #2178]  INFO -- : Added episode <The Lion's Den>
+I, [2015-10-17T22:01:03.506997 #2178]  INFO -- : Added episode <Game Over>
+I, [2015-10-17T22:01:03.595921 #2178]  INFO -- : Added episode <June 13th (1)>
+I, [2015-10-17T22:01:03.684817 #2178]  INFO -- : Added episode <June 13th (2)>
+I, [2015-10-17T22:01:03.773791 #2178]  INFO -- : Added episode <Sundae, Bloody Sundae>
+I, [2015-10-17T22:01:03.862512 #2178]  INFO -- : Added episode <11:53 to Odessa>
+I, [2015-10-17T22:01:03.862747 #2178]  INFO -- : ...completed
+D, [2015-10-17T22:03:18.691703 #2266] DEBUG -- : Connecting to the database
+D, [2015-10-17T22:03:18.848468 #2266] DEBUG -- : ...completed
+D, [2015-10-17T22:05:27.262755 #2328] DEBUG -- : Connecting to the database
+D, [2015-10-17T22:05:27.414734 #2328] DEBUG -- : ...completed
+I, [2015-10-17T22:05:33.521932 #2328]  INFO -- : Deleting entry with id <181926> from dataset 
+I, [2015-10-17T22:05:33.599599 #2328]  INFO -- : Deleting entry with id <215345> from dataset 
+I, [2015-10-17T22:05:33.666248 #2328]  INFO -- : Deleting entry with id <215346> from dataset 
+I, [2015-10-17T22:05:33.744062 #2328]  INFO -- : Deleting entry with id <250057> from dataset 
+I, [2015-10-17T22:05:33.821885 #2328]  INFO -- : Deleting entry with id <266937> from dataset 
+I, [2015-10-17T22:05:33.899664 #2328]  INFO -- : Deleting entry with id <266938> from dataset 
+I, [2015-10-17T22:05:33.977468 #2328]  INFO -- : Deleting entry with id <266939> from dataset 
+I, [2015-10-17T22:05:34.055207 #2328]  INFO -- : Deleting entry with id <331455> from dataset 
+I, [2015-10-17T22:05:34.132995 #2328]  INFO -- : Deleting entry with id <339864> from dataset 
+I, [2015-10-17T22:05:34.210780 #2328]  INFO -- : Deleting entry with id <339873> from dataset 
+I, [2015-10-17T22:05:34.288500 #2328]  INFO -- : Deleting entry with id <1415> from dataset 
+I, [2015-10-17T22:05:40.336072 #2328]  INFO -- : Trying to add show <Heroes Reborn>
+I, [2015-10-17T22:05:40.755109 #2328]  INFO -- : Added episode <Brave New World>
+I, [2015-10-17T22:05:40.832834 #2328]  INFO -- : Added episode <Odessa>
+I, [2015-10-17T22:05:40.910596 #2328]  INFO -- : Added episode <Under the Mask>
+I, [2015-10-17T22:05:40.988318 #2328]  INFO -- : Added episode <The Needs of the Many>
+I, [2015-10-17T22:05:41.066175 #2328]  INFO -- : Added episode <The Lion's Den>
+I, [2015-10-17T22:05:41.144052 #2328]  INFO -- : Added episode <Game Over>
+I, [2015-10-17T22:05:41.221639 #2328]  INFO -- : Added episode <June 13th (1)>
+I, [2015-10-17T22:05:41.344050 #2328]  INFO -- : Added episode <June 13th (2)>
+I, [2015-10-17T22:05:41.421775 #2328]  INFO -- : Added episode <Sundae, Bloody Sundae>
+I, [2015-10-17T22:05:41.499415 #2328]  INFO -- : Added episode <11:53 to Odessa>
+I, [2015-10-17T22:05:41.499647 #2328]  INFO -- : ...completed
