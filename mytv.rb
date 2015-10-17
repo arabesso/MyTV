@@ -2,6 +2,8 @@ require "rubygems"
 require "sequel"
 require "date"
 require 'net/http'
+require 'mechanize'
+require 'nokogiri'
 require 'digest'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
@@ -10,6 +12,7 @@ require_relative "web"
 require_relative "TVShow"
 require_relative "Episode"
 require_relative "database"
+require_relative "import"
 
 module MyTV
 	class Cli
@@ -21,28 +24,61 @@ module MyTV
 
 		def initialize
 			$logger.debug "Connecting to the database"
+
+			if (!File.exist?("MyTV.db")) 
+				File.write("MyTV.db", "")
+			end
+
 			@DB = Sequel.connect('sqlite://MyTV.db')
+
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			else
 				$logger.debug "Creating tables... "
-				Database.createTables
+				createTables
 				@myShows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			end
 			$logger.debug "...completed"
 		end
+
+		# Creates the TVShows and Episodes tables
+		def createTables
+
+			@DB.create_table :TVShows do
+	  		Integer :id, :primary_key=>true #TVMAZE ID
+	  		String :name
+	  	end
+
+	  	@DB.create_table :Episodes do
+			  Integer :id, :primary_key=>true #tvmaze id
+			  String :title
+			  Integer :seasonNumber
+			  Integer :episodeNumber
+			  Date :airdate
+			  Boolean :watched
+			  Integer :show_id #FOREIGN KEY REFERENCES TVSHOWS ID
+			end
+
+		rescue => e
+			$logger.error("Exception in createTables : " + e.message)
+			puts "Error: " + e.message
+		
+		end
 		
 		def help_text
 			puts
 			puts "Usage: <command> [<args>]"
-			puts "Common commands:"
-			puts "\taddshow <showname>\t\tAdds a show to the database."
-			puts "\tremoveshow <showname>\t\tRemoves a show from the database."
-			puts "\tupdate\t\tUpdates the database"
-			puts "\twatched\t\tSets an episode as watched."
-			puts "\tnexteps\t\tShows the @episodes airing soon."
+			puts
+			puts "Commands:"
+			puts "  addshow <showname>\t\t\tAdds a show to the database."
+			puts "  removeshow <showname>\t\t\tRemoves a show from the database."
+			puts "  watch [options] (args) <show>\t\tSets an episode as watched."
+			puts "  update\t\t\t\tUpdates the database"
+			puts "  nexteps\t\t\t\tShows the @episodes airing soon."
+			puts "  help\t\t\t\t\tShows this text."
+			puts "  exit\t\t\t\t\tExit the application."
 			puts
 
 		end
@@ -59,7 +95,6 @@ module MyTV
 				end
 				
 				showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
-
 				puts showname + "\tS" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
 
 			end
@@ -106,13 +141,26 @@ module MyTV
 						Database.setShowWatched(@myShows, @episodes, showid)
 						puts
 						next
-					elsif params.first == "-e" && params.size >= 4# watch -e 1 2 Quantico
+
+					elsif params.first == "-e" && params.size >= 4# watch -e 1 <ep> Quantico
 						showname = params.slice(3, params.size).join(" ")
-						epid = Database.getEpisodeID(@myShows, @episodes, params[1], params [2], showname)
-						puts epid
-						Database.setWatched(@episodes, epid)
-						puts
-						next
+
+						if !params[2].is_a?(Integer) # Watch several episodes at the same time. watch -e 1 3-5 Quantico
+							eps = params[2].split("-")
+							range = eps.first .. eps.last
+							range.to_a.each do |i|
+								epid = Database.getEpisodeID(@myShows, @episodes, params[1], i, showname)
+								Database.setWatched(@episodes, epid)
+							end
+							puts
+							next
+						else #Watch only one episode. watch -e 1 3 Quantico
+							epid = Database.getEpisodeID(@myShows, @episodes, params[1], params [2], showname)
+							Database.setWatched(@episodes, epid)
+							puts
+							next
+						end
+
 					end
 
 					puts "Invalid/insufficient arguments."
@@ -121,7 +169,17 @@ module MyTV
 				when /\Aprint\z/i
 					(params.first == "-a")?Database.printFull(@myShows, @episodes):Database.printShows(@myShows, @episodes)
 
-				when /\Aexit\z/i
+
+				when /\Aimport\z/i
+					if params.first != "-e" # External
+						Import.import(@myShows, @episodes, params.first)
+					else
+						Import.myEpisodesImport(params[1], params[2])
+						Import.import(@myShows, @episodes, "shows.txt")
+					end
+					puts
+
+				when /\Aexit\z/i, /\Aq\z/i
 					break
 					
 				else
@@ -134,31 +192,32 @@ module MyTV
 
 	end
 
-	cli = Cli.new
-	cli.run
-
 end
 
 =begin
 
 TODO:
-Heroes Reborn 1x10 has an error when doing print -a
-Better Exception description and user feedback (explaining error, different error types)
-Import shows from a file
-Show feedback to the user ("Completed, etc")
-(Gem structure) / ship as a normal app
-Do I need TVShow.rb and Episode.rb? I can simulate the classes
+Change Web Net HTTP to Mechanize (how to json parse)
+Print A-> instead of database order
+Set season as watched watch -e 1 Quantico    OR:
+Watch mulltiple episodes (watch -e 1 2-5 Quantico)
+Support for importing from files with spaces
 (Find torrent link and subtitles)
-#!/usr/bin/env ruby
+
+Bugs:
+Adding Breaking In: Invalid date
 
 Exceptions:
 class MyError < StandardError
 end
 raise MyError
-Differenciate errors (no connection, show not found...)
 
 nexteps:
 (distinction before @episodes that haven't aired yet)
 (distinction for shows airing that day?)
+
+Gem structure
+Later on
+Follow https://github.com/mthssdrbrg/my_episodes/tree/master/lib/my_episodes
 
 =end

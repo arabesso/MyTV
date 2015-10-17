@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative 'mytv'
+
+cli = MyTV::Cli.new
+cli.run

@@ -12,16 +12,18 @@ module Database
 		# Checks it's not in the database already
 		if dataset1.where(:id => obj['id']).count == 1
 			$logger.warn "The show <" + obj['name'] + "> is already in the database"
+			puts "The show " + obj['name'] + " is already in the database"
 		else
 			newshow = TVShow.new(obj['name'], obj['id'])
 			dataset1.insert(:id => newshow.getID, :name => newshow.getName)
 			Database.addEpisodes(dataset2, newshow)
+			puts "Added show " + showName
 			$logger.info "...completed"
 		end
 
 	rescue => e
 		$logger.error("Exception in addShow trying to add <" + showName + "> : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	end
 
 	# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -43,7 +45,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in addEpisodes : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	end
 
 	# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -121,7 +123,7 @@ module Database
 		
 	rescue => e
 		$logger.error("Exception in update : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -139,7 +141,7 @@ module Database
 		
 	rescue => e
 		$logger.error("Exception in removeShow trying to remove show <" + showid + "> : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -160,7 +162,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in getShowID trying to get <" + showname + ">'s id : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -169,8 +171,8 @@ module Database
 		dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
 
 	rescue => e
-		$logger.error("Exception in getEpisodeID trying to get <" + showname + ">'s id : " + e.message)
-		puts "Error."
+		$logger.error("Exception in getEpisodeID trying to get <" + show + ">'s id : " + e.message)
+		puts "Error: " + e.message
 	
 	end
 
@@ -180,33 +182,11 @@ module Database
 	
 	rescue => e
 		$logger.error("Exception in setWatched trying to set episode <" + episodeid + "> as watched : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 		
 	end
 
-	# Creates the TVShows and Episodes tables
-	def Database.createTables
-
-		DB.create_table :TVShows do
-  		Integer :id, :primary_key=>true #TVMAZE ID
-  		String :name
-  	end
-
-  	DB.create_table :Episodes do
-		  Integer :id, :primary_key=>true #tvmaze id
-		  String :title
-		  Integer :seasonNumber
-		  Integer :episodeNumber
-		  Date :airdate
-		  Boolean :watched
-		  Integer :show_id #FOREIGN KEY REFERENCES TVSHOWS ID
-		end
-
-	rescue => e
-		$logger.error("Exception in createTables : " + e.message)
-		puts "Error."
 	
-	end
 
 	# Returns a TVShow object. Receives the myShows dataset and the show id
 	def Database.getShow (dataset, id)
@@ -215,7 +195,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in getShow trying to get id <" + id + "> : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -225,7 +205,7 @@ module Database
 		
 	rescue => e
 		$logger.error("Exception in getEpisodes trying to get episodes for show <" + showID + "> : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -235,7 +215,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in numberOfEntries : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -249,7 +229,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in setShowWatched with show <" + showid + "> : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -264,7 +244,7 @@ module Database
 
 	rescue => e
 		$logger.error("Exception in nextEpisodes : " + e.message)
-		puts "Error."
+		puts "Error: " + e.message
 	
 	end
 
@@ -282,12 +262,9 @@ module Database
 		dataset1.each do |i|
 			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ")"
 			dataset2.where(:show_id => i[:id]).each do |j|
-				if j[:seasonNumber]<10
-					seasonNumber = "0" + j[:seasonNumber].to_s
-				end
-				if j[:episodeNumber]<10
-					episodeNumber = "0" + j[:episodeNumber].to_s
-				end
+				seasonNumber =  j[:seasonNumber]<10 ? "0" + j[:seasonNumber].to_s : j[:seasonNumber].to_s
+				episodeNumber = j[:episodeNumber]<10 ? "0" + j[:episodeNumber].to_s : j[:episodeNumber].to_s
+
 				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title].to_s + " - " + (j[:watched]?"watched":"not watched")
 			end
 		end
