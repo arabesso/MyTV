@@ -1,5 +1,6 @@
 module Web
 
+
 	# ************************************************************+
 	# **                      TVMaze                             **
 	# ************************************************************+
@@ -40,12 +41,11 @@ module Web
 	end
 
 	# ************************************************************+
-	# **                      KickassTorrents                    **
+	# **                      RARBG                              **
 	# ************************************************************+
 	# Choose 720p
-	KAT_URL = 	"https://kat.cr"
+	TPB_URL = 	"https://thehiddenbay.me/search/"
 	GROUPS = ["LOL", "BATV", "DIMENSION", "FLEET", "KILLERS"]
-	QUAL = "-720p" # Change to 720p to get links to 720p torrents
 
 	def Web.getMagnetLink(showname, season, episode)
 		search = Array.new
@@ -65,23 +65,21 @@ module Web
 			epnum = "E" + episode.to_s
 		end
 
-		search = search.join("%20")
+		search = search.join("+")
 		search << epnum
-		search << "%20"
-		search << "ettv"
-		search << "%20"
-		search << QUAL
-		
-		# <tr class="odd" id="torrent_quantico_s01e02_ettv_720p11361274">
-		# 				<td>
-		# 				<div class="iaconbox center floatright">
-		# 						<a rel="11361274,0" class="icommentjs icon16" href="/quantico-s01e02-hdtv-x264-lol-ettv-t11361274.html#comment"><em style="font-size: 12px; margin: 0 4px 0 4px;" class="iconvalue">261</em><i class="ka ka-comment"></i></a>				<a class="icon16" href="/quantico-s01e02-hdtv-x264-lol-ettv-t11361274.html" title="Verified Torrent"><i class="ka ka16 ka-verify ka-green"></i></a>                                <a href="#" data-nop onclick="sc('redirect', '_b91ea3142d712c64815b8c569ca90f34', { 'name': 'Quantico%20S01E02%20HDTV%20x264-LOL%5Bettv%5D', 'magnet': 'magnet%3A%3Fxt%3Durn%3Abtih%3A11F77466C2EE04FBA543338FB7A56BEC962D4EF2%26dn%3Dquantico%2Bs01e02%2Bhdtv%2Bx264%2Blol%2Bettv%26tr%3Dudp%253A%252F%252Ftracker.publicbt.com%252Fannounce%26tr%3Dudp%253A%252F%252Fopen.demonii.com%253A1337' }); return false;" class="icon16"><i class="ka ka16 ka-arrow-down blueButton"></i></a>
-		# 						<a data-nop title="Torrent magnet link" href="magnet:?xt=urn:btih:11F77466C2EE04FBA543338FB7A56BEC962D4EF2&dn=quantico+s01e02+hdtv+x264+lol+ettv&tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" class="icon16"><i class="ka ka16 ka-magnet"></i></a>
+		search << "/0/7/0"
+		uri = TPB_URL + search.to_s
+		agent = Mechanize.new
+		page = agent.get(uri)
+		return page.links[27].href # Likely to have bugs if TPB changes its layout at all
 
-		url = KAT_URL + "/usearch/" + search.to_s + "/"
-		puts url
-		resp = Net::HTTP.get_response(URI.parse(url))
-		resp_text = resp.body
+		# Process.spawn('deluge-gtk "magnetlink"')
+
+	rescue => e
+		$logger.error("Exception <" + filename + "> : " + e.message)
+		puts "Error: " + e.message
+
+
 	end
 
 	def Web.getTorrentLink()
@@ -92,12 +90,18 @@ module Web
 	# **                        Addic7ed                         **
 	# ************************************************************+
 	ADDIC_URL = 	"http://Addic7ed.org"
-	
 
 	# Choose 720p
 end
 
 =begin
+
+<tr class="lista2">
+	<td align="left" class="lista" width="48" style="width:48px;">
+		<a href="/torrents.php?category=18"><img src="//dyncdn.me/static/20/images/categories/cat_new18.gif" border="0" alt="" /></a></td>
+		<td align="left" class="lista">
+			<a onmouseover="return overlib('<img src=\'//dyncdn.me/static/20/tvdb/314002_small.jpg\' border=0>')" onmouseout="return nd();" 
+				href="/torrent/kh6l95s" title="The Player 2015 S01E01 HDTV XviD-FUM[ettv]">
 	
 	def Web.searchShow(showName)
 		url = TVMAZE_URL + "/search/shows?q=" + showName

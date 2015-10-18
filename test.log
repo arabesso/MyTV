@@ -6722,3 +6722,98 @@ D, [2015-10-18T01:22:00.523145 #27166] DEBUG -- : Connecting to the database
 D, [2015-10-18T01:22:00.541904 #27166] DEBUG -- : ...completed
 D, [2015-10-18T01:22:08.023702 #27168] DEBUG -- : Connecting to the database
 D, [2015-10-18T01:22:08.042719 #27168] DEBUG -- : ...completed
+D, [2015-10-18T01:28:02.054938 #29098] DEBUG -- : Connecting to the database
+D, [2015-10-18T01:28:02.073959 #29098] DEBUG -- : ...completed
+D, [2015-10-18T01:28:21.566712 #29200] DEBUG -- : Connecting to the database
+D, [2015-10-18T01:28:21.585429 #29200] DEBUG -- : ...completed
+D, [2015-10-18T01:35:00.013776 #32118] DEBUG -- : Connecting to the database
+D, [2015-10-18T01:35:00.032358 #32118] DEBUG -- : ...completed
+D, [2015-10-18T04:45:47.420304 #2351] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:45:47.439042 #2351] DEBUG -- : ...completed
+D, [2015-10-18T04:47:23.331101 #4367] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:47:23.350038 #4367] DEBUG -- : ...completed
+D, [2015-10-18T04:49:02.280621 #6694] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:49:02.299348 #6694] DEBUG -- : ...completed
+E, [2015-10-18T04:49:11.427221 #6694] ERROR -- : Exception importing file <my> : No such file or directory @ rb_sysopen - my
+E, [2015-10-18T04:49:19.962692 #6694] ERROR -- : Exception importing file <mis> : No such file or directory @ rb_sysopen - mis
+E, [2015-10-18T04:49:28.322443 #6694] ERROR -- : Exception importing file <mis> : No such file or directory @ rb_sysopen - mis
+D, [2015-10-18T04:50:05.051020 #6998] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:50:05.069731 #6998] DEBUG -- : ...completed
+E, [2015-10-18T04:50:07.265431 #6998] ERROR -- : Exception importing file <["mis", "shows"]> : No such file or directory @ rb_sysopen - ["mis", "shows"]
+D, [2015-10-18T04:50:25.667310 #7598] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:50:25.687123 #7598] DEBUG -- : ...completed
+I, [2015-10-18T04:50:29.199785 #7598]  INFO -- : Trying to add show <Narcos>
+I, [2015-10-18T04:50:29.692085 #7598]  INFO -- : Added episode <Descenso>
+I, [2015-10-18T04:50:29.792290 #7598]  INFO -- : Added episode <The Sword Of Simón Bolívar>
+I, [2015-10-18T04:50:29.884327 #7598]  INFO -- : Added episode <The Men Of Always>
+I, [2015-10-18T04:50:29.984678 #7598]  INFO -- : Added episode <The Palace In Flames>
+I, [2015-10-18T04:50:30.068425 #7598]  INFO -- : Added episode <There Will Be A Future>
+I, [2015-10-18T04:50:30.168904 #7598]  INFO -- : Added episode <Explosivos>
+I, [2015-10-18T04:50:30.269493 #7598]  INFO -- : Added episode <You Will Cry Tears Of Blood>
+I, [2015-10-18T04:50:30.386354 #7598]  INFO -- : Added episode <La Gran Mentira>
+I, [2015-10-18T04:50:30.503542 #7598]  INFO -- : Added episode <La Catedral>
+I, [2015-10-18T04:50:30.587170 #7598]  INFO -- : Added episode <Despegue>
+I, [2015-10-18T04:50:30.587351 #7598]  INFO -- : ...completed
+I, [2015-10-18T04:50:42.852571 #7598]  INFO -- : Deleting entry with id <203469> from dataset 
+I, [2015-10-18T04:50:42.961356 #7598]  INFO -- : Deleting entry with id <208978> from dataset 
+I, [2015-10-18T04:50:43.111761 #7598]  INFO -- : Deleting entry with id <208979> from dataset 
+I, [2015-10-18T04:50:43.203746 #7598]  INFO -- : Deleting entry with id <208980> from dataset 
+I, [2015-10-18T04:50:43.287557 #7598]  INFO -- : Deleting entry with id <208981> from dataset 
+I, [2015-10-18T04:50:43.387884 #7598]  INFO -- : Deleting entry with id <208982> from dataset 
+I, [2015-10-18T04:50:43.496547 #7598]  INFO -- : Deleting entry with id <208983> from dataset 
+I, [2015-10-18T04:50:43.597016 #7598]  INFO -- : Deleting entry with id <208984> from dataset 
+I, [2015-10-18T04:50:43.917627 #7598]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-18T04:50:44.237927 #7598]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-18T04:50:44.550151 #7598]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-18T04:50:44.797621 #7598]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-18T04:51:17.531803 #7619] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:51:17.551529 #7619] DEBUG -- : ...completed
+I, [2015-10-18T04:51:21.958686 #7619]  INFO -- : Trying to add show <Narcos>
+W, [2015-10-18T04:51:21.959307 #7619]  WARN -- : The show <Narcos> is already in the database
+I, [2015-10-18T04:51:22.220296 #7619]  INFO -- : Trying to add show <Black Mirror>
+I, [2015-10-18T04:51:22.700502 #7619]  INFO -- : Added episode <The National Anthem>
+I, [2015-10-18T04:51:22.809681 #7619]  INFO -- : Added episode <Fifteen Million Merits>
+I, [2015-10-18T04:51:22.910041 #7619]  INFO -- : Added episode <The Entire History of You>
+I, [2015-10-18T04:51:23.018788 #7619]  INFO -- : Added episode <Be Right Back>
+I, [2015-10-18T04:51:23.119102 #7619]  INFO -- : Added episode <White Bear>
+I, [2015-10-18T04:51:23.219563 #7619]  INFO -- : Added episode <The Waldo Moment>
+I, [2015-10-18T04:51:23.219696 #7619]  INFO -- : ...completed
+I, [2015-10-18T04:51:44.911572 #7619]  INFO -- : Deleting entry with id <30902> from dataset 
+I, [2015-10-18T04:51:45.011744 #7619]  INFO -- : Deleting entry with id <30903> from dataset 
+I, [2015-10-18T04:51:45.112167 #7619]  INFO -- : Deleting entry with id <30904> from dataset 
+I, [2015-10-18T04:51:45.212507 #7619]  INFO -- : Deleting entry with id <30905> from dataset 
+I, [2015-10-18T04:51:45.321189 #7619]  INFO -- : Deleting entry with id <30906> from dataset 
+I, [2015-10-18T04:51:45.321844 #7619]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-18T04:51:45.615175 #7619]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-18T04:51:45.883749 #7619]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-18T04:51:46.138006 #7619]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-18T04:51:46.382576 #7619]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-18T04:51:46.676671 #7619]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-18T04:53:47.378909 #8040] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:53:47.397600 #8040] DEBUG -- : ...completed
+D, [2015-10-18T04:55:13.742020 #8361] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:55:13.760736 #8361] DEBUG -- : ...completed
+D, [2015-10-18T04:57:26.942873 #10702] DEBUG -- : Connecting to the database
+D, [2015-10-18T04:57:26.961613 #10702] DEBUG -- : ...completed
+D, [2015-10-18T05:00:02.902570 #10889] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:00:02.921342 #10889] DEBUG -- : ...completed
+D, [2015-10-18T05:00:14.848497 #11289] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:00:14.867309 #11289] DEBUG -- : ...completed
+D, [2015-10-18T05:04:48.561948 #14360] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:04:48.580813 #14360] DEBUG -- : ...completed
+D, [2015-10-18T05:05:05.847451 #14569] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:05:05.866261 #14569] DEBUG -- : ...completed
+D, [2015-10-18T05:05:13.611917 #14671] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:05:13.630719 #14671] DEBUG -- : ...completed
+D, [2015-10-18T05:07:40.152196 #14930] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:07:40.171039 #14930] DEBUG -- : ...completed
+D, [2015-10-18T05:07:52.089957 #15032] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:07:52.109314 #15032] DEBUG -- : ...completed
+D, [2015-10-18T05:09:28.668877 #16651] DEBUG -- : Connecting to the database
+D, [2015-10-18T05:09:28.687511 #16651] DEBUG -- : ...completed
+I, [2015-10-18T05:09:32.558818 #16651]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-18T05:09:32.870477 #16651]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-18T05:09:33.180842 #16651]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-18T05:09:33.499061 #16651]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-18T05:09:33.776521 #16651]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-18T05:09:34.072952 #16651]  INFO -- : No new episodes to add to <Narcos>

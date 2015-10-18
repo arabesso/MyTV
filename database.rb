@@ -237,7 +237,10 @@ module Database
 	def Database.nextEpisodes(dataset1, dataset2)
 		nextEpisodes = Array.new
 		dataset1.each do |i|
-			nextEpisodes <<  dataset2.where(:show_id => i[:id], :watched => false).order(:airdate).to_a[0]
+			episode = dataset2.where(:show_id => i[:id], :watched => false).order(:airdate).to_a[0]
+			if episode != nil
+				nextEpisodes <<  episode
+			end
 		end
 
 	return nextEpisodes
@@ -251,7 +254,7 @@ module Database
 	# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
 	# SLOW METHOD?
 	def Database.printShows(dataset1, dataset2)
-		dataset1.each do |i|
+		dataset1.order(:name).each do |i|
 			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ") " + "- " + dataset2.where(:show_id => i[:id]).count.to_s + " episodes stored"
 		end
 		puts
@@ -259,13 +262,13 @@ module Database
 
 	# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
 	def Database.printFull(dataset1, dataset2)
-		dataset1.each do |i|
+		dataset1.order(:name).each do |i|
 			puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ")"
 			dataset2.where(:show_id => i[:id]).each do |j|
 				seasonNumber =  j[:seasonNumber]<10 ? "0" + j[:seasonNumber].to_s : j[:seasonNumber].to_s
 				episodeNumber = j[:episodeNumber]<10 ? "0" + j[:episodeNumber].to_s : j[:episodeNumber].to_s
-
-				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title].to_s + " - " + (j[:watched]?"watched":"not watched")
+				watch = j[:watched]? "watched" : "not watched"
+				puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title].to_s + " - " + watch
 			end
 		end
 		puts

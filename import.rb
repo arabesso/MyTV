@@ -1,5 +1,3 @@
-require 'rubygems'
-
 module Import
 	def Import.import(dataset1, dataset2, filename)
 		File.foreach(filename) do |x|
@@ -13,7 +11,6 @@ module Import
 	# Creates a file ready for importing from http://www.myepisodes.com/myshows/manage/.
 	def Import.myEpisodesImport(user, pass)
 		agent = Mechanize.new
-		#agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 		page = agent.get 'http://www.myepisodes.com/login.php'
 
@@ -35,4 +32,5 @@ module Import
 
 end
 =begin
+
 =end

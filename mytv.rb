@@ -95,7 +95,8 @@ module MyTV
 				end
 				
 				showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
-				puts showname + "\tS" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				data = "S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				puts showname + "\t\t" + data
 
 			end
 			
@@ -170,10 +171,15 @@ module MyTV
 					(params.first == "-a")?Database.printFull(@myShows, @episodes):Database.printShows(@myShows, @episodes)
 
 
-				when /\Aimport\z/i
-					if params.first != "-e" # External
-						Import.import(@myShows, @episodes, params.first)
-					else
+				when /\Aimport\z/i # import <filename>
+					if params.size == 0
+						puts "Insufficient arguments"
+						help_text
+
+					elsif params.first != "-e" 
+						Import.import(@myShows, @episodes, params.join(" ").to_s)
+
+					else  # External importing import -e
 						Import.myEpisodesImport(params[1], params[2])
 						Import.import(@myShows, @episodes, "shows.txt")
 					end
@@ -196,13 +202,13 @@ end
 
 =begin
 
+BabaNna
 TODO:
 Change Web Net HTTP to Mechanize (how to json parse)
-Print A-> instead of database order
-Set season as watched watch -e 1 Quantico    OR:
-Watch mulltiple episodes (watch -e 1 2-5 Quantico)
-Support for importing from files with spaces
-(Find torrent link and subtitles)
+Find subtitles
+Add commands for torrent
+Support for importing from files with spaces (my shows.txt)
+
 
 Bugs:
 Adding Breaking In: Invalid date
