@@ -6817,3 +6817,62 @@ I, [2015-10-18T05:09:33.180842 #16651]  INFO -- : No new episodes to add to <Qua
 I, [2015-10-18T05:09:33.499061 #16651]  INFO -- : No new episodes to add to <The Player>
 I, [2015-10-18T05:09:33.776521 #16651]  INFO -- : No new episodes to add to <Limitless>
 I, [2015-10-18T05:09:34.072952 #16651]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-19T01:08:26.804297 #2862] DEBUG -- : Connecting to the database
+D, [2015-10-19T01:08:26.943606 #2862] DEBUG -- : ...completed
+I, [2015-10-19T01:08:34.533381 #2862]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:08:34.865164 #2862] ERROR -- : Exception in addShow trying to add <breaking in> : invalid date
+I, [2015-10-19T01:11:30.822124 #5660]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:11:30.822332 #5660] ERROR -- : Exception in addShow trying to add <Breaking in> : undefined method `where' for nil:NilClass
+I, [2015-10-19T01:12:33.751399 #5971]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:12:33.751586 #5971] ERROR -- : Exception in addShow trying to add <Breaking in> : undefined method `where' for nil:NilClass
+I, [2015-10-19T01:12:45.193275 #6376]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:12:45.193509 #6376] ERROR -- : Exception in addShow trying to add <Breaking in> : undefined method `where' for nil:NilClass
+I, [2015-10-19T01:12:55.316770 #6479]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:12:55.316991 #6479] ERROR -- : Exception in addShow trying to add <Breaking in> : undefined method `where' for nil:NilClass
+I, [2015-10-19T01:13:47.721798 #2862]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:13:48.051087 #2862] ERROR -- : Exception in addShow trying to add <breakin in> : invalid date
+I, [2015-10-19T01:14:05.616382 #6980]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:14:05.616632 #6980] ERROR -- : Exception in addShow trying to add <Breaking in> : undefined method `where' for nil:NilClass
+D, [2015-10-19T01:14:05.616837 #6980] DEBUG -- : Connecting to the database
+D, [2015-10-19T01:14:05.641639 #6980] DEBUG -- : ...completed
+I, [2015-10-19T01:14:09.326636 #6980]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:14:09.948483 #6980] ERROR -- : Exception in addShow trying to add <breaking in> : invalid date
+D, [2015-10-19T01:14:18.803172 #6983] DEBUG -- : Connecting to the database
+D, [2015-10-19T01:14:18.821947 #6983] DEBUG -- : ...completed
+I, [2015-10-19T01:14:22.561548 #6983]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:14:22.834710 #6983] ERROR -- : Exception in addShow trying to add <breaking in> : invalid date
+D, [2015-10-19T01:14:37.273771 #7384] DEBUG -- : Connecting to the database
+D, [2015-10-19T01:14:37.292571 #7384] DEBUG -- : ...completed
+I, [2015-10-19T01:14:40.864013 #7384]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:14:41.116961 #7384] ERROR -- : Exception in addShow trying to add <breaking in> : invalid date
+D, [2015-10-19T01:17:42.290270 #8442] DEBUG -- : Connecting to the database
+D, [2015-10-19T01:17:42.309000 #8442] DEBUG -- : ...completed
+I, [2015-10-19T01:17:45.154099 #8442]  INFO -- : Trying to add show <Breaking In>
+E, [2015-10-19T01:17:45.395787 #8442] ERROR -- : Exception in loadEpisodes trying to add episodes for <Breaking In> : invalid date
+I, [2015-10-19T01:17:45.591437 #8442]  INFO -- : Added episode <Pilot>
+I, [2015-10-19T01:17:45.675118 #8442]  INFO -- : Added episode <'Tis Better to Have Loved and Flossed>
+I, [2015-10-19T01:17:45.758788 #8442]  INFO -- : Added episode <Need for Speed>
+I, [2015-10-19T01:17:45.842492 #8442]  INFO -- : Added episode <White On White On White>
+I, [2015-10-19T01:17:45.926182 #8442]  INFO -- : Added episode <Take the Movie and Run>
+I, [2015-10-19T01:17:46.009834 #8442]  INFO -- : Added episode <Breaking Out>
+I, [2015-10-19T01:17:46.093484 #8442]  INFO -- : Added episode <21.0 Jump Street>
+I, [2015-10-19T01:17:46.193888 #8442]  INFO -- : Added episode <The Contra Club>
+I, [2015-10-19T01:17:46.293968 #8442]  INFO -- : Added episode <Who's The Boss>
+I, [2015-10-19T01:17:46.394711 #8442]  INFO -- : Added episode <The Blind Sided>
+I, [2015-10-19T01:17:46.511833 #8442]  INFO -- : Added episode <Game of Jones>
+I, [2015-10-19T01:17:46.636959 #8442]  INFO -- : Added episode <Cyrano de Nerdgerac>
+I, [2015-10-19T01:17:46.637122 #8442]  INFO -- : ...completed
+W, [2015-10-19T01:18:38.558681 #8442]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-19T01:18:39.043154 #8442]  INFO -- : Deleting entry with id <46338> from dataset 
+I, [2015-10-19T01:18:39.126775 #8442]  INFO -- : Deleting entry with id <46339> from dataset 
+I, [2015-10-19T01:18:39.243883 #8442]  INFO -- : Deleting entry with id <46340> from dataset 
+I, [2015-10-19T01:18:39.344115 #8442]  INFO -- : Deleting entry with id <46341> from dataset 
+I, [2015-10-19T01:18:39.494605 #8442]  INFO -- : Deleting entry with id <46342> from dataset 
+I, [2015-10-19T01:18:39.578248 #8442]  INFO -- : Deleting entry with id <46343> from dataset 
+I, [2015-10-19T01:18:39.678492 #8442]  INFO -- : Deleting entry with id <46344> from dataset 
+I, [2015-10-19T01:18:39.770670 #8442]  INFO -- : Deleting entry with id <46345> from dataset 
+I, [2015-10-19T01:18:39.854326 #8442]  INFO -- : Deleting entry with id <46346> from dataset 
+I, [2015-10-19T01:18:39.937990 #8442]  INFO -- : Deleting entry with id <46347> from dataset 
+I, [2015-10-19T01:18:40.021480 #8442]  INFO -- : Deleting entry with id <46348> from dataset 
+I, [2015-10-19T01:18:40.130449 #8442]  INFO -- : Deleting entry with id <46349> from dataset 
+I, [2015-10-19T01:18:40.255740 #8442]  INFO -- : Deleting entry with id <510> from dataset 

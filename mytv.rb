@@ -197,7 +197,6 @@ module MyTV
 		end
 
 	end
-
 end
 
 =begin
@@ -208,7 +207,6 @@ Change Web Net HTTP to Mechanize (how to json parse)
 Find subtitles
 Add commands for torrent
 Support for importing from files with spaces (my shows.txt)
-
 
 Bugs:
 Adding Breaking In: Invalid date

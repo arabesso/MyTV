@@ -16,6 +16,7 @@ module Database
 		else
 			newshow = TVShow.new(obj['name'], obj['id'])
 			dataset1.insert(:id => newshow.getID, :name => newshow.getName)
+			puts "Hi"
 			Database.addEpisodes(dataset2, newshow)
 			puts "Added show " + showName
 			$logger.info "...completed"

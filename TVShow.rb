@@ -34,6 +34,10 @@ class TVShow
 		episodelist.each do |i|
 			@episodes << Episode.new(i['name'].to_s, i['season'], i['number'], i['airdate'], i['id'])
 		end
+
+		rescue => e
+		$logger.error("Exception in loadEpisodes trying to add episodes for <" + @name + "> : " + e.message)
+		puts "Error: " + e.message
 	end
 
 	def to_s # use these methods to create a hash for the DB?
