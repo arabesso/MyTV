@@ -170,6 +170,11 @@ module MyTV
 				when /\Aprint\z/i
 					(params.first == "-a")?Database.printFull(@myShows, @episodes):Database.printShows(@myShows, @episodes)
 
+				when /\Adownload\z/i # download 1 2 Quantico
+					showname = params.slice(2, params.size).join(" ")
+					magnet = Web.getMagnetLink(params[0], params[1], showname).to_s
+					exec = "'deluge-gtk \"" + magnet + "\"'"
+					Process.spawn(exec)
 
 				when /\Aimport\z/i # import <filename>
 					if params.size == 0
@@ -201,8 +206,8 @@ end
 
 =begin
 
-BabaNna
 TODO:
+Fix torrent: Parsing with nokogiri for the link
 Change Web Net HTTP to Mechanize (how to json parse)
 Find subtitles
 Add commands for torrent

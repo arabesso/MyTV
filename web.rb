@@ -1,97 +1,103 @@
-module Web
+module MyTV
+	class Web
 
 
-	# ************************************************************+
-	# **                      TVMaze                             **
-	# ************************************************************+
-	
-	TVMAZE_URL = 	"http://api.tvmaze.com"
-
-	def Web.getShowID(showName)
-		url = TVMAZE_URL + "/singlesearch/shows?q=" + showName
-		resp = Net::HTTP.get_response(URI.parse(url))
-		resp_text = resp.body
-
-		obj = JSON.parse(resp_text)
-
-		obj['id']
-	
-	end
-
-	##
-	# "id"=>2244
-	# "status"=>"Running"
-	# "schedule"=>{"time"=>"22:00", "days"=>["Thursday"]}
-	# "updated"=>1443264033
-	# "_links"=>{previousepisode"=>{"href"=>"http://api.tvmaze.com/episodes/182003"}, "nextepisode"=>{"href"=>"http://api.tvmaze.com/episodes/215496"}}
-	def Web.searchShowFast(showName)
-		url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
-		resp = Net::HTTP.get_response(URI.parse(url))
-		resp_text = resp.body
-
-		obj = JSON.parse(resp_text)
-	end
-
-	def Web.getEpisodes(showID)
-		url = TVMAZE_URL + "/shows/" + showID.to_s + "/episodes" #?specials=1
-		resp = Net::HTTP.get_response(URI.parse(url))
-		resp_text = resp.body
-
-		obj = JSON.parse(resp_text)
-	end
-
-	# ************************************************************+
-	# **                      RARBG                              **
-	# ************************************************************+
-	# Choose 720p
-	TPB_URL = 	"https://thehiddenbay.me/search/"
-	GROUPS = ["LOL", "BATV", "DIMENSION", "FLEET", "KILLERS"]
-
-	def Web.getMagnetLink(showname, season, episode)
-		search = Array.new
-		search << showname.split(" ")
+		# ************************************************************+
+		# **                      TVMaze                             **
+		# ************************************************************+
 		
-		if season < 10
-			seasonnum = "S0" + season.to_s
-		else
-			seasonnum = "S" + season.to_s
+		TVMAZE_URL = 	"http://api.tvmaze.com"
+
+		def Web.getShowID(showName)
+			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName
+			resp = Net::HTTP.get_response(URI.parse(url))
+			resp_text = resp.body
+
+			obj = JSON.parse(resp_text)
+
+			obj['id']
+		
 		end
 
-			search << seasonnum
+		##
+		# "id"=>2244
+		# "status"=>"Running"
+		# "schedule"=>{"time"=>"22:00", "days"=>["Thursday"]}
+		# "updated"=>1443264033
+		# "_links"=>{previousepisode"=>{"href"=>"http://api.tvmaze.com/episodes/182003"}, "nextepisode"=>{"href"=>"http://api.tvmaze.com/episodes/215496"}}
+		def Web.searchShowFast(showName)
+			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
+			resp = Net::HTTP.get_response(URI.parse(url))
+			resp_text = resp.body
 
-		if episode < 10
-			epnum = "E0" + episode.to_s
-		else
-			epnum = "E" + episode.to_s
+			obj = JSON.parse(resp_text)
 		end
 
-		search = search.join("+")
-		search << epnum
-		search << "/0/7/0"
-		uri = TPB_URL + search.to_s
-		agent = Mechanize.new
-		page = agent.get(uri)
-		return page.links[27].href # Likely to have bugs if TPB changes its layout at all
+		def Web.getEpisodes(showID)
+			url = TVMAZE_URL + "/shows/" + showID.to_s + "/episodes" #?specials=1
+			resp = Net::HTTP.get_response(URI.parse(url))
+			resp_text = resp.body
 
-		# Process.spawn('deluge-gtk "magnetlink"')
+			obj = JSON.parse(resp_text)
+		end
 
-	rescue => e
-		$logger.error("Exception <" + filename + "> : " + e.message)
-		puts "Error: " + e.message
+		# ************************************************************+
+		# **                      RARBG                              **
+		# ************************************************************+
+		# Choose 720p
+		TPB_URL = 	"https://thehiddenbay.me/search/"
+		GROUPS = ["LOL", "BATV", "DIMENSION", "FLEET", "KILLERS"]
+
+		def Web.getMagnetLink(season, episode, showname)
+			search = Array.new
+			search << showname.split(" ")
+			
+			if season.to_i < 10
+				seasonnum = "S0" + season.to_s
+			else
+				seasonnum = "S" + season.to_s
+			end
+
+				search << seasonnum
+
+			if episode.to_i < 10
+				epnum = "E0" + episode.to_s
+			else
+				epnum = "E" + episode.to_s
+			end
+
+			search = search.join("+")
+			search << epnum
+			search << "/0/7/0"
+			uri = TPB_URL + search.to_s
+			agent = Mechanize.new
+			page = agent.get(uri)
+			puts page.links_with(:text => "Magnet link")[0].href
+			#link = page.parser.css('table#searchResult tbody tr td')#[|]
+			#link = link.css('a')[0].href
+			
+			# Parse for: table id searchResult
+			# tbody > tr > td (second one) > first link
+			# or tbody > tr > td (second one) > div detname > first link.click > parse new page
+
+		rescue => e
+			$logger.error("Exception in getMagnetLink : " + e.message)
+			puts "Error: " + e.message
 
 
+		end
+
+		def Web.getTorrentLink()
+			
+		end
+
+		# ************************************************************+
+		# **                        Addic7ed                         **
+		# ************************************************************+
+		ADDIC_URL = 	"http://Addic7ed.org"
+
+		# Choose 720p
 	end
-
-	def Web.getTorrentLink()
-		
-	end
-
-	# ************************************************************+
-	# **                        Addic7ed                         **
-	# ************************************************************+
-	ADDIC_URL = 	"http://Addic7ed.org"
-
-	# Choose 720p
 end
 
 =begin
