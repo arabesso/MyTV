@@ -68,12 +68,13 @@ module MyTV
 
 			search = search.join("+")
 			search << epnum
+			# Add ettv/rartv?
 			search << "/0/7/0"
 			uri = TPB_URL + search.to_s
 			agent = Mechanize.new
 			page = agent.get(uri)
 			puts page.links_with(:text => "Magnet link")[0].href
-			#link = page.parser.css('table#searchResult tbody tr td')#[|]
+			#link = page.parser.css('table#searchResult tbody tr td')#[1]
 			#link = link.css('a')[0].href
 			
 			# Parse for: table id searchResult
@@ -84,7 +85,6 @@ module MyTV
 			$logger.error("Exception in getMagnetLink : " + e.message)
 			puts "Error: " + e.message
 
-
 		end
 
 		def Web.getTorrentLink()
@@ -94,9 +94,18 @@ module MyTV
 		# ************************************************************+
 		# **                        Addic7ed                         **
 		# ************************************************************+
-		ADDIC_URL = 	"http://Addic7ed.org"
+		ADD_URL = 	"http://Addic7ed.org"
 
-		# Choose 720p
+		def getSubtitles()
+			uri = ADD_URL# Full url
+			agent = Mechanize.new
+			page = agent.get(uri)
+			
+		rescue => e
+			$logger.error("Exception in getSubtitles : " + e.message)
+			puts "Error: " + e.message	
+		end
+
 	end
 end
 

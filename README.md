@@ -17,10 +17,27 @@ MyTV will only keep in the database those episodes you haven't watched yet in or
 
 ## Usage
 
-| Command       | Description   |
-| ------------- | ------------- |
-| print         | Content Cell  |
-| Content Cell  | Content Cell  |
+Execute the run executable in the terminal (./run). This will start the MyTV CLI.
+
+Available commands:
+
+help													Prints the available commands.
+print													Prints basic information about the shows stored
+	-a													Prints detailed information about each show and episode stored.
+addshow <showname>						Searchs showname and adds it (along with its episodes) to the database.
+removeshow <showname>					Removes showname and all its episodes from the database
+update												Updates the database. Pulls new episodes, removes episodes you've set as watched.
+watched
+	-s <showname>								Sets all the episodes for showname as watched.
+	-e <season> <episode> <showname>	Sets as watched the specified episode,
+	-e <season> <episode1>-<episode2> <showname>	Sets as watched all the episodes in the given interval
+nexteps												Prints the next non-watched episodes of each show ordered by airing date.
+import
+	<filename>									Imports the shows from a given file. One show name per line.
+	-e <user> <pass>						Imports all the non-ignored shows in your MyEpisodes account.
+download <season> <episode> <showname>	Opens deluge with a magnet link for the specified show.
+exit													Exits the program
+
 
 ## Important files
 MyTV.rb: Main program.

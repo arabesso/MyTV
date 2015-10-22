@@ -14,3 +14,5 @@ D, [2015-10-22T17:42:45.857040 #20647] DEBUG -- : ...completed
 D, [2015-10-22T17:43:30.190263 #20651] DEBUG -- : Connecting to the database
 D, [2015-10-22T17:43:30.305025 #20651] DEBUG -- : ...completed
 E, [2015-10-22T17:43:38.571415 #20651] ERROR -- : Exception in getMagnetLink : 502 => Net::HTTPBadGateway for https://thehiddenbay.me/search/Quantico+S01E04/0/7/0 -- unhandled response
+D, [2015-10-22T19:46:08.273453 #1048] DEBUG -- : Connecting to the database
+D, [2015-10-22T19:46:08.578557 #1048] DEBUG -- : ...completed

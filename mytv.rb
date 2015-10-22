@@ -8,11 +8,11 @@ require 'digest'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
 
-require_relative "web"
+require_relative "Web"
 require_relative "TVShow"
 require_relative "Episode"
-require_relative "database"
-require_relative "import"
+require_relative "Database"
+require_relative "Import"
 
 module MyTV
 	class Cli
@@ -95,7 +95,13 @@ module MyTV
 				end
 				
 				showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
-				data = "S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				if i[:airdate] == Date.today
+					data = "(!)S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				elsif i[:airdate] > Date.today
+					data = "...S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				else
+					data = "S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+				end
 				puts showname + "\t\t" + data
 
 			end
@@ -207,14 +213,12 @@ end
 =begin
 
 TODO:
-Fix torrent: Parsing with nokogiri for the link
+Fix nexteps dates
+Fix magnet: Parsing with nokogiri for the link
 Change Web Net HTTP to Mechanize (how to json parse)
 Find subtitles
-Add commands for torrent
+attr accessor (DB?)
 Support for importing from files with spaces (my shows.txt)
-
-Bugs:
-Adding Breaking In: Invalid date
 
 Exceptions:
 class MyError < StandardError
