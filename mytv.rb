@@ -1,10 +1,10 @@
 require "rubygems"
 require "sequel"
 require "date"
-require 'net/http'
+#require 'net/http'
 require 'mechanize'
 require 'nokogiri'
-require 'digest'
+#require 'digest'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
 
@@ -84,7 +84,7 @@ module MyTV
 		end
 
 		def printNextEpisodes(dataset1, nextEpisodes)
-			nextEpisodes.sort_by { |hsh| hsh[:airdate] }
+			nextEpisodes = nextEpisodes.sort_by { |hsh| hsh[:airdate] }
 
 			nextEpisodes.each do |i|
 				if i[:seasonNumber]<10
@@ -96,9 +96,9 @@ module MyTV
 				
 				showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
 				if i[:airdate] == Date.today
-					data = "(!)S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+					data = "(!) S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
 				elsif i[:airdate] > Date.today
-					data = "...S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+					data = "... S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
 				else
 					data = "S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
 				end
@@ -213,9 +213,7 @@ end
 =begin
 
 TODO:
-Fix nexteps dates
-Fix magnet: Parsing with nokogiri for the link
-Change Web Net HTTP to Mechanize (how to json parse)
+Solve formatting problem when deluge isn't found. Puts after spawning the process doesn't solve it
 Find subtitles
 attr accessor (DB?)
 Support for importing from files with spaces (my shows.txt)
@@ -224,10 +222,6 @@ Exceptions:
 class MyError < StandardError
 end
 raise MyError
-
-nexteps:
-(distinction before @episodes that haven't aired yet)
-(distinction for shows airing that day?)
 
 Gem structure
 Later on

@@ -10,13 +10,13 @@ module MyTV
 
 		def Web.getShowID(showName)
 			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName
-			resp = Net::HTTP.get_response(URI.parse(url))
-			resp_text = resp.body
+			agent = Mechanize.new
+			page = agent.get(url).content
 
-			obj = JSON.parse(resp_text)
+			obj = JSON.parse(page)
 
 			obj['id']
-		
+
 		end
 
 		##
@@ -27,18 +27,21 @@ module MyTV
 		# "_links"=>{previousepisode"=>{"href"=>"http://api.tvmaze.com/episodes/182003"}, "nextepisode"=>{"href"=>"http://api.tvmaze.com/episodes/215496"}}
 		def Web.searchShowFast(showName)
 			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
-			resp = Net::HTTP.get_response(URI.parse(url))
-			resp_text = resp.body
 
-			obj = JSON.parse(resp_text)
+			agent = Mechanize.new
+			page = agent.get(url).content
+			
+			obj = JSON.parse(page)
 		end
 
 		def Web.getEpisodes(showID)
 			url = TVMAZE_URL + "/shows/" + showID.to_s + "/episodes" #?specials=1
-			resp = Net::HTTP.get_response(URI.parse(url))
-			resp_text = resp.body
-
-			obj = JSON.parse(resp_text)
+			
+			agent = Mechanize.new
+			page = agent.get(url).content
+			
+			obj = JSON.parse(page)
+			
 		end
 
 		# ************************************************************+
@@ -58,7 +61,7 @@ module MyTV
 				seasonnum = "S" + season.to_s
 			end
 
-				search << seasonnum
+			search << seasonnum
 
 			if episode.to_i < 10
 				epnum = "E0" + episode.to_s
@@ -73,10 +76,9 @@ module MyTV
 			uri = TPB_URL + search.to_s
 			agent = Mechanize.new
 			page = agent.get(uri)
-			puts page.links_with(:text => "Magnet link")[0].href
-			#link = page.parser.css('table#searchResult tbody tr td')#[1]
-			#link = link.css('a')[0].href
 			
+			page.links_with(:text => "Magnet link")[0].href
+		
 			# Parse for: table id searchResult
 			# tbody > tr > td (second one) > first link
 			# or tbody > tr > td (second one) > div detname > first link.click > parse new page

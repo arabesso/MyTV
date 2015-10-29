@@ -16,3 +16,112 @@ D, [2015-10-22T17:43:30.305025 #20651] DEBUG -- : ...completed
 E, [2015-10-22T17:43:38.571415 #20651] ERROR -- : Exception in getMagnetLink : 502 => Net::HTTPBadGateway for https://thehiddenbay.me/search/Quantico+S01E04/0/7/0 -- unhandled response
 D, [2015-10-22T19:46:08.273453 #1048] DEBUG -- : Connecting to the database
 D, [2015-10-22T19:46:08.578557 #1048] DEBUG -- : ...completed
+D, [2015-10-29T16:48:22.376490 #6448] DEBUG -- : Connecting to the database
+D, [2015-10-29T16:48:22.775548 #6448] DEBUG -- : ...completed
+D, [2015-10-29T16:50:47.760713 #6496] DEBUG -- : Connecting to the database
+D, [2015-10-29T16:50:47.866992 #6496] DEBUG -- : ...completed
+I, [2015-10-29T16:50:49.006780 #6496]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-29T16:50:49.009215 #6496]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
+I, [2015-10-29T16:50:49.602127 #6496]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-29T16:50:50.073288 #6496]  INFO -- : Added episode <Over>
+I, [2015-10-29T16:50:50.395487 #6496]  INFO -- : Added episode <Downtown Odds>
+I, [2015-10-29T16:50:50.628789 #6496]  INFO -- : Added episode <Headquarters!>
+I, [2015-10-29T16:50:50.749806 #6496]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-29T16:51:31.580603 #6508] DEBUG -- : Connecting to the database
+D, [2015-10-29T16:51:31.686334 #6508] DEBUG -- : ...completed
+W, [2015-10-29T16:51:46.942133 #6508]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T16:51:47.444513 #6508]  INFO -- : Deleting entry with id <30907> from dataset 
+I, [2015-10-29T16:51:47.522370 #6508]  INFO -- : Deleting entry with id <305> from dataset 
+E, [2015-10-29T16:51:58.462305 #6508] ERROR -- : Exception in addShow trying to add <black mirror> : no implicit conversion of Mechanize::File into String
+D, [2015-10-29T16:57:07.990525 #6559] DEBUG -- : Connecting to the database
+D, [2015-10-29T16:57:08.119435 #6559] DEBUG -- : ...completed
+E, [2015-10-29T16:57:09.980055 #6559] ERROR -- : Exception in addShow trying to add <black mirror> : no implicit conversion of Mechanize::File into String
+D, [2015-10-29T16:57:35.893772 #6565] DEBUG -- : Connecting to the database
+D, [2015-10-29T16:57:36.005632 #6565] DEBUG -- : ...completed
+I, [2015-10-29T16:57:37.161990 #6565]  INFO -- : Trying to add show <Black Mirror>
+I, [2015-10-29T16:57:37.753878 #6565]  INFO -- : Added episode <The National Anthem>
+I, [2015-10-29T16:57:37.842464 #6565]  INFO -- : Added episode <Fifteen Million Merits>
+I, [2015-10-29T16:57:37.920218 #6565]  INFO -- : Added episode <The Entire History of You>
+I, [2015-10-29T16:57:37.998066 #6565]  INFO -- : Added episode <Be Right Back>
+I, [2015-10-29T16:57:38.064720 #6565]  INFO -- : Added episode <White Bear>
+I, [2015-10-29T16:57:38.142427 #6565]  INFO -- : Added episode <The Waldo Moment>
+I, [2015-10-29T16:57:38.145205 #6565]  INFO -- : ...completed
+D, [2015-10-29T17:00:22.580803 #6581] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:00:22.692461 #6581] DEBUG -- : ...completed
+D, [2015-10-29T17:01:54.163318 #6594] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:01:54.270669 #6594] DEBUG -- : ...completed
+W, [2015-10-29T17:02:48.620468 #6594]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2015-10-29T17:02:57.194631 #6594]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2015-10-29T17:03:03.327951 #6594]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T17:03:05.155681 #6594]  INFO -- : Deleting entry with id <30902> from dataset 
+I, [2015-10-29T17:03:05.244585 #6594]  INFO -- : Deleting entry with id <30903> from dataset 
+I, [2015-10-29T17:03:05.333272 #6594]  INFO -- : Deleting entry with id <30904> from dataset 
+I, [2015-10-29T17:03:05.411179 #6594]  INFO -- : Deleting entry with id <30905> from dataset 
+I, [2015-10-29T17:03:05.488840 #6594]  INFO -- : Deleting entry with id <30906> from dataset 
+I, [2015-10-29T17:03:05.490361 #6594]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-29T17:03:05.492058 #6594]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
+I, [2015-10-29T17:03:05.577823 #6594]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-10-29T17:03:05.677781 #6594]  INFO -- : Deleting entry with id <313794> from dataset 
+I, [2015-10-29T17:03:05.738849 #6594]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-29T17:03:05.800402 #6594]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-29T17:03:05.862327 #6594]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-29T17:03:05.936616 #6594]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-29T17:03:05.995906 #6594]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-29T17:04:15.818601 #6607] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:04:15.927535 #6607] DEBUG -- : ...completed
+D, [2015-10-29T17:05:39.177676 #6629] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:05:39.288907 #6629] DEBUG -- : ...completed
+D, [2015-10-29T17:06:28.616448 #6636] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:06:28.730784 #6636] DEBUG -- : ...completed
+W, [2015-10-29T17:06:45.956179 #6636]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T17:06:46.197851 #6636]  INFO -- : Deleting entry with id <30907> from dataset 
+I, [2015-10-29T17:06:46.286735 #6636]  INFO -- : Deleting entry with id <305> from dataset 
+I, [2015-10-29T17:06:49.690690 #6636]  INFO -- : Trying to add show <Black Mirror>
+I, [2015-10-29T17:06:49.942068 #6636]  INFO -- : Added episode <The National Anthem>
+I, [2015-10-29T17:06:50.019865 #6636]  INFO -- : Added episode <Fifteen Million Merits>
+I, [2015-10-29T17:06:50.097620 #6636]  INFO -- : Added episode <The Entire History of You>
+I, [2015-10-29T17:06:50.175492 #6636]  INFO -- : Added episode <Be Right Back>
+I, [2015-10-29T17:06:50.264310 #6636]  INFO -- : Added episode <White Bear>
+I, [2015-10-29T17:06:50.342137 #6636]  INFO -- : Added episode <The Waldo Moment>
+I, [2015-10-29T17:06:50.342590 #6636]  INFO -- : ...completed
+W, [2015-10-29T17:06:58.373622 #6636]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T17:07:03.263829 #6636]  INFO -- : Deleting entry with id <30902> from dataset 
+I, [2015-10-29T17:07:03.352782 #6636]  INFO -- : Deleting entry with id <30903> from dataset 
+I, [2015-10-29T17:07:03.430618 #6636]  INFO -- : Deleting entry with id <30904> from dataset 
+I, [2015-10-29T17:07:03.508416 #6636]  INFO -- : Deleting entry with id <30905> from dataset 
+I, [2015-10-29T17:07:03.597245 #6636]  INFO -- : Deleting entry with id <30906> from dataset 
+I, [2015-10-29T17:07:03.599080 #6636]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-29T17:07:03.600678 #6636]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
+I, [2015-10-29T17:07:03.754129 #6636]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-29T17:07:03.828951 #6636]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-29T17:07:03.887956 #6636]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-29T17:07:03.949279 #6636]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-29T17:07:04.013894 #6636]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-10-29T17:07:45.118283 #6732] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:07:45.231944 #6732] DEBUG -- : ...completed
+D, [2015-10-29T17:11:00.199191 #6856] DEBUG -- : Connecting to the database
+D, [2015-10-29T17:11:00.301490 #6856] DEBUG -- : ...completed
+W, [2015-10-29T17:11:06.201074 #6856]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T17:11:07.540978 #6856]  INFO -- : Deleting entry with id <30907> from dataset 
+I, [2015-10-29T17:11:07.629874 #6856]  INFO -- : Deleting entry with id <305> from dataset 
+I, [2015-10-29T17:11:11.521353 #6856]  INFO -- : Trying to add show <Black Mirror>
+I, [2015-10-29T17:11:11.785393 #6856]  INFO -- : Added episode <The National Anthem>
+I, [2015-10-29T17:11:11.863202 #6856]  INFO -- : Added episode <Fifteen Million Merits>
+I, [2015-10-29T17:11:11.940932 #6856]  INFO -- : Added episode <The Entire History of You>
+I, [2015-10-29T17:11:12.018758 #6856]  INFO -- : Added episode <Be Right Back>
+I, [2015-10-29T17:11:12.096526 #6856]  INFO -- : Added episode <White Bear>
+I, [2015-10-29T17:11:12.174282 #6856]  INFO -- : Added episode <The Waldo Moment>
+I, [2015-10-29T17:11:12.174793 #6856]  INFO -- : ...completed
+W, [2015-10-29T17:11:17.400275 #6856]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-10-29T17:11:19.285115 #6856]  INFO -- : Deleting entry with id <30902> from dataset 
+I, [2015-10-29T17:11:19.362797 #6856]  INFO -- : Deleting entry with id <30903> from dataset 
+I, [2015-10-29T17:11:19.440632 #6856]  INFO -- : Deleting entry with id <30904> from dataset 
+I, [2015-10-29T17:11:19.518499 #6856]  INFO -- : Deleting entry with id <30905> from dataset 
+I, [2015-10-29T17:11:19.596141 #6856]  INFO -- : Deleting entry with id <30906> from dataset 
+I, [2015-10-29T17:11:19.597530 #6856]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
+I, [2015-10-29T17:11:19.599084 #6856]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
+I, [2015-10-29T17:11:19.665786 #6856]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2015-10-29T17:11:19.730528 #6856]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-10-29T17:11:19.797535 #6856]  INFO -- : No new episodes to add to <The Player>
+I, [2015-10-29T17:11:19.864595 #6856]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-10-29T17:11:19.931760 #6856]  INFO -- : No new episodes to add to <Narcos>
