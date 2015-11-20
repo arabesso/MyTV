@@ -25,11 +25,11 @@ module MyTV
 		def initialize
 			$logger.debug "Connecting to the database"
 
-			if (!File.exist?("MyTV.db")) 
-				File.write("MyTV.db", "")
+			if (!File.exist?("mytv.rb")) 
+				File.write("mytv.rb", "")
 			end
 
-			@DB = Sequel.connect('sqlite://MyTV.db')
+			@DB = Sequel.connect('sqlite://mytv.rb')
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
