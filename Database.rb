@@ -5,7 +5,7 @@ module MyTV
 		def Database.add_show(dataset1, dataset2, showName)
 			# Finding the show
 			obj = Web.search_show(showName)
-			$logger.info "Trying to add show <" + obj['name'] + ">"
+			$logger.debug "Trying to add show <" + obj['name'] + ">"
 
 			# Checks it's not in the database already
 			if dataset1.where(:id => obj['id']).count == 1
@@ -16,12 +16,12 @@ module MyTV
 				dataset1.insert(:id => newshow.id, :name => newshow.name)
 				Database.add_episodes(dataset2, newshow)
 				puts "Added show " + showName
-				$logger.info "...completed"
+				$logger.debug "...completed"
 			end
 
 		rescue => e
-			$logger.error("Exception in add_show trying to add <" + showName + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in add_show trying to add <" + showName + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		end
 
 		# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -36,22 +36,22 @@ module MyTV
 					$logger.warn "The episode <" + i.title + "> is already in the database"
 				else
 					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.title + ">"
+					$logger.debug "Added episode <" + i.title + ">"
 				end
 
 			end
 
 		rescue => e
-			$logger.error("Exception in add_episodes : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in add_episodes : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		end
 
 		# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
 		# PRIVATE=
 		# SLOW METHOD?
-		def Database.addNewEpisodes (dataset, show, lastEpisodeS, lastEpisodeN)
+		def Database.add_new_episodes (dataset, show, lastEpisodeS, lastEpisodeN)
 			id = show.id
-			episodes = show.getEpisodes
+			episodes = show.episodes
 
 			# Quick check if there are new episodes
 			if episodes[-1].season > lastEpisodeS
@@ -65,31 +65,31 @@ module MyTV
 			episodes.each do |i|
 				if i.season > lastEpisodeS
 					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.title + ">"
+					$logger.debug "Added episode <" + i.title + ">"
 				elsif lastEpisodeS == i.season && i.number > lastEpisodeN
 					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.title + ">"
+					$logger.debug "Added episode <" + i.title + ">"
 				end
 			end
 
 		rescue => e
 			puts "Error"
-			$logger.error("Exception in addNewEpisodes trying to add episodes for <" + show.name + "> : " + e.message)
+			$logger.error("Exception in add_new_episodes trying to add episodes for <" + show.name + "> : " + e.message + " [" + e.class.to_s + "]")
 		end
 
 		# Removes an episodes from the database.
 		# PRIVATE?
-		def Database.removeEntry (dataset, id)
+		def Database.remove_entry (dataset, id)
 			if dataset.where(:id => id).count == 1
 				dataset.where(:id => id).delete
-				$logger.info "Deleting entry with id <" + id.to_s + "> from dataset "
+				$logger.debug "Deleting entry with id <" + id.to_s + "> from dataset "
 			else
 				$logger.warn "Couldn't delete entry with id <" + id.to_s + ">. Entry not found."
 			end
 		
 		rescue => e
 			puts "Error"
-			$logger.error("Exception in removeEntry trying to remove item <" + id + "> : " + e.message)
+			$logger.error("Exception in remove_entry trying to remove item <" + id + "> : " + e.message + " [" + e.class.to_s + "]")
 		
 		end
 
@@ -101,7 +101,7 @@ module MyTV
 			# if it is higher, delete watched=true episode
 			dataset2.where(:watched => true).each do |i|
 				if dataset2.where(:show_id => i[:show_id]).count > 1
-					Database.removeEntry(dataset2, i[:id])
+					Database.remove_entry(dataset2, i[:id])
 				else
 					$logger.info "The episode id " + i[:id].to_s + "wasn't deleted because it's the last one."
 				end
@@ -115,30 +115,30 @@ module MyTV
 				lastepn = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:episodeNumber]
 				#puts i[:name]
 				#puts lasteps.to_s + " x " + lastepn.to_s
-				Database.addNewEpisodes(dataset2, show, lasteps, lastepn)
+				Database.add_new_episodes(dataset2, show, lasteps, lastepn)
 			end
 			
 		rescue => e
-			$logger.error("Exception in update : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in update : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
 		# Removes a TVShow and all its episodes
 		# SLOW METHOD?
-		def Database.removeShow(dataset1, dataset2, showid)
+		def Database.remove_show(dataset1, dataset2, showid)
 
 			# Remove episodes of that show
 			dataset2.where(:show_id => showid).each do |i|
-				Database.removeEntry(dataset2, i[:id])
+				Database.remove_entry(dataset2, i[:id])
 			end
 
 			# Removing the show
-			Database.removeEntry(dataset1, showid)
+			Database.remove_entry(dataset1, showid)
 			
 		rescue => e
-			$logger.error("Exception in removeShow trying to remove show <" + showid + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in remove_show trying to remove show <" + showid + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
@@ -158,8 +158,8 @@ module MyTV
 			end
 
 		rescue => e
-			$logger.error("Exception in get_show_id trying to get <" + showname + ">'s id : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in get_show_id trying to get <" + showname + ">'s id : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
@@ -168,8 +168,8 @@ module MyTV
 			dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
 
 		rescue => e
-			$logger.error("Exception in get_episode_id trying to get <" + show + ">\'s S" + season + "E" + episode + " id : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in get_episode_id trying to get <" + show + ">\'s S" + season + "E" + episode + " id : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
@@ -178,41 +178,41 @@ module MyTV
 			dataset.where(:id => episodeid).update(:watched => true)
 		
 		rescue => e
-			$logger.error("Exception in set_watched trying to set episode <" + episodeid + "> as watched : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in set_watched trying to set episode <" + episodeid + "> as watched : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 			
 		end
 
 		
 
 		# Returns a TVShow object. Receives the myShows dataset and the show id
-		def Database.getShow (dataset, id)
+		def Database.get_show (dataset, id)
 			tvshowdata = dataset.where(:id => id).to_a
 			TVShow.new(tvshowdata[0][:name], tvshowdata[0][:id])
 
 		rescue => e
-			$logger.error("Exception in getShow trying to get id <" + id + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in get_show trying to get id <" + id + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
 		# Returns the episodes of a specific show id. Receives the episodes dataset and a showid as parameters
-		def Database.getEpisodes(dataset, showID)
+		def Database.get_episodes(dataset, showID)
 			dataset.where(:show_id => showID)
 			
 		rescue => e
-			$logger.error("Exception in getEpisodes trying to get episodes for show <" + showID + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in get_episodes trying to get episodes for show <" + showID + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
 		# Returns the current number of entries in the given dataset
-		def Database.numberOfEntries (dataset)
+		def Database.number_of_entries (dataset)
 			dataset.count
 
 		rescue => e
-			$logger.error("Exception in numberOfEntries : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in number_of_entries : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
@@ -225,8 +225,8 @@ module MyTV
 			end
 
 		rescue => e
-			$logger.error("Exception in set_show_watched with show <" + showid + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in set_show_watched with show <" + showid + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 
@@ -243,8 +243,8 @@ module MyTV
 		return next_episodes
 
 		rescue => e
-			$logger.error("Exception in next_episodes : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in next_episodes : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 

@@ -7,17 +7,17 @@ module MyTV
 				Database.add_show(dataset1, dataset2, x)
 			end
 		rescue => e
-			$logger.error("Exception importing file <" + filename + "> : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception importing file <" + filename + "> : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		end
 
 		# Creates a file ready for importing from http://www.myepisodes.com/myshows/manage/.
 		def Import.myepisodes_import(user, pass)
 			agent = Mechanize.new
 
-			page = agent.get 'http://www.myepisodes.com/login.php'
+			page = agent.get "http://www.myepisodes.com/login.php"
 
-			loginform = page.forms[3]
+			loginform = page.forms[1]
 			loginform.username = user
 			loginform.password = pass
 			loginform.u = "myshows/manage/"
@@ -31,6 +31,9 @@ module MyTV
 			end
 			file.close
 
+		rescue => e
+			$logger.error("Exception importing from myEpisodes : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		end
 
 	end

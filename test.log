@@ -413,3 +413,27 @@ I, [2015-11-23T19:52:33.300902 #5132]  INFO -- : Deleting entry with id <414658>
 I, [2015-11-23T19:52:33.301419 #5132]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
 I, [2015-11-23T19:52:34.404378 #5132]  INFO -- : No new episodes to add to <Quantico>
 I, [2015-11-23T19:52:34.510016 #5132]  INFO -- : No new episodes to add to <Limitless>
+E, [2015-11-23T22:58:40.454293 #2775] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T23:00:43.790210 #2887] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T23:01:50.372420 #2919] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T23:02:45.154802 #2992] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T23:04:02.670726 #3079] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass [NoMethodError]
+E, [2015-11-23T23:04:26.165471 #3162] ERROR -- : Exception in add_show trying to add <dfsighsogrds> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=dfsighsogrds -- unhandled response [Mechanize::ResponseCodeError]
+W, [2015-11-23T23:05:14.979554 #3165]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T23:05:15.240308 #3165] ERROR -- : Exception in get_show_id trying to get <sdkfhusagf>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=sdkfhusagf -- unhandled response [Mechanize::ResponseCodeError]
+W, [2015-11-23T23:05:15.241610 #3165]  WARN -- : Couldn't delete entry with id <>. Entry not found.
+E, [2015-11-23T23:06:22.847755 #3170] ERROR -- : Exception importing file <asdiahsda> : No such file or directory @ rb_sysopen - asdiahsda [Errno::ENOENT]
+I, [2015-11-23T23:08:49.783938 #3303]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
+I, [2015-11-23T23:08:50.239820 #3303]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-11-23T23:08:50.334832 #3303]  INFO -- : No new episodes to add to <Into The Badlands>
+I, [2015-11-23T23:08:50.436078 #3303]  INFO -- : No new episodes to add to <Limitless>
+W, [2015-11-23T23:09:00.719667 #3303]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2015-11-23T23:09:01.194026 #3303]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T23:09:03.653035 #3303]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
+I, [2015-11-23T23:09:03.759480 #3303]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-11-23T23:09:03.856399 #3303]  INFO -- : No new episodes to add to <Into The Badlands>
+I, [2015-11-23T23:09:03.957897 #3303]  INFO -- : No new episodes to add to <Limitless>
+E, [2015-11-24T00:02:05.755081 #5102] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
+E, [2015-11-24T00:02:35.181513 #5104] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
+E, [2015-11-24T00:03:05.220677 #5108] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
+E, [2015-11-24T00:03:19.527484 #5110] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]

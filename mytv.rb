@@ -5,6 +5,7 @@ require 'mechanize'
 require 'nokogiri'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
+#require 'benchmark'
 
 require_relative 'Web'
 require_relative 'TVShow'
@@ -19,7 +20,7 @@ module MyTV
 		PROMPT = "MyTV > "
 
 		$logger = Logger.new("test.log", "daily")
-		$logger.level = Logger::DEBUG
+		$logger.level = Logger::INFO
 
 		def initialize
 			$logger.debug "Connecting to the database"
@@ -61,8 +62,8 @@ module MyTV
 			end
 
 		rescue => e
-			$logger.error("Exception in create_tables : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in create_tables : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
 		end
 		
@@ -131,7 +132,7 @@ module MyTV
 					puts
 
 				when /\Aremoveshow\z/i
-					Database.removeShow(@myShows, @episodes, Database.get_show_id(@myShows, params.join(" ")))
+					Database.remove_show(@myShows, @episodes, Database.get_show_id(@myShows, params.join(" ")))
 					puts
 
 				when /\Aupdate\z/i
@@ -181,8 +182,11 @@ module MyTV
 				when /\Adownload\z/i # download 1 2 Quantico
 					showname = params.slice(2, params.size).join(" ")
 					magnet = Web.get_magnet_link(params[0], params[1], showname).to_s
-					exec = "'deluge-gtk \"" + magnet + "\"'"
-					Process.spawn(exec)
+					exec = "deluge-gtk \"" + magnet + "\" &> /dev/null"
+					Process.detach(Process.spawn(exec))
+					# 
+					sleep(1)
+					puts
 
 				when /\Aimport\z/i # import <filename>
 					if params.size == 0
@@ -211,22 +215,3 @@ module MyTV
 
 	end
 end
-
-=begin
-
-TODO:
-Solve formatting problem when deluge isn't found. Puts after spawning the process doesn't solve it
-Find subtitles
-attr accessor (DB?)
-Support for importing from files with spaces (my shows.txt)
-
-Exceptions:
-class MyError < StandardError
-end
-raise MyError
-
-Gem structure
-Later on
-Follow https://github.com/mthssdrbrg/my_episodes/tree/master/lib/my_episodes
-
-=end

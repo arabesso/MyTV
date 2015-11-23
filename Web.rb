@@ -8,8 +8,8 @@ module MyTV
 		
 		TVMAZE_URL = 	"http://api.tvmaze.com"
 
-		def Web.get_show_id(showName)
-			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
+		def Web.get_show_id(show_name)
+			url = TVMAZE_URL + "/singlesearch/shows?q=" + show_name # &embed=episodes
 
 			agent = Mechanize.new
 			page = agent.get(url).content
@@ -26,8 +26,8 @@ module MyTV
 		# "schedule"=>{"time"=>"22:00", "days"=>["Thursday"]}
 		# "updated"=>1443264033
 		# "_links"=>{previousepisode"=>{"href"=>"http://api.tvmaze.com/episodes/182003"}, "nextepisode"=>{"href"=>"http://api.tvmaze.com/episodes/215496"}}
-		def Web.search_show(showName)
-			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
+		def Web.search_show(show_name)
+			url = TVMAZE_URL + "/singlesearch/shows?q=" + show_name # &embed=episodes
 
 			agent = Mechanize.new
 			page = agent.get(url).content
@@ -37,7 +37,7 @@ module MyTV
 			return obj
 		end
 
-		def Web.getEpisodes(showID)
+		def Web.get_episodes(showID)
 			url = TVMAZE_URL + "/shows/" + showID.to_s + "/episodes" #?specials=1
 			
 			agent = Mechanize.new
@@ -89,8 +89,8 @@ module MyTV
 			# or tbody > tr > td (second one) > div detname > first link.click > parse new page
 
 		rescue => e
-			$logger.error("Exception in get_magnet_link : " + e.message)
-			puts "Error: " + e.message
+			$logger.error("Exception in get_magnet_link : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 
 		end
 
@@ -109,8 +109,8 @@ module MyTV
 			page = agent.get(uri)
 			
 		rescue => e
-			$logger.error("Exception in get_subtitles : " + e.message)
-			puts "Error: " + e.message	
+			$logger.error("Exception in get_subtitles : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"	
 		end
 
 	end
@@ -125,8 +125,8 @@ end
 			<a onmouseover="return overlib('<img src=\'//dyncdn.me/static/20/tvdb/314002_small.jpg\' border=0>')" onmouseout="return nd();" 
 				href="/torrent/kh6l95s" title="The Player 2015 S01E01 HDTV XviD-FUM[ettv]">
 	
-	def Web.searchShow(showName)
-		url = TVMAZE_URL + "/search/shows?q=" + showName
+	def Web.searchShow(show_name)
+		url = TVMAZE_URL + "/search/shows?q=" + show_name
 		resp = Net::HTTP.get_response(URI.parse(url))
 		resp_text = resp.body
 

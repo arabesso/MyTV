@@ -6,23 +6,19 @@ module MyTV
 		def initialize(n, id)
 			@name = n
 			@id = id
-			loadEpisodes(id)
+			load_episodes(id)
 			
 		end
 
-		def getEpisodes
-			@episodes
-		end
-
-		def loadEpisodes(id)
+		def load_episodes(id)
 			@episodes = Array.new()
-			episodelist = Web.getEpisodes(id)
+			episodelist = Web.get_episodes(id)
 			episodelist.each do |i|
 				@episodes << Episode.new(i['name'].to_s, i['season'], i['number'], i['airdate'], i['id'])
 			end
 
 			rescue => e
-			$logger.error("Exception in loadEpisodes trying to add episodes for <" + @name + "> : " + e.message)
+			$logger.error("Exception in load_episodes trying to add episodes for <" + @name + "> : " + e.message)
 			puts "Error: " + e.message
 		end
 

@@ -10,10 +10,13 @@ MyTV will only keep in the database those episodes you haven't watched yet in or
 
 ## Installation
 
-1. Install prerequisites (ruby)
+1. Install prerequisites (ruby and rubygems)
 2. Download the files from GitHub.
 3. Open the terminal and move to the folder where you placed the files.
-4. Run ruby MyTV.rb
+
+##Compatibility
+
+This app should work in every platform. However, the download functionality requires an UNIX-based system with Deluge installed.
 
 ## Usage
 
@@ -21,29 +24,68 @@ Execute the run executable in the terminal (./run). This will start the MyTV CLI
 
 Available commands:
 
-help													Prints the available commands.
-print													Prints basic information about the shows stored
-	-a													Prints detailed information about each show and episode stored.
-addshow <showname>						Searchs showname and adds it (along with its episodes) to the database.
-removeshow <showname>					Removes showname and all its episodes from the database
-update												Updates the database. Pulls new episodes, removes episodes you've set as watched.
-watched
-	-s <showname>								Sets all the episodes for showname as watched.
-	-e <season> <episode> <showname>	Sets as watched the specified episode,
-	-e <season> <episode1>-<episode2> <showname>	Sets as watched all the episodes in the given interval
-nexteps												Prints the next non-watched episodes of each show ordered by airing date.
-import
-	<filename>									Imports the shows from a given file. One show name per line.
-	-e <user> <pass>						Imports all the non-ignored shows in your MyEpisodes account.
-download <season> <episode> <showname>	Opens deluge with a magnet link for the specified show.
-exit													Exits the program
+Print all the available commands:
 
+    help
+
+Prints basic information about the shows stored
+
+    print
+
+Prints detailed information about each show and episode stored.
+
+    print -a
+
+Adds a show and all its episodes to the database
+
+    addshow <showname>
+
+Removes a show and all its episodes from the database
+
+    removeshow <showname>
+
+Updates the database. Pulls new episodes and removes episodes you've set as watched.
+
+    update
+
+Sets all the episodes for a show as watched.
+
+    watched -s <showname>
+
+Sets as watched the specified episode
+
+    watched -e <season> <episode> <showname>
+
+Sets as watched all the episodes from interval [episode1, episode2]
+
+    watched -e <season> <episode1>-<episode2> <showname>
+
+Prints the next non-watched episodes of each show ordered by airing date.
+
+    nexteps
+
+Imports the shows from a given file. One show name per line.
+
+    import <filename>
+
+Imports all the non-ignored shows in your MyEpisodes account.
+	
+    import -e <user> <pass>
+
+Opens deluge with a magnet link for the specified show.
+
+    download <season> <episode> <showname>
+
+Exits the program
+
+    exit
 
 ## Important files
-MyTV.rb: Main program.
-MyTV.db: This is the database where shows are stored.
-README.md: This file
-test.log: MyTV's log
+mytv.db: This is the database where shows are stored. 
+
+README.md: This file.
+
+test.log: MyTV's log.
 
 ## Log
 
@@ -58,16 +100,18 @@ DEBUG, INFO, WARN, ERROR, FATAL
 
 ## Troubleshooting
 
-Common errors and solutions:
+###Common errors and solutions:
 
-getaddrinfo: Name or service not known
+*getaddrinfo: Name or service not known*
 
 Check your Internet connection
 
-A JSON text must at least contain two octets!
+*Error: 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=---- -- unhandled response [Mechanize::ResponseCodeError]*
 
 The show couldn't be found in TVMaze's database.
 
-undefined method `[]' for nil:NilClass
+*undefined method `[]' for nil:NilClass [NoMethodError]*
 
 When setting episodes as watched: episode isn't in the database
+
+* Modifying the mytv.db file can result in errors when using mytv.
