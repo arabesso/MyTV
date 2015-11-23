@@ -263,13 +263,13 @@ module MyTV
 
 		# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
 		def Database.printFull(dataset1, dataset2)
-			dataset1.order(:name).each do |i|
-				puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ")"
-				dataset2.where(:show_id => i[:id]).each do |j|
-					seasonNumber =  j[:seasonNumber]<10 ? "0" + j[:seasonNumber].to_s : j[:seasonNumber].to_s
-					episodeNumber = j[:episodeNumber]<10 ? "0" + j[:episodeNumber].to_s : j[:episodeNumber].to_s
-					watch = j[:watched]? "watched" : "not watched"
-					puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + j[:title].to_s + " - " + watch
+			dataset1.order(:name).each do |show|
+				puts "TV Show <" + show[:name] + "> (id " + show[:id].to_s + ")"
+				dataset2.where(:show_id => show[:id]).each do |ep|
+					seasonNumber =  ep[:seasonNumber]<10 ? "0" + ep[:seasonNumber].to_s : ep[:seasonNumber].to_s
+					episodeNumber = ep[:episodeNumber]<10 ? "0" + ep[:episodeNumber].to_s : ep[:episodeNumber].to_s
+					watch = ep[:watched]? "watched" : "not watched"
+					puts "\tS" + seasonNumber + "E" + episodeNumber + " - " + ep[:title].to_s + " - " + watch
 				end
 			end
 			puts

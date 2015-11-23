@@ -2,11 +2,11 @@ require "rubygems"
 require "sequel"
 require "date"
 #require 'net/http'
-require 'mechanize'
-require 'nokogiri'
+require "mechanize"
+require "nokogiri"
 #require 'digest'
-require 'json'
-require 'logger' # debug, info, warn, error, fatal
+require "json"
+require "logger" # debug, info, warn, error, fatal
 
 require_relative "Web"
 require_relative "TVShow"
@@ -25,18 +25,18 @@ module MyTV
 		def initialize
 			$logger.debug "Connecting to the database"
 
-			if (!File.exist?("mytv.rb")) 
-				File.write("mytv.rb", "")
+			if (!File.exist?("mytv.db")) 
+				File.write("mytv.db", "")
 			end
 
-			@DB = Sequel.connect('sqlite://mytv.rb')
+			@DB = Sequel.connect('sqlite://mytv.db')
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			else
 				$logger.debug "Creating tables... "
-				createTables
+				create_tables
 				@myShows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			end
@@ -44,7 +44,7 @@ module MyTV
 		end
 
 		# Creates the TVShows and Episodes tables
-		def createTables
+		def create_tables
 
 			@DB.create_table :TVShows do
 	  		Integer :id, :primary_key=>true #TVMAZE ID
@@ -62,7 +62,7 @@ module MyTV
 			end
 
 		rescue => e
-			$logger.error("Exception in createTables : " + e.message)
+			$logger.error("Exception in create_tables : " + e.message)
 			puts "Error: " + e.message
 		
 		end
@@ -83,7 +83,7 @@ module MyTV
 
 		end
 
-		def printNextEpisodes(dataset1, nextEpisodes)
+		def print_next_episodes(dataset1, nextEpisodes)
 			nextEpisodes = nextEpisodes.sort_by { |hsh| hsh[:airdate] }
 
 			nextEpisodes.each do |i|
@@ -140,7 +140,7 @@ module MyTV
 					puts
 
 				when /\Anexteps\z/i
-					printNextEpisodes(@myShows, Database.nextEpisodes(@myShows, @episodes))
+					print_next_episodes(@myShows, Database.nextEpisodes(@myShows, @episodes))
 
 				when /\Awatch\z/i
 					if params.first == "-s" && params.size >=2 # watch -s Quantico 

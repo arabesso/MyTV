@@ -125,3 +125,28 @@ I, [2015-10-29T17:11:19.730528 #6856]  INFO -- : No new episodes to add to <Quan
 I, [2015-10-29T17:11:19.797535 #6856]  INFO -- : No new episodes to add to <The Player>
 I, [2015-10-29T17:11:19.864595 #6856]  INFO -- : No new episodes to add to <Limitless>
 I, [2015-10-29T17:11:19.931760 #6856]  INFO -- : No new episodes to add to <Narcos>
+D, [2015-11-22T19:07:26.851274 #11778] DEBUG -- : Connecting to the database
+D, [2015-11-22T19:07:26.965316 #11778] DEBUG -- : Creating tables... 
+E, [2015-11-22T19:07:26.965871 #11778] ERROR -- : Exception in create_tables : SQLite3::NotADatabaseException: file is encrypted or is not a database
+D, [2015-11-22T19:07:26.966044 #11778] DEBUG -- : ...completed
+E, [2015-11-22T19:07:30.143797 #11778] ERROR -- : Exception in nextEpisodes : SQLite3::NotADatabaseException: file is encrypted or is not a database
+D, [2015-11-22T19:07:51.070940 #11883] DEBUG -- : Connecting to the database
+D, [2015-11-22T19:07:51.092346 #11883] DEBUG -- : Creating tables... 
+E, [2015-11-22T19:07:51.092664 #11883] ERROR -- : Exception in create_tables : SQLite3::NotADatabaseException: file is encrypted or is not a database
+D, [2015-11-22T19:07:51.092778 #11883] DEBUG -- : ...completed
+D, [2015-11-22T19:09:22.272422 #12596] DEBUG -- : Connecting to the database
+D, [2015-11-22T19:09:22.293802 #12596] DEBUG -- : Creating tables... 
+D, [2015-11-22T19:09:22.466010 #12596] DEBUG -- : ...completed
+I, [2015-11-22T19:09:29.986144 #12596]  INFO -- : Trying to add show <Limitless>
+I, [2015-11-22T19:09:30.196656 #12596]  INFO -- : Added episode <Pilot>
+I, [2015-11-22T19:09:30.246711 #12596]  INFO -- : Added episode <Badge! Gun!>
+I, [2015-11-22T19:09:30.296668 #12596]  INFO -- : Added episode <The Legend of Marcos Ramos>
+I, [2015-11-22T19:09:30.371690 #12596]  INFO -- : Added episode <Page 44>
+I, [2015-11-22T19:09:30.421746 #12596]  INFO -- : Added episode <Personality Crisis>
+I, [2015-11-22T19:09:30.471861 #12596]  INFO -- : Added episode <Side Effects May Include...>
+I, [2015-11-22T19:09:30.538578 #12596]  INFO -- : Added episode <Brian Finch's Black Op>
+I, [2015-11-22T19:09:30.605136 #12596]  INFO -- : Added episode <When Pirates Pirate Pirates>
+I, [2015-11-22T19:09:30.671803 #12596]  INFO -- : Added episode <Headquarters!>
+I, [2015-11-22T19:09:30.738448 #12596]  INFO -- : Added episode <Arm-Ageddon>
+I, [2015-11-22T19:09:30.788460 #12596]  INFO -- : Added episode <TBA>
+I, [2015-11-22T19:09:30.788596 #12596]  INFO -- : ...completed

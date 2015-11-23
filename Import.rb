@@ -1,3 +1,5 @@
+require "mechanize"
+
 module MyTV
 	class Import
 		def Import.import(dataset1, dataset2, filename)
