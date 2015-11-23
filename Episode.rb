@@ -1,35 +1,22 @@
 module MyTV
 	class Episode
+
+		attr_reader :title, :season, :id, :number, :airdate
+
 		def initialize (n, s, e, air, id)
-			@title, @seasonNumber, @episodeNumber = n, s, e
+			@title, @season, @number = n, s, e
 			@id = id
 			@airdate = Date.parse(air)#.next  # YYYY-MM-DD
 			@watched = false
 			
 		end
 	
-		def getTitle
-			@title
-		end
-
-		def getSeason
-			@seasonNumber
-		end
-
-		def getID
-			@id
-		end
-
-		def getNumber
-			@episodeNumber
-		end
-
-		def getAirdate
-			@airdate
-		end
-
 		def watched
 			@watched=true
+		end
+
+		def to_s
+			puts "This is the Episode named " + @title + " S" + @season + "E" + @number
 		end
 
 	end

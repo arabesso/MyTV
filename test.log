@@ -150,3 +150,266 @@ I, [2015-11-22T19:09:30.671803 #12596]  INFO -- : Added episode <Headquarters!>
 I, [2015-11-22T19:09:30.738448 #12596]  INFO -- : Added episode <Arm-Ageddon>
 I, [2015-11-22T19:09:30.788460 #12596]  INFO -- : Added episode <TBA>
 I, [2015-11-22T19:09:30.788596 #12596]  INFO -- : ...completed
+D, [2015-11-23T18:55:31.526905 #4461] DEBUG -- : Connecting to the database
+D, [2015-11-23T18:55:31.686814 #4461] DEBUG -- : ...completed
+D, [2015-11-23T19:21:07.125313 #4624] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:21:07.144570 #4624] DEBUG -- : ...completed
+I, [2015-11-23T19:21:12.573278 #4624]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:21:12.810870 #4624]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:21:12.860946 #4624]  INFO -- : Added episode <America>
+I, [2015-11-23T19:21:12.919346 #4624]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:21:12.977753 #4624]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:21:13.027652 #4624]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:21:13.085954 #4624]  INFO -- : Added episode <God>
+I, [2015-11-23T19:21:13.144321 #4624]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:21:13.202730 #4624]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:21:13.261053 #4624]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:21:13.335884 #4624]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:21:13.394472 #4624]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:21:13.452601 #4624]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:21:13.452722 #4624]  INFO -- : ...completed
+W, [2015-11-23T19:21:24.480185 #4624]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T19:21:24.966624 #4624] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:26:04.681581 #4662] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:26:04.700971 #4662] DEBUG -- : ...completed
+W, [2015-11-23T19:26:11.113880 #4662]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T19:26:11.403680 #4662] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:26:29.365059 #4664] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:26:29.384320 #4664] DEBUG -- : ...completed
+E, [2015-11-23T19:26:33.466425 #4664] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+W, [2015-11-23T19:28:15.183804 #4664]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T19:28:15.466178 #4664] ERROR -- : Exception in get_show_id trying to get <Quantico[A>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Quantico%1B%5BA -- unhandled response
+E, [2015-11-23T19:28:15.467286 #4664] ERROR -- : Exception in get_episode_id trying to get <Quantico[A>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:28:23.554691 #4669] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:28:23.574268 #4669] DEBUG -- : ...completed
+E, [2015-11-23T19:28:32.176331 #4669] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:29:07.142946 #4675] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:29:07.162503 #4675] DEBUG -- : ...completed
+E, [2015-11-23T19:29:10.175506 #4675] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:30:05.190506 #4679] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:30:05.211108 #4679] DEBUG -- : ...completed
+W, [2015-11-23T19:30:09.341964 #4679]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T19:30:09.647644 #4679] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:30:30.265255 #4683] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:30:30.284464 #4683] DEBUG -- : ...completed
+E, [2015-11-23T19:30:34.534025 #4683] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:31:59.870610 #4697] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:31:59.889380 #4697] DEBUG -- : ...completed
+W, [2015-11-23T19:32:03.107115 #4697]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-11-23T19:32:03.404683 #4697] ERROR -- : Exception in get_episode_id trying to get <QUantico>'s id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T19:33:20.809926 #4697] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+E, [2015-11-23T19:33:20.811240 #4697] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:33:49.282268 #4703] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:33:49.301315 #4703] DEBUG -- : ...completed
+E, [2015-11-23T19:33:52.497921 #4703] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:34:25.646631 #4792] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:34:25.666353 #4792] DEBUG -- : ...completed
+E, [2015-11-23T19:34:29.433545 #4792] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:38:35.969615 #4895] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:38:35.989376 #4895] DEBUG -- : ...completed
+E, [2015-11-23T19:38:38.891814 #4895] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:38:57.518525 #4897] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:38:57.537821 #4897] DEBUG -- : ...completed
+E, [2015-11-23T19:39:00.428603 #4897] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:39:28.635542 #4900] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:39:28.654866 #4900] DEBUG -- : ...completed
+E, [2015-11-23T19:39:32.010015 #4900] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
+D, [2015-11-23T19:40:59.648842 #4911] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:40:59.668458 #4911] DEBUG -- : ...completed
+D, [2015-11-23T19:41:30.626810 #4916] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:41:30.645962 #4916] DEBUG -- : ...completed
+I, [2015-11-23T19:41:41.051438 #4916]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:41:41.118026 #4916]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:41:41.218038 #4916]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:41:41.276329 #4916]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:41:41.334738 #4916]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:41:41.392986 #4916]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:41:41.451396 #4916]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:41:41.551403 #4916]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:41:41.609739 #4916]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:41:41.668020 #4916]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:41:41.726354 #4916]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:41:41.809758 #4916]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:41:41.876473 #4916]  INFO -- : Deleting entry with id <2114> from dataset 
+I, [2015-11-23T19:41:48.633357 #4916]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:41:48.852726 #4916]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:41:48.911013 #4916]  INFO -- : Added episode <America>
+I, [2015-11-23T19:41:48.961101 #4916]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:41:49.011190 #4916]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:41:49.061149 #4916]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:41:49.119462 #4916]  INFO -- : Added episode <God>
+I, [2015-11-23T19:41:49.177694 #4916]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:41:49.252911 #4916]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:41:49.303260 #4916]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:41:49.386156 #4916]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:41:49.436249 #4916]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:41:49.494447 #4916]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:41:49.494610 #4916]  INFO -- : ...completed
+D, [2015-11-23T19:43:03.263314 #5040] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:43:03.282425 #5040] DEBUG -- : ...completed
+W, [2015-11-23T19:43:06.203103 #5040]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T19:43:06.525044 #5040]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:43:06.591522 #5040]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:43:06.650109 #5040]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:43:06.716520 #5040]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:43:06.775074 #5040]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:43:06.841601 #5040]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:43:06.925029 #5040]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:43:07.000081 #5040]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:43:07.066831 #5040]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:43:07.125016 #5040]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:43:07.191697 #5040]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:43:07.241700 #5040]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:43:07.291664 #5040]  INFO -- : Deleting entry with id <2114> from dataset 
+I, [2015-11-23T19:43:08.717613 #5040]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:43:08.942003 #5040]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:43:09.017176 #5040]  INFO -- : Added episode <America>
+I, [2015-11-23T19:43:09.067012 #5040]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:43:09.117126 #5040]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:43:09.183869 #5040]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:43:09.250403 #5040]  INFO -- : Added episode <God>
+I, [2015-11-23T19:43:09.317213 #5040]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:43:09.375613 #5040]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:43:09.433828 #5040]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:43:09.492183 #5040]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:43:09.550415 #5040]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:43:09.608892 #5040]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:43:09.609061 #5040]  INFO -- : ...completed
+D, [2015-11-23T19:44:03.530387 #5048] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:44:03.550214 #5048] DEBUG -- : ...completed
+W, [2015-11-23T19:44:08.033423 #5048]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T19:44:08.377959 #5048]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:44:08.444627 #5048]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:44:08.511392 #5048]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:44:08.594575 #5048]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:44:08.661269 #5048]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:44:08.736413 #5048]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:44:08.802944 #5048]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:44:08.869641 #5048]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:44:08.927957 #5048]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:44:08.994736 #5048]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:44:09.044615 #5048]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:44:09.094805 #5048]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:44:09.170136 #5048]  INFO -- : Deleting entry with id <2114> from dataset 
+I, [2015-11-23T19:44:12.053960 #5048]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:44:12.270397 #5048]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:44:12.337062 #5048]  INFO -- : Added episode <America>
+I, [2015-11-23T19:44:12.403598 #5048]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:44:12.486966 #5048]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:44:12.553809 #5048]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:44:12.620456 #5048]  INFO -- : Added episode <God>
+I, [2015-11-23T19:44:12.678844 #5048]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:44:12.737003 #5048]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:44:12.812862 #5048]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:44:12.870575 #5048]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:44:12.928742 #5048]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:44:13.003858 #5048]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:44:13.004032 #5048]  INFO -- : ...completed
+D, [2015-11-23T19:45:51.561593 #5081] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:45:51.581035 #5081] DEBUG -- : ...completed
+W, [2015-11-23T19:45:53.476165 #5081]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T19:45:53.831120 #5081]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:45:53.881313 #5081]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:45:53.930985 #5081]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:45:53.989310 #5081]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:45:54.047665 #5081]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:45:54.106136 #5081]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:45:54.164368 #5081]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:45:54.222662 #5081]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:45:54.281197 #5081]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:45:54.339460 #5081]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:45:54.397868 #5081]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:45:54.456089 #5081]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:45:54.514546 #5081]  INFO -- : Deleting entry with id <2114> from dataset 
+I, [2015-11-23T19:45:57.145124 #5081]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:45:57.373375 #5081]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:45:57.431651 #5081]  INFO -- : Added episode <America>
+I, [2015-11-23T19:45:57.489926 #5081]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:45:57.556798 #5081]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:45:57.615186 #5081]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:45:57.681647 #5081]  INFO -- : Added episode <God>
+I, [2015-11-23T19:45:57.756861 #5081]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:45:57.840102 #5081]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:45:57.898528 #5081]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:45:57.948496 #5081]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:45:58.015278 #5081]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:45:58.131924 #5081]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:45:58.132108 #5081]  INFO -- : ...completed
+W, [2015-11-23T19:48:39.101678 #5081]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T19:48:39.613001 #5081]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:48:39.687950 #5081]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:48:39.746348 #5081]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:48:39.804540 #5081]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:48:39.863069 #5081]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:48:39.921244 #5081]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:48:39.979713 #5081]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:48:40.037974 #5081]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:48:40.096479 #5081]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:48:40.171417 #5081]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:48:40.229827 #5081]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:48:40.288033 #5081]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:48:40.346508 #5081]  INFO -- : Deleting entry with id <2114> from dataset 
+D, [2015-11-23T19:48:45.145862 #5102] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:48:45.165316 #5102] DEBUG -- : ...completed
+I, [2015-11-23T19:48:50.259346 #5102]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:48:50.490231 #5102]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:48:50.540070 #5102]  INFO -- : Added episode <America>
+I, [2015-11-23T19:48:50.606772 #5102]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:48:50.665151 #5102]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:48:50.740054 #5102]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:48:50.798384 #5102]  INFO -- : Added episode <God>
+I, [2015-11-23T19:48:50.856781 #5102]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:48:50.923564 #5102]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:48:50.998392 #5102]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:48:51.056848 #5102]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:48:51.123467 #5102]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:48:51.182130 #5102]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:48:51.182266 #5102]  INFO -- : ...completed
+W, [2015-11-23T19:50:23.096737 #5102]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-11-23T19:50:23.608513 #5102]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:50:23.666703 #5102]  INFO -- : Deleting entry with id <209150> from dataset 
+I, [2015-11-23T19:50:23.725025 #5102]  INFO -- : Deleting entry with id <209151> from dataset 
+I, [2015-11-23T19:50:23.791772 #5102]  INFO -- : Deleting entry with id <209152> from dataset 
+I, [2015-11-23T19:50:23.850230 #5102]  INFO -- : Deleting entry with id <267348> from dataset 
+I, [2015-11-23T19:50:23.916868 #5102]  INFO -- : Deleting entry with id <365300> from dataset 
+I, [2015-11-23T19:50:23.975211 #5102]  INFO -- : Deleting entry with id <394067> from dataset 
+I, [2015-11-23T19:50:24.033585 #5102]  INFO -- : Deleting entry with id <401013> from dataset 
+I, [2015-11-23T19:50:24.125159 #5102]  INFO -- : Deleting entry with id <453268> from dataset 
+I, [2015-11-23T19:50:24.208637 #5102]  INFO -- : Deleting entry with id <461951> from dataset 
+I, [2015-11-23T19:50:24.266814 #5102]  INFO -- : Deleting entry with id <461952> from dataset 
+I, [2015-11-23T19:50:24.350277 #5102]  INFO -- : Deleting entry with id <471071> from dataset 
+I, [2015-11-23T19:50:24.408652 #5102]  INFO -- : Deleting entry with id <2114> from dataset 
+D, [2015-11-23T19:50:26.510969 #5120] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:50:26.531285 #5120] DEBUG -- : ...completed
+I, [2015-11-23T19:50:29.761662 #5120]  INFO -- : Trying to add show <Quantico>
+I, [2015-11-23T19:50:29.992929 #5120]  INFO -- : Added episode <Run>
+I, [2015-11-23T19:50:30.051421 #5120]  INFO -- : Added episode <America>
+I, [2015-11-23T19:50:30.109633 #5120]  INFO -- : Added episode <Cover>
+I, [2015-11-23T19:50:30.176503 #5120]  INFO -- : Added episode <Kill>
+I, [2015-11-23T19:50:30.234844 #5120]  INFO -- : Added episode <Found>
+I, [2015-11-23T19:50:30.293121 #5120]  INFO -- : Added episode <God>
+I, [2015-11-23T19:50:30.351472 #5120]  INFO -- : Added episode <Go>
+I, [2015-11-23T19:50:30.443114 #5120]  INFO -- : Added episode <Over>
+I, [2015-11-23T19:50:30.501540 #5120]  INFO -- : Added episode <Guilty>
+I, [2015-11-23T19:50:30.559875 #5120]  INFO -- : Added episode <Quantico>
+I, [2015-11-23T19:50:30.618210 #5120]  INFO -- : Added episode <Inside>
+I, [2015-11-23T19:50:30.676608 #5120]  INFO -- : Added episode <TBA>
+I, [2015-11-23T19:50:30.676726 #5120]  INFO -- : ...completed
+D, [2015-11-23T19:52:16.107845 #5132] DEBUG -- : Connecting to the database
+D, [2015-11-23T19:52:16.126814 #5132] DEBUG -- : ...completed
+I, [2015-11-23T19:52:21.048623 #5132]  INFO -- : Deleting entry with id <167671> from dataset 
+I, [2015-11-23T19:52:21.436779 #5132]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-11-23T19:52:21.529967 #5132]  INFO -- : No new episodes to add to <Limitless>
+I, [2015-11-23T19:52:32.759244 #5132]  INFO -- : Deleting entry with id <211775> from dataset 
+I, [2015-11-23T19:52:32.817553 #5132]  INFO -- : Deleting entry with id <212079> from dataset 
+I, [2015-11-23T19:52:32.875913 #5132]  INFO -- : Deleting entry with id <277890> from dataset 
+I, [2015-11-23T19:52:32.934176 #5132]  INFO -- : Deleting entry with id <295551> from dataset 
+I, [2015-11-23T19:52:32.992657 #5132]  INFO -- : Deleting entry with id <295552> from dataset 
+I, [2015-11-23T19:52:33.050952 #5132]  INFO -- : Deleting entry with id <313794> from dataset 
+I, [2015-11-23T19:52:33.125895 #5132]  INFO -- : Deleting entry with id <361474> from dataset 
+I, [2015-11-23T19:52:33.184314 #5132]  INFO -- : Deleting entry with id <394059> from dataset 
+I, [2015-11-23T19:52:33.242693 #5132]  INFO -- : Deleting entry with id <401017> from dataset 
+I, [2015-11-23T19:52:33.300902 #5132]  INFO -- : Deleting entry with id <414658> from dataset 
+I, [2015-11-23T19:52:33.301419 #5132]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
+I, [2015-11-23T19:52:34.404378 #5132]  INFO -- : No new episodes to add to <Quantico>
+I, [2015-11-23T19:52:34.510016 #5132]  INFO -- : No new episodes to add to <Limitless>

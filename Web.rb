@@ -8,11 +8,12 @@ module MyTV
 		
 		TVMAZE_URL = 	"http://api.tvmaze.com"
 
-		def Web.getShowID(showName)
-			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName
+		def Web.get_show_id(showName)
+			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
+
 			agent = Mechanize.new
 			page = agent.get(url).content
-
+			
 			obj = JSON.parse(page)
 
 			obj['id']
@@ -25,13 +26,15 @@ module MyTV
 		# "schedule"=>{"time"=>"22:00", "days"=>["Thursday"]}
 		# "updated"=>1443264033
 		# "_links"=>{previousepisode"=>{"href"=>"http://api.tvmaze.com/episodes/182003"}, "nextepisode"=>{"href"=>"http://api.tvmaze.com/episodes/215496"}}
-		def Web.searchShowFast(showName)
+		def Web.search_show(showName)
 			url = TVMAZE_URL + "/singlesearch/shows?q=" + showName # &embed=episodes
 
 			agent = Mechanize.new
 			page = agent.get(url).content
 			
 			obj = JSON.parse(page)
+
+			return obj
 		end
 
 		def Web.getEpisodes(showID)
@@ -41,6 +44,8 @@ module MyTV
 			page = agent.get(url).content
 			
 			obj = JSON.parse(page)
+
+			return obj
 			
 		end
 
@@ -51,7 +56,7 @@ module MyTV
 		TPB_URL = 	"https://thehiddenbay.me/search/"
 		GROUPS = ["LOL", "BATV", "DIMENSION", "FLEET", "KILLERS"]
 
-		def Web.getMagnetLink(season, episode, showname)
+		def Web.get_magnet_link(season, episode, showname)
 			search = Array.new
 			search << showname.split(" ")
 			
@@ -84,12 +89,12 @@ module MyTV
 			# or tbody > tr > td (second one) > div detname > first link.click > parse new page
 
 		rescue => e
-			$logger.error("Exception in getMagnetLink : " + e.message)
+			$logger.error("Exception in get_magnet_link : " + e.message)
 			puts "Error: " + e.message
 
 		end
 
-		def Web.getTorrentLink()
+		def Web.get_torrent_link()
 			
 		end
 
@@ -98,13 +103,13 @@ module MyTV
 		# ************************************************************+
 		ADD_URL = 	"http://Addic7ed.org"
 
-		def getSubtitles()
+		def get_subtitles()
 			uri = ADD_URL# Full url
 			agent = Mechanize.new
 			page = agent.get(uri)
 			
 		rescue => e
-			$logger.error("Exception in getSubtitles : " + e.message)
+			$logger.error("Exception in get_subtitles : " + e.message)
 			puts "Error: " + e.message	
 		end
 

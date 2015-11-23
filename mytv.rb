@@ -1,35 +1,34 @@
-require "rubygems"
-require "sequel"
-require "date"
-#require 'net/http'
-require "mechanize"
-require "nokogiri"
-#require 'digest'
-require "json"
-require "logger" # debug, info, warn, error, fatal
+require 'rubygems'
+require 'sequel'
+require 'date'
+require 'mechanize'
+require 'nokogiri'
+require 'json'
+require 'logger' # debug, info, warn, error, fatal
 
-require_relative "Web"
-require_relative "TVShow"
-require_relative "Episode"
-require_relative "Database"
-require_relative "Import"
+require_relative 'Web'
+require_relative 'TVShow'
+require_relative 'Episode'
+require_relative 'Database'
+require_relative 'Import'
 
 module MyTV
+
 	class Cli
 
-		PROMPT = 'MyTV > '
+		PROMPT = "MyTV > "
 
-		$logger = Logger.new('test.log', 'daily')
+		$logger = Logger.new("test.log", "daily")
 		$logger.level = Logger::DEBUG
 
 		def initialize
 			$logger.debug "Connecting to the database"
 
-			if (!File.exist?("mytv.db")) 
+			if (!File.exist?("mytv.db"))
 				File.write("mytv.db", "")
 			end
 
-			@DB = Sequel.connect('sqlite://mytv.db')
+			@DB = Sequel.connect("sqlite://mytv.db")
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
@@ -45,7 +44,7 @@ module MyTV
 
 		# Creates the TVShows and Episodes tables
 		def create_tables
-
+			
 			@DB.create_table :TVShows do
 	  		Integer :id, :primary_key=>true #TVMAZE ID
 	  		String :name
@@ -83,10 +82,10 @@ module MyTV
 
 		end
 
-		def print_next_episodes(dataset1, nextEpisodes)
-			nextEpisodes = nextEpisodes.sort_by { |hsh| hsh[:airdate] }
+		def print_next_episodes(dataset1, next_episodes)
+			next_episodes = next_episodes.sort_by { |hsh| hsh[:airdate] }
 
-			nextEpisodes.each do |i|
+			next_episodes.each do |i|
 				if i[:seasonNumber]<10
 					seasonNumber = "0" + i[:seasonNumber].to_s
 				end
@@ -128,11 +127,11 @@ module MyTV
 					help_text
 					
 				when /\Aaddshow\z/i
-					Database.addShow(@myShows, @episodes, params.join(" "))
+					Database.add_show(@myShows, @episodes, params.join(" "))
 					puts
 
 				when /\Aremoveshow\z/i
-					Database.removeShow(@myShows, @episodes, Database.getShowID(@myShows, params.join(" ")))
+					Database.removeShow(@myShows, @episodes, Database.get_show_id(@myShows, params.join(" ")))
 					puts
 
 				when /\Aupdate\z/i
@@ -140,30 +139,33 @@ module MyTV
 					puts
 
 				when /\Anexteps\z/i
-					print_next_episodes(@myShows, Database.nextEpisodes(@myShows, @episodes))
+					print_next_episodes(@myShows, Database.next_episodes(@myShows, @episodes))
 
 				when /\Awatch\z/i
 					if params.first == "-s" && params.size >=2 # watch -s Quantico 
-						showid = Database.getShowID(@myShows, params.slice(1,params.size).join(" "))
-						Database.setShowWatched(@myShows, @episodes, showid)
+						showid = Database.get_show_id(@myShows, params.slice(1,params.size).join(" "))
+						Database.set_show_watched(@myShows, @episodes, showid)
 						puts
 						next
 
 					elsif params.first == "-e" && params.size >= 4# watch -e 1 <ep> Quantico
 						showname = params.slice(3, params.size).join(" ")
+						
 
-						if !params[2].is_a?(Integer) # Watch several episodes at the same time. watch -e 1 3-5 Quantico
+						if params[2].include?"-" # Watch several episodes at the same time. watch -e 1 3-5 Quantico
 							eps = params[2].split("-")
 							range = eps.first .. eps.last
 							range.to_a.each do |i|
-								epid = Database.getEpisodeID(@myShows, @episodes, params[1], i, showname)
-								Database.setWatched(@episodes, epid)
+								epid = Database.get_episode_id(@myShows, @episodes, params[1], i, showname)
+								Database.set_watched(@episodes, epid)
 							end
 							puts
 							next
+
 						else #Watch only one episode. watch -e 1 3 Quantico
-							epid = Database.getEpisodeID(@myShows, @episodes, params[1], params [2], showname)
-							Database.setWatched(@episodes, epid)
+
+							epid = Database.get_episode_id(@myShows, @episodes, params[1], params [2], showname)
+							Database.set_watched(@episodes, epid)
 							puts
 							next
 						end
@@ -174,11 +176,11 @@ module MyTV
 					help_text
 
 				when /\Aprint\z/i
-					(params.first == "-a")?Database.printFull(@myShows, @episodes):Database.printShows(@myShows, @episodes)
+					(params.first == "-a")?Database.print_full(@myShows, @episodes):Database.print_shows(@myShows, @episodes)
 
 				when /\Adownload\z/i # download 1 2 Quantico
 					showname = params.slice(2, params.size).join(" ")
-					magnet = Web.getMagnetLink(params[0], params[1], showname).to_s
+					magnet = Web.get_magnet_link(params[0], params[1], showname).to_s
 					exec = "'deluge-gtk \"" + magnet + "\"'"
 					Process.spawn(exec)
 
@@ -191,7 +193,7 @@ module MyTV
 						Import.import(@myShows, @episodes, params.join(" ").to_s)
 
 					else  # External importing import -e
-						Import.myEpisodesImport(params[1], params[2])
+						Import.myepisodes_import(params[1], params[2])
 						Import.import(@myShows, @episodes, "shows.txt")
 					end
 					puts
@@ -200,7 +202,7 @@ module MyTV
 					break
 					
 				else
-					puts 'Invalid command'
+					puts "Invalid command"
 					help_text
 				end
 

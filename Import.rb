@@ -4,7 +4,7 @@ module MyTV
 	class Import
 		def Import.import(dataset1, dataset2, filename)
 			File.foreach(filename) do |x|
-				Database.addShow(dataset1, dataset2, x)
+				Database.add_show(dataset1, dataset2, x)
 			end
 		rescue => e
 			$logger.error("Exception importing file <" + filename + "> : " + e.message)
@@ -12,7 +12,7 @@ module MyTV
 		end
 
 		# Creates a file ready for importing from http://www.myepisodes.com/myshows/manage/.
-		def Import.myEpisodesImport(user, pass)
+		def Import.myepisodes_import(user, pass)
 			agent = Mechanize.new
 
 			page = agent.get 'http://www.myepisodes.com/login.php'

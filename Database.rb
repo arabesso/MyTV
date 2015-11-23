@@ -1,13 +1,10 @@
 module MyTV
 	class Database
 
-		# DATABASE_NAME = "MyTV.db"
-		# DB = Sequel.connect('sqlite://MyTV.db')
-
 		# Add a new show and its episodes. Receives a string and the dataset myShows and episodes as parameters
-		def Database.addShow(dataset1, dataset2, showName)
+		def Database.add_show(dataset1, dataset2, showName)
 			# Finding the show
-			obj = Web.searchShowFast(showName)
+			obj = Web.search_show(showName)
 			$logger.info "Trying to add show <" + obj['name'] + ">"
 
 			# Checks it's not in the database already
@@ -16,14 +13,14 @@ module MyTV
 				puts "The show " + obj['name'] + " is already in the database"
 			else
 				newshow = TVShow.new(obj['name'], obj['id'])
-				dataset1.insert(:id => newshow.getID, :name => newshow.getName)
-				Database.addEpisodes(dataset2, newshow)
+				dataset1.insert(:id => newshow.id, :name => newshow.name)
+				Database.add_episodes(dataset2, newshow)
 				puts "Added show " + showName
 				$logger.info "...completed"
 			end
 
 		rescue => e
-			$logger.error("Exception in addShow trying to add <" + showName + "> : " + e.message)
+			$logger.error("Exception in add_show trying to add <" + showName + "> : " + e.message)
 			puts "Error: " + e.message
 		end
 
@@ -31,21 +28,21 @@ module MyTV
 		# PRIVATE?
 		# SLOW METHOD?
 		# 
-		def Database.addEpisodes (dataset, show)
-			id = show.getID
-			show.getEpisodes().each do |i|
+		def Database.add_episodes (dataset, show)
+			id = show.id
+			show.episodes.each do |i|
 
-				if dataset.where(:id => i.getID).count == 1
-					$logger.warn "The episode <" + i.getTitle + "> is already in the database"
+				if dataset.where(:id => i.id).count == 1
+					$logger.warn "The episode <" + i.title + "> is already in the database"
 				else
-					dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.getTitle + ">"
+					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
+					$logger.info "Added episode <" + i.title + ">"
 				end
 
 			end
 
 		rescue => e
-			$logger.error("Exception in addEpisodes : " + e.message)
+			$logger.error("Exception in add_episodes : " + e.message)
 			puts "Error: " + e.message
 		end
 
@@ -53,32 +50,31 @@ module MyTV
 		# PRIVATE=
 		# SLOW METHOD?
 		def Database.addNewEpisodes (dataset, show, lastEpisodeS, lastEpisodeN)
-			id = show.getID
+			id = show.id
 			episodes = show.getEpisodes
 
 			# Quick check if there are new episodes
-			if episodes[-1].getSeason > lastEpisodeS
-			elsif lastEpisodeS == episodes[-1].getSeason && episodes[-1].getNumber > lastEpisodeN
+			if episodes[-1].season > lastEpisodeS
+			elsif lastEpisodeS == episodes[-1].season && episodes[-1].number > lastEpisodeN
 			else
-				$logger.info "No new episodes to add to <" + show.getName + ">"
+				$logger.info "No new episodes to add to <" + show.name + ">"
 				return
 			end
 			
-
 			# New episodes to add, full iteration:
 			episodes.each do |i|
-				if i.getSeason > lastEpisodeS
-					dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.getTitle + ">"
-				elsif lastEpisodeS == i.getSeason && i.getNumber > lastEpisodeN
-					dataset.insert(:id => i.getID, :title => i.getTitle, :seasonNumber => i.getSeason, :episodeNumber => i.getNumber, :airdate => i.getAirdate, :watched => false, :show_id => id)
-					$logger.info "Added episode <" + i.getTitle + ">"
+				if i.season > lastEpisodeS
+					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
+					$logger.info "Added episode <" + i.title + ">"
+				elsif lastEpisodeS == i.season && i.number > lastEpisodeN
+					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
+					$logger.info "Added episode <" + i.title + ">"
 				end
 			end
 
 		rescue => e
 			puts "Error"
-			$logger.error("Exception in addNewEpisodes trying to add episodes for <" + show.getName + "> : " + e.message)
+			$logger.error("Exception in addNewEpisodes trying to add episodes for <" + show.name + "> : " + e.message)
 		end
 
 		# Removes an episodes from the database.
@@ -111,7 +107,7 @@ module MyTV
 				end
 			end
 
-			# Storing the "update" and only calling addEpisodes when the update field changes would make this much faster
+			# Storing the "update" and only calling add_episodes when the update field changes would make this much faster
 			# Adds the new episodes of every tvshow checking the last season and episode numbers stored in the DB
 			dataset1.each do |i|
 				show = TVShow.new(i[:name], i[:id])
@@ -152,37 +148,37 @@ module MyTV
 		# Initially trying to do it with web, do this if connection problem?
 		# Initially doing this here, do it with Web if show isn't found?
 		# Watch the infinite loop
-		def Database.getShowID(dataset, showname)
+		def Database.get_show_id(dataset, showname)
 			var = dataset.where(:name => showname).to_a[0]
 			if var != nil # Found in the database
 				var[:id]
 			else # Search online
 				$logger.warn("Show wasn't found in the database. Searching online.")
-				Web.getShowID(showname)
+				Web.get_show_id(showname)
 			end
 
 		rescue => e
-			$logger.error("Exception in getShowID trying to get <" + showname + ">'s id : " + e.message)
+			$logger.error("Exception in get_show_id trying to get <" + showname + ">'s id : " + e.message)
 			puts "Error: " + e.message
 		
 		end
 
-		def Database.getEpisodeID(dataset1, dataset2, season, episode, show)
-			showid = Database.getShowID(dataset1, show)
+		def Database.get_episode_id(dataset1, dataset2, season, episode, show)
+			showid = Database.get_show_id(dataset1, show)
 			dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
 
 		rescue => e
-			$logger.error("Exception in getEpisodeID trying to get <" + show + ">'s id : " + e.message)
+			$logger.error("Exception in get_episode_id trying to get <" + show + ">\'s S" + season + "E" + episode + " id : " + e.message)
 			puts "Error: " + e.message
 		
 		end
 
 
-		def Database.setWatched(dataset, episodeid)
+		def Database.set_watched(dataset, episodeid)
 			dataset.where(:id => episodeid).update(:watched => true)
 		
 		rescue => e
-			$logger.error("Exception in setWatched trying to set episode <" + episodeid + "> as watched : " + e.message)
+			$logger.error("Exception in set_watched trying to set episode <" + episodeid + "> as watched : " + e.message)
 			puts "Error: " + e.message
 			
 		end
@@ -222,39 +218,39 @@ module MyTV
 
 		# Sets all the episodes of a tv show as watched
 		# SLOW METHOD?
-		def Database.setShowWatched(dataset1, dataset2, showid)
+		def Database.set_show_watched(dataset1, dataset2, showid)
 
 			dataset2.where(:show_id => showid).to_a.each do |i|
-				Database.setWatched(dataset2, i[:id])
+				Database.set_watched(dataset2, i[:id])
 			end
 
 		rescue => e
-			$logger.error("Exception in setShowWatched with show <" + showid + "> : " + e.message)
+			$logger.error("Exception in set_show_watched with show <" + showid + "> : " + e.message)
 			puts "Error: " + e.message
 		
 		end
 
 		# Returns an array of non-watched episodes, one per show.
-		def Database.nextEpisodes(dataset1, dataset2)
-			nextEpisodes = Array.new
+		def Database.next_episodes(dataset1, dataset2)
+			next_episodes = Array.new
 			dataset1.each do |i|
 				episode = dataset2.where(:show_id => i[:id], :watched => false).order(:airdate).to_a[0]
 				if episode != nil
-					nextEpisodes <<  episode
+					next_episodes <<  episode
 				end
 			end
 
-		return nextEpisodes
+		return next_episodes
 
 		rescue => e
-			$logger.error("Exception in nextEpisodes : " + e.message)
+			$logger.error("Exception in next_episodes : " + e.message)
 			puts "Error: " + e.message
 		
 		end
 
 		# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
 		# SLOW METHOD?
-		def Database.printShows(dataset1, dataset2)
+		def Database.print_shows(dataset1, dataset2)
 			dataset1.order(:name).each do |i|
 				puts "TV Show <" + i[:name] + "> (id " + i[:id].to_s + ") " + "- " + dataset2.where(:show_id => i[:id]).count.to_s + " episodes stored"
 			end
@@ -262,7 +258,7 @@ module MyTV
 		end
 
 		# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
-		def Database.printFull(dataset1, dataset2)
+		def Database.print_full(dataset1, dataset2)
 			dataset1.order(:name).each do |show|
 				puts "TV Show <" + show[:name] + "> (id " + show[:id].to_s + ")"
 				dataset2.where(:show_id => show[:id]).each do |ep|
