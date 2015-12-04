@@ -12,7 +12,7 @@ module MyTV
 		end
 
 		# Creates a file ready for importing from http://www.myepisodes.com/myshows/manage/.
-		def Import.myepisodes_import(user, pass)
+		def Import.myepisodes_import(user, pass, filename = "shows.txt")
 			agent = Mechanize.new
 
 			page = agent.get "http://www.myepisodes.com/login.php"
@@ -25,7 +25,7 @@ module MyTV
 			page = agent.submit(loginform, loginform.buttons.first)
 			shows = page.parser.css('select#shows option')
 
-			file = File.open("shows.txt", 'w')
+			file = File.open(filename, 'w')
 			shows.each do |i|
 				file.write(i.text + "\n")
 			end

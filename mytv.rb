@@ -198,7 +198,7 @@ module MyTV
 
 					else  # External importing import -e
 						Import.myepisodes_import(params[1], params[2])
-						Import.import(@myShows, @episodes, "shows.txt")
+						#Import.import(@myShows, @episodes, "shows.txt")
 					end
 					puts
 
