@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative 'Import'
+
+begin
+	if ARGV[2].nil?
+		MyTV::Import.myepisodes_import(ARGV[0], ARGV[1])
+		puts "Your MyEpisodes shows have been exported to the file shows.txt"
+	else
+		MyTV::Import.myepisodes_import(ARGV[0], ARGV[1], ARGV[2])
+		puts "Your MyEpisodes shows have been exported to the file " + ARGV[2]
+	end
+	
+rescue => e
+	puts "Error: " + e.message + " [" + e.class.to_s + "]"
+end
