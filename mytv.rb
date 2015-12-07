@@ -5,7 +5,7 @@ require 'mechanize'
 require 'nokogiri'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
-#require 'benchmark'
+require 'benchmark'
 
 require_relative 'Web'
 require_relative 'TVShow'
@@ -198,7 +198,7 @@ module MyTV
 
 					else  # External importing import -e
 						Import.myepisodes_import(params[1], params[2])
-						#Import.import(@myShows, @episodes, "shows.txt")
+						Import.import(@myShows, @episodes, "shows.txt")
 					end
 					puts
 

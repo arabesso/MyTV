@@ -125,7 +125,7 @@ module MyTV
 		end
 
 		# Removes a TVShow and all its episodes
-		# SLOW METHOD?
+		# SLOW METHOD
 		def Database.remove_show(dataset1, dataset2, showid)
 
 			# Remove episodes of that show

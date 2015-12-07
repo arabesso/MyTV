@@ -1,14 +1,22 @@
 #!/usr/bin/env ruby
 
 require_relative 'Import'
+require 'io/console'
 
 begin
-	if ARGV[2].nil?
-		MyTV::Import.myepisodes_import(ARGV[0], ARGV[1])
+	print "Enter your MyEpisodes username: "
+	user = STDIN.gets.chomp
+
+	print "Enter your MyEpisodes password: "
+	pass = STDIN.noecho(&:gets).chomp
+	puts
+
+	if ARGV[0].nil?
+		MyTV::Import.myepisodes_import(user, pass)
 		puts "Your MyEpisodes shows have been exported to the file shows.txt"
 	else
-		MyTV::Import.myepisodes_import(ARGV[0], ARGV[1], ARGV[2])
-		puts "Your MyEpisodes shows have been exported to the file " + ARGV[2]
+		MyTV::Import.myepisodes_import(user, pass, ARGV[0])
+		puts "Your MyEpisodes shows have been exported to the file " + ARGV[0]
 	end
 	
 rescue => e

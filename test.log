@@ -437,3 +437,32 @@ E, [2015-11-24T00:02:05.755081 #5102] ERROR -- : Exception importing from myEpis
 E, [2015-11-24T00:02:35.181513 #5104] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
 E, [2015-11-24T00:03:05.220677 #5108] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
 E, [2015-11-24T00:03:19.527484 #5110] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
+W, [2015-12-08T00:05:54.745268 #23715]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-12-08T00:07:15.171109 #23721] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:07:19.843481 #23721] ERROR -- : Exception in add_show trying to add <Black Cat
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Black%20Cat -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:07:36.501928 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+E, [2015-12-08T00:09:23.908946 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <Gravity Falls> : invalid date
+E, [2015-12-08T00:09:59.550740 #23721] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:10:33.208332 #23721] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:11:14.542383 #23721] ERROR -- : Exception in add_show trying to add <Needless
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Needless -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:12:41.879835 #23721] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:13:30.294482 #23721] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+E, [2015-12-08T00:13:30.747996 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <The Americans> : invalid date
+E, [2015-12-08T00:16:01.713632 #23878] ERROR -- : Exception in add_show trying to add <Heroes
+> : undefined local variable or method `obj' for MyTV::Database:Class [NameError]
+E, [2015-12-08T00:16:38.570822 #23881] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
+E, [2015-12-08T00:18:19.653992 #23889] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
+W, [2015-12-08T00:20:09.875931 #23895]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2015-12-08T00:20:18.745995 #23895] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
+W, [2015-12-08T00:20:45.731676 #23898]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2015-12-08T00:22:07.291228 #23898]  INFO -- : No new episodes to add to <Heroes>
+I, [2015-12-08T00:22:08.121537 #23898]  INFO -- : No new episodes to add to <Friends>
+W, [2015-12-08T00:24:35.917057 #23999]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2015-12-08T00:25:21.755308 #23999]  WARN -- : Show wasn't found in the database. Searching online.
