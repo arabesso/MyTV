@@ -154,14 +154,11 @@ module MyTV
 
 
 		# Returns the ID of a show stored in the database. Receives a string with the show name
-		# Would it be faster using the tvmaze api?
-		# Initially trying to do it with web, do this if connection problem?
-		# Initially doing this here, do it with Web if show isn't found?
-		# Watch the infinite loop
+		# Mechanize::ResponseCodeError if show isn't found
 		def Database.get_show_id(dataset, showname)
-			var = dataset.where(:name => showname).to_a[0]
-			if var != nil # Found in the database
-				var[:id]
+			show = dataset.where(:name => showname).to_a[0]
+			if show # Found in the database
+				show[:id]	
 			else # Search online
 				$logger.warn("Show wasn't found in the database. Searching online.")
 				Web.get_show_id(showname)
@@ -173,6 +170,7 @@ module MyTV
 		
 		end
 
+		# NoMethodError when the episode id isn't found
 		def Database.get_episode_id(dataset1, dataset2, season, episode, show)
 			showid = Database.get_show_id(dataset1, show)
 			dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]

@@ -21,3 +21,209 @@ E, [2016-01-29T23:11:26.186035 #508] ERROR -- : Exception in add_show trying to 
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
 E, [2016-01-29T23:11:29.973912 #508] ERROR -- : Exception in add_show trying to add <Tegami Bachi
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:15:15.562102 #1451] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:15:31.342568 #1451] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:15:35.349882 #1451] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:15:44.209716 #1451] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:15:47.938574 #1451] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:18:20.041261 #3307] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:18:36.898247 #3307] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:18:40.643474 #3307] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:18:48.520080 #3307] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:18:52.069297 #3307] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T23:25:55.767251 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:56.442191 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:56.614556 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:56.788321 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:56.964084 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:57.138919 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:57.316558 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:57.491782 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:57.672386 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:25:57.852089 #3619]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:19.764442 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:32.211549 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:32.897465 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.076336 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.246250 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.421667 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.598780 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.779633 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:33.959985 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:34.136588 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:27:34.314153 #5171]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:13.209242 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:13.843769 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.009334 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.175005 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.340860 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.505911 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.675632 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:14.845907 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:15.017329 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:28:15.190160 #5300]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:29:32.240371 #5635]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:29:32.910038 #5635] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E100 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:54.390359 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:54.803392 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E1 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:54.804217 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:54.971356 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E2 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:54.971605 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.138316 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E3 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.138749 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.305487 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E4 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.305998 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.477644 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E5 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.478061 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.648075 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E6 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.648477 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.820236 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E7 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.820792 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:55.991051 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E8 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:55.991523 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:56.158928 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E9 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:56.159464 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:56.325483 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E10 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:56.325994 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:30:56.493073 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:30:56.660117 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:56.828535 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E13 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:56.828738 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:56.996011 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E14 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:56.996402 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:57.167605 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E15 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:57.168212 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:57.341583 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E16 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:57.342083 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:57.514884 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E17 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:57.515404 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:57.686026 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E18 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:57.686444 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:57.855358 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E19 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:57.855860 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.026637 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E20 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.027054 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.196153 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E21 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.196683 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.370197 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E22 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.370605 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.537101 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E23 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.537584 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.703956 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E24 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.704453 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:58.867786 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E25 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:58.868246 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.031665 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E26 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.032113 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.197883 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E27 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.198190 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.357868 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E28 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.358417 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.518980 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E29 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.519289 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.682193 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E30 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.682637 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:30:59.846735 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E31 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:30:59.847159 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.017608 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E32 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.018106 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.190268 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E33 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.190674 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.360326 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E34 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.360808 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.529930 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E35 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.530221 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.697804 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E36 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.698216 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:00.864424 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E37 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:00.864884 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.029461 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E38 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.029966 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.192693 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E39 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.193206 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.351313 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E40 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.351852 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.511802 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E41 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.512147 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.667832 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E42 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.668440 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.826466 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E43 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.826793 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:01.981109 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E44 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:01.981432 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.138736 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E45 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.139069 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.290382 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E46 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.290757 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.442279 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E47 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.442697 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.598717 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E48 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.599065 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.759184 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E49 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.759507 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:02.925581 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E50 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:02.926142 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.088246 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E51 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.088591 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.251531 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E52 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.251853 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.415748 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E53 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.416231 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.577957 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E54 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.578281 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.738403 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E55 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.738875 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:03.900599 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E56 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:03.901046 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.063684 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E57 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.064329 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.228534 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E58 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.228783 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.388767 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E59 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.389223 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.548874 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E60 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.549511 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.714587 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E61 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.714956 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:04.882080 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E62 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:04.882568 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.052030 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E63 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.052425 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.219823 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E64 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.220424 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.388435 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E65 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.388970 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.559194 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E66 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.559799 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.725166 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E67 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.725405 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:05.895994 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E68 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:05.896439 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:06.068862 #6088] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E69 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:06.069392 #6088]  WARN -- : Show wasn't found in the database. Searching online.
+W, [2016-01-29T23:31:23.933475 #6320]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:24.552194 #6320] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E20 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:24.552675 #6320]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:24.713688 #6320] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E21 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:49.781165 #6433]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:50.192802 #6433] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E20 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:31:50.193880 #6433]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:31:50.356958 #6433] ERROR -- : Exception in get_episode_id trying to get <quantico>'s S1E21 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:33:40.065842 #6433]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:33:40.702552 #6433] ERROR -- : Exception in get_show_id trying to get <asfhdiyausgf>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=asfhdiyausgf -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T23:33:40.703539 #6433] ERROR -- : Exception in get_episode_id trying to get <asfhdiyausgf>'s S1E1 id : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T23:35:54.950007 #9536]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:35:55.383537 #9536] ERROR -- : Exception in get_show_id trying to get <1 aidhfs>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=1%20aidhfs -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T23:36:01.829064 #9536]  WARN -- : Show wasn't found in the database. Searching online.
+E, [2016-01-29T23:36:02.501867 #9536] ERROR -- : Exception in get_show_id trying to get <1 quantico>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=1%20quantico -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T23:36:22.149398 #9536]  WARN -- : Show wasn't found in the database. Searching online.

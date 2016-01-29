@@ -34,7 +34,7 @@ module MyTV
 
 			@DB = Sequel.connect("sqlite://mytv.db")
 			@DB.synchronous = :off
-			#@DB.temp_store = :memory
+			@DB.temp_store = :memory
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
@@ -152,7 +152,9 @@ module MyTV
 				when /\Awatch\z/i
 					if params.first == "-s" && params.size >=2 # watch -s Quantico 
 						showid = Database.get_show_id(@myShows, params.slice(1,params.size).join(" "))
-						Database.set_show_watched(@myShows, @episodes, showid)
+						@DB.transaction do
+							Database.set_show_watched(@myShows, @episodes, showid)
+						end
 						puts
 						next
 
@@ -163,9 +165,11 @@ module MyTV
 						if params[2].include?"-" # Watch several episodes at the same time. watch -e 1 3-5 Quantico
 							eps = params[2].split("-")
 							range = eps.first .. eps.last
-							range.to_a.each do |i|
-								epid = Database.get_episode_id(@myShows, @episodes, params[1], i, showname)
-								Database.set_watched(@episodes, epid)
+							@DB.transaction do
+								range.each do |ep_number|
+									epid = Database.get_episode_id(@myShows, @episodes, params[1], ep_number, showname)
+									Database.set_watched(@episodes, epid) unless epid.nil?
+								end
 							end
 							puts
 							next
@@ -173,7 +177,7 @@ module MyTV
 						else #Watch only one episode. watch -e 1 3 Quantico
 
 							epid = Database.get_episode_id(@myShows, @episodes, params[1], params [2], showname)
-							Database.set_watched(@episodes, epid)
+							Database.set_watched(@episodes, epid) unless epid.nil?
 							puts
 							next
 						end
@@ -191,8 +195,7 @@ module MyTV
 					magnet = Web.get_magnet_link(params[0], params[1], showname).to_s
 					exec = "deluge-gtk \"" + magnet + "\" &> /dev/null"
 					Process.detach(Process.spawn(exec))
-					# 
-					sleep(1)
+					sleep(1) # Formatting
 					puts
 
 				when /\Aimport\z/i # import <filename>
@@ -201,15 +204,15 @@ module MyTV
 						help_text
 
 					elsif params.first != "-e" 
-						#@DB.transaction do
-						Import.import(@myShows, @episodes, params.join(" ").to_s)
-						#end
+						@DB.transaction do
+							Import.import(@myShows, @episodes, params.join(" ").to_s)
+						end
 
 					else  # External importing import -e
 						Import.myepisodes_import(params[1], params[2])
-						#@DB.transaction do
-						Import.import(@myShows, @episodes, "shows.txt")
-						#end
+						@DB.transaction do
+							Import.import(@myShows, @episodes, "shows.txt")
+						end
 					end
 					puts
 

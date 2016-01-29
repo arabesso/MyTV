@@ -20,7 +20,9 @@ Benchmark.bm do |bm|
 
 	# Iterates over those 104 shows looking for updates
 	bm.report("update:") do
-		MyTV::Database.update(cli.myShows, cli.episodes)
+		cli.DB.transaction do
+			MyTV::Database.update(cli.myShows, cli.episodes)
+		end
 	end
 
 	# Deletes all those shows
@@ -29,7 +31,3 @@ Benchmark.bm do |bm|
 	end
 
 end
-
-# rehearsal = 499 + 28 + 0.2
-# second try = 545 + 31 + 0.2
-# total: 18:26
