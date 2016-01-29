@@ -87,6 +87,8 @@ README.md: This file.
 
 test.log: MyTV's log.
 
+export: Standalone binary used to export your MyEpisodes show list. Can be called with the destination filename as an argument (shows.txt by default)
+
 ## Log
 
 MyTV comes with a log that's tasked with recording almost everything the program does.

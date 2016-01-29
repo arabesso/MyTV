@@ -1,20 +1,35 @@
 #!/usr/bin/env ruby
+# This executable removes all the information stored in your database
 
 require 'benchmark'
 require_relative 'mytv'
 
-
 cli = MyTV::Cli.new
-# Can't use bmbm because the rehearsal 
-Benchmark.bmbm do |bm|
 
+MyTV::Database.clear(cli.myShows, cli.episodes)
+
+#Change to bmbm?
+Benchmark.bm do |bm|
+
+	# Tries to add a list of 104 shows
 	bm.report("import:") do
-		MyTV::Import.import(cli.myShows, cli.episodes, "testshows.txt", false)
+		cli.DB.transaction do
+			MyTV::Import.import(cli.myShows, cli.episodes, "testshows.txt", false)
+		end
 	end
 
+	# Iterates over those 104 shows looking for updates
 	bm.report("update:") do
 		MyTV::Database.update(cli.myShows, cli.episodes)
 	end
-	MyTV::Database.clear(cli.myShows, cli.episodes)
+
+	# Deletes all those shows
+	bm.report("clear:") do
+		MyTV::Database.clear(cli.myShows, cli.episodes)
+	end
 
 end
+
+# rehearsal = 499 + 28 + 0.2
+# second try = 545 + 31 + 0.2
+# total: 18:26

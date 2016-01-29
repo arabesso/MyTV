@@ -20,6 +20,7 @@ module MyTV
 
 		$logger = Logger.new("test.log", "daily")
 		$logger.level = Logger::WARN
+		attr_reader :DB
 		attr_reader :episodes
 		attr_reader :myShows
 
@@ -32,6 +33,8 @@ module MyTV
 			end
 
 			@DB = Sequel.connect("sqlite://mytv.db")
+			@DB.synchronous = :off
+			#@DB.temp_store = :memory
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
 				@myShows = @DB[:TVShows] 
