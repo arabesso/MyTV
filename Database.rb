@@ -53,6 +53,10 @@ module MyTV
 			id = show.id
 			episodes = show.episodes
 
+			if episodes.empty?
+				return
+			end
+			
 			# Quick check if there are new episodes
 			if episodes[-1].season > lastEpisodeS
 			elsif lastEpisodeS == episodes[-1].season && episodes[-1].number > lastEpisodeN
@@ -73,7 +77,7 @@ module MyTV
 			end
 
 		rescue => e
-			puts "Error"
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 			$logger.error("Exception in add_new_episodes trying to add episodes for <" + show.name + "> : " + e.message + " [" + e.class.to_s + "]")
 		end
 
@@ -88,7 +92,7 @@ module MyTV
 			end
 		
 		rescue => e
-			puts "Error"
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 			$logger.error("Exception in remove_entry trying to remove item <" + id + "> : " + e.message + " [" + e.class.to_s + "]")
 		
 		end
@@ -111,8 +115,14 @@ module MyTV
 			# Adds the new episodes of every tvshow checking the last season and episode numbers stored in the DB
 			dataset1.each do |i|
 				show = TVShow.new(i[:name], i[:id])
-				lasteps = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:seasonNumber]
-				lastepn = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last[:episodeNumber]
+				last_episode = dataset2.where(:show_id => i[:id]).order(:seasonNumber, :episodeNumber).last
+				if (last_episode)
+					lasteps = last_episode[:seasonNumber]
+					lastepn = last_episode[:episodeNumber]
+				else # Show without episodes stored
+					lasteps = 0
+					lastepn = 0
+				end
 				#puts i[:name]
 				#puts lasteps.to_s + " x " + lastepn.to_s
 				Database.add_new_episodes(dataset2, show, lasteps, lastepn)

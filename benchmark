@@ -5,7 +5,7 @@ require_relative 'mytv'
 
 
 cli = MyTV::Cli.new
-
+# Can't use bmbm because the rehearsal 
 Benchmark.bmbm do |bm|
 
 	bm.report("import:") do
@@ -15,4 +15,6 @@ Benchmark.bmbm do |bm|
 	bm.report("update:") do
 		MyTV::Database.update(cli.myShows, cli.episodes)
 	end
+	MyTV::Database.clear(cli.myShows, cli.episodes)
+
 end

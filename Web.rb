@@ -44,7 +44,7 @@ module MyTV
 			page = agent.get(url).content
 			
 			obj = JSON.parse(page)
-
+			
 			return obj
 			
 		end

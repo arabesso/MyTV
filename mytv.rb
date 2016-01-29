@@ -19,7 +19,7 @@ module MyTV
 		PROMPT = "MyTV > "
 
 		$logger = Logger.new("test.log", "daily")
-		$logger.level = Logger::INFO
+		$logger.level = Logger::WARN
 		attr_reader :episodes
 		attr_reader :myShows
 
@@ -198,11 +198,15 @@ module MyTV
 						help_text
 
 					elsif params.first != "-e" 
+						#@DB.transaction do
 						Import.import(@myShows, @episodes, params.join(" ").to_s)
+						#end
 
 					else  # External importing import -e
 						Import.myepisodes_import(params[1], params[2])
+						#@DB.transaction do
 						Import.import(@myShows, @episodes, "shows.txt")
+						#end
 					end
 					puts
 
