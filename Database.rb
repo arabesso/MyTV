@@ -2,7 +2,7 @@ module MyTV
 	class Database
 
 		# Add a new show and its episodes. Receives a string and the dataset myShows and episodes as parameters
-		def Database.add_show(dataset1, dataset2, showName)
+		def Database.add_show(dataset1, dataset2, showName, verbose=true)
 			# Finding the show
 			obj = Web.search_show(showName)
 			$logger.debug "Trying to add show <" + obj['name'] + ">"
@@ -10,18 +10,18 @@ module MyTV
 			# Checks it's not in the database already
 			if dataset1.where(:id => obj['id']).count == 1
 				$logger.warn "The show <" + obj['name'] + "> is already in the database"
-				puts "The show " + obj['name'] + " is already in the database"
+				puts "The show " + obj['name'] + " is already in the database" unless !verbose
 			else
 				newshow = TVShow.new(obj['name'], obj['id'])
 				dataset1.insert(:id => newshow.id, :name => newshow.name)
 				Database.add_episodes(dataset2, newshow)
-				puts "Added show " + showName
+				puts "Added show " + showName unless !verbose
 				$logger.debug "...completed"
 			end
 
 		rescue => e
 			$logger.error("Exception in add_show trying to add <" + showName + "> : " + e.message + " [" + e.class.to_s + "]")
-			puts "Error: " + e.message + " [" + e.class.to_s + "]"
+			puts "Error: " + e.message + " [" + e.class.to_s + "]" unless !verbose
 		end
 
 		# Add episodes to the database. Receives a TVShow and the dataset episodes as parameters
@@ -125,7 +125,7 @@ module MyTV
 		end
 
 		# Removes a TVShow and all its episodes
-		# SLOW METHOD
+		# SLOW METHOD 
 		def Database.remove_show(dataset1, dataset2, showid)
 
 			# Remove episodes of that show
@@ -246,6 +246,17 @@ module MyTV
 			$logger.error("Exception in next_episodes : " + e.message + " [" + e.class.to_s + "]")
 			puts "Error: " + e.message + " [" + e.class.to_s + "]"
 		
+		end
+
+		def Database.clear(dataset1, dataset2)
+			dataset1.delete
+			dataset2.delete
+			
+		rescue => e
+			$logger.error("Exception in clear : " + e.message + " [" + e.class.to_s + "]")
+			puts "Error: " + e.message + " [" + e.class.to_s + "]"
+
+			
 		end
 
 		# Prints general information about the shows in the DB. Receives myShows and episodes as parameters

@@ -2,9 +2,9 @@ require "mechanize"
 
 module MyTV
 	class Import
-		def Import.import(dataset1, dataset2, filename)
+		def Import.import(dataset1, dataset2, filename, verbose=true)
 			File.foreach(filename) do |x|
-				Database.add_show(dataset1, dataset2, x)
+				Database.add_show(dataset1, dataset2, x, verbose)
 			end
 		rescue => e
 			$logger.error("Exception importing file <" + filename + "> : " + e.message + " [" + e.class.to_s + "]")

@@ -1,468 +1,1269 @@
-D, [2015-10-22T17:36:28.539377 #20565] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:36:28.653864 #20565] DEBUG -- : ...completed
-D, [2015-10-22T17:38:05.841588 #20575] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:38:05.955179 #20575] DEBUG -- : ...completed
-E, [2015-10-22T17:38:08.330012 #20575] ERROR -- : Exception in getMagnetLink : wrong number of arguments (1 for 0)
-D, [2015-10-22T17:41:29.726735 #20629] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:41:29.841982 #20629] DEBUG -- : ...completed
-E, [2015-10-22T17:41:33.824779 #20629] ERROR -- : Exception in getMagnetLink : undefined method `name' for #<Mechanize::Page::Link "The Pirate Bay" "/">
-
-D, [2015-10-22T17:42:17.148008 #20640] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:42:17.261476 #20640] DEBUG -- : ...completed
-D, [2015-10-22T17:42:45.741597 #20647] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:42:45.857040 #20647] DEBUG -- : ...completed
-D, [2015-10-22T17:43:30.190263 #20651] DEBUG -- : Connecting to the database
-D, [2015-10-22T17:43:30.305025 #20651] DEBUG -- : ...completed
-E, [2015-10-22T17:43:38.571415 #20651] ERROR -- : Exception in getMagnetLink : 502 => Net::HTTPBadGateway for https://thehiddenbay.me/search/Quantico+S01E04/0/7/0 -- unhandled response
-D, [2015-10-22T19:46:08.273453 #1048] DEBUG -- : Connecting to the database
-D, [2015-10-22T19:46:08.578557 #1048] DEBUG -- : ...completed
-D, [2015-10-29T16:48:22.376490 #6448] DEBUG -- : Connecting to the database
-D, [2015-10-29T16:48:22.775548 #6448] DEBUG -- : ...completed
-D, [2015-10-29T16:50:47.760713 #6496] DEBUG -- : Connecting to the database
-D, [2015-10-29T16:50:47.866992 #6496] DEBUG -- : ...completed
-I, [2015-10-29T16:50:49.006780 #6496]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
-I, [2015-10-29T16:50:49.009215 #6496]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
-I, [2015-10-29T16:50:49.602127 #6496]  INFO -- : No new episodes to add to <Black Mirror>
-I, [2015-10-29T16:50:50.073288 #6496]  INFO -- : Added episode <Over>
-I, [2015-10-29T16:50:50.395487 #6496]  INFO -- : Added episode <Downtown Odds>
-I, [2015-10-29T16:50:50.628789 #6496]  INFO -- : Added episode <Headquarters!>
-I, [2015-10-29T16:50:50.749806 #6496]  INFO -- : No new episodes to add to <Narcos>
-D, [2015-10-29T16:51:31.580603 #6508] DEBUG -- : Connecting to the database
-D, [2015-10-29T16:51:31.686334 #6508] DEBUG -- : ...completed
-W, [2015-10-29T16:51:46.942133 #6508]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T16:51:47.444513 #6508]  INFO -- : Deleting entry with id <30907> from dataset 
-I, [2015-10-29T16:51:47.522370 #6508]  INFO -- : Deleting entry with id <305> from dataset 
-E, [2015-10-29T16:51:58.462305 #6508] ERROR -- : Exception in addShow trying to add <black mirror> : no implicit conversion of Mechanize::File into String
-D, [2015-10-29T16:57:07.990525 #6559] DEBUG -- : Connecting to the database
-D, [2015-10-29T16:57:08.119435 #6559] DEBUG -- : ...completed
-E, [2015-10-29T16:57:09.980055 #6559] ERROR -- : Exception in addShow trying to add <black mirror> : no implicit conversion of Mechanize::File into String
-D, [2015-10-29T16:57:35.893772 #6565] DEBUG -- : Connecting to the database
-D, [2015-10-29T16:57:36.005632 #6565] DEBUG -- : ...completed
-I, [2015-10-29T16:57:37.161990 #6565]  INFO -- : Trying to add show <Black Mirror>
-I, [2015-10-29T16:57:37.753878 #6565]  INFO -- : Added episode <The National Anthem>
-I, [2015-10-29T16:57:37.842464 #6565]  INFO -- : Added episode <Fifteen Million Merits>
-I, [2015-10-29T16:57:37.920218 #6565]  INFO -- : Added episode <The Entire History of You>
-I, [2015-10-29T16:57:37.998066 #6565]  INFO -- : Added episode <Be Right Back>
-I, [2015-10-29T16:57:38.064720 #6565]  INFO -- : Added episode <White Bear>
-I, [2015-10-29T16:57:38.142427 #6565]  INFO -- : Added episode <The Waldo Moment>
-I, [2015-10-29T16:57:38.145205 #6565]  INFO -- : ...completed
-D, [2015-10-29T17:00:22.580803 #6581] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:00:22.692461 #6581] DEBUG -- : ...completed
-D, [2015-10-29T17:01:54.163318 #6594] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:01:54.270669 #6594] DEBUG -- : ...completed
-W, [2015-10-29T17:02:48.620468 #6594]  WARN -- : Show wasn't found in the database. Searching online.
-W, [2015-10-29T17:02:57.194631 #6594]  WARN -- : Show wasn't found in the database. Searching online.
-W, [2015-10-29T17:03:03.327951 #6594]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T17:03:05.155681 #6594]  INFO -- : Deleting entry with id <30902> from dataset 
-I, [2015-10-29T17:03:05.244585 #6594]  INFO -- : Deleting entry with id <30903> from dataset 
-I, [2015-10-29T17:03:05.333272 #6594]  INFO -- : Deleting entry with id <30904> from dataset 
-I, [2015-10-29T17:03:05.411179 #6594]  INFO -- : Deleting entry with id <30905> from dataset 
-I, [2015-10-29T17:03:05.488840 #6594]  INFO -- : Deleting entry with id <30906> from dataset 
-I, [2015-10-29T17:03:05.490361 #6594]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
-I, [2015-10-29T17:03:05.492058 #6594]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
-I, [2015-10-29T17:03:05.577823 #6594]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-10-29T17:03:05.677781 #6594]  INFO -- : Deleting entry with id <313794> from dataset 
-I, [2015-10-29T17:03:05.738849 #6594]  INFO -- : No new episodes to add to <Black Mirror>
-I, [2015-10-29T17:03:05.800402 #6594]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-10-29T17:03:05.862327 #6594]  INFO -- : No new episodes to add to <The Player>
-I, [2015-10-29T17:03:05.936616 #6594]  INFO -- : No new episodes to add to <Limitless>
-I, [2015-10-29T17:03:05.995906 #6594]  INFO -- : No new episodes to add to <Narcos>
-D, [2015-10-29T17:04:15.818601 #6607] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:04:15.927535 #6607] DEBUG -- : ...completed
-D, [2015-10-29T17:05:39.177676 #6629] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:05:39.288907 #6629] DEBUG -- : ...completed
-D, [2015-10-29T17:06:28.616448 #6636] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:06:28.730784 #6636] DEBUG -- : ...completed
-W, [2015-10-29T17:06:45.956179 #6636]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T17:06:46.197851 #6636]  INFO -- : Deleting entry with id <30907> from dataset 
-I, [2015-10-29T17:06:46.286735 #6636]  INFO -- : Deleting entry with id <305> from dataset 
-I, [2015-10-29T17:06:49.690690 #6636]  INFO -- : Trying to add show <Black Mirror>
-I, [2015-10-29T17:06:49.942068 #6636]  INFO -- : Added episode <The National Anthem>
-I, [2015-10-29T17:06:50.019865 #6636]  INFO -- : Added episode <Fifteen Million Merits>
-I, [2015-10-29T17:06:50.097620 #6636]  INFO -- : Added episode <The Entire History of You>
-I, [2015-10-29T17:06:50.175492 #6636]  INFO -- : Added episode <Be Right Back>
-I, [2015-10-29T17:06:50.264310 #6636]  INFO -- : Added episode <White Bear>
-I, [2015-10-29T17:06:50.342137 #6636]  INFO -- : Added episode <The Waldo Moment>
-I, [2015-10-29T17:06:50.342590 #6636]  INFO -- : ...completed
-W, [2015-10-29T17:06:58.373622 #6636]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T17:07:03.263829 #6636]  INFO -- : Deleting entry with id <30902> from dataset 
-I, [2015-10-29T17:07:03.352782 #6636]  INFO -- : Deleting entry with id <30903> from dataset 
-I, [2015-10-29T17:07:03.430618 #6636]  INFO -- : Deleting entry with id <30904> from dataset 
-I, [2015-10-29T17:07:03.508416 #6636]  INFO -- : Deleting entry with id <30905> from dataset 
-I, [2015-10-29T17:07:03.597245 #6636]  INFO -- : Deleting entry with id <30906> from dataset 
-I, [2015-10-29T17:07:03.599080 #6636]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
-I, [2015-10-29T17:07:03.600678 #6636]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
-I, [2015-10-29T17:07:03.754129 #6636]  INFO -- : No new episodes to add to <Black Mirror>
-I, [2015-10-29T17:07:03.828951 #6636]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-10-29T17:07:03.887956 #6636]  INFO -- : No new episodes to add to <The Player>
-I, [2015-10-29T17:07:03.949279 #6636]  INFO -- : No new episodes to add to <Limitless>
-I, [2015-10-29T17:07:04.013894 #6636]  INFO -- : No new episodes to add to <Narcos>
-D, [2015-10-29T17:07:45.118283 #6732] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:07:45.231944 #6732] DEBUG -- : ...completed
-D, [2015-10-29T17:11:00.199191 #6856] DEBUG -- : Connecting to the database
-D, [2015-10-29T17:11:00.301490 #6856] DEBUG -- : ...completed
-W, [2015-10-29T17:11:06.201074 #6856]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T17:11:07.540978 #6856]  INFO -- : Deleting entry with id <30907> from dataset 
-I, [2015-10-29T17:11:07.629874 #6856]  INFO -- : Deleting entry with id <305> from dataset 
-I, [2015-10-29T17:11:11.521353 #6856]  INFO -- : Trying to add show <Black Mirror>
-I, [2015-10-29T17:11:11.785393 #6856]  INFO -- : Added episode <The National Anthem>
-I, [2015-10-29T17:11:11.863202 #6856]  INFO -- : Added episode <Fifteen Million Merits>
-I, [2015-10-29T17:11:11.940932 #6856]  INFO -- : Added episode <The Entire History of You>
-I, [2015-10-29T17:11:12.018758 #6856]  INFO -- : Added episode <Be Right Back>
-I, [2015-10-29T17:11:12.096526 #6856]  INFO -- : Added episode <White Bear>
-I, [2015-10-29T17:11:12.174282 #6856]  INFO -- : Added episode <The Waldo Moment>
-I, [2015-10-29T17:11:12.174793 #6856]  INFO -- : ...completed
-W, [2015-10-29T17:11:17.400275 #6856]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-10-29T17:11:19.285115 #6856]  INFO -- : Deleting entry with id <30902> from dataset 
-I, [2015-10-29T17:11:19.362797 #6856]  INFO -- : Deleting entry with id <30903> from dataset 
-I, [2015-10-29T17:11:19.440632 #6856]  INFO -- : Deleting entry with id <30904> from dataset 
-I, [2015-10-29T17:11:19.518499 #6856]  INFO -- : Deleting entry with id <30905> from dataset 
-I, [2015-10-29T17:11:19.596141 #6856]  INFO -- : Deleting entry with id <30906> from dataset 
-I, [2015-10-29T17:11:19.597530 #6856]  INFO -- : The episode id 30907wasn't deleted because it's the last one.
-I, [2015-10-29T17:11:19.599084 #6856]  INFO -- : The episode id 208986wasn't deleted because it's the last one.
-I, [2015-10-29T17:11:19.665786 #6856]  INFO -- : No new episodes to add to <Black Mirror>
-I, [2015-10-29T17:11:19.730528 #6856]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-10-29T17:11:19.797535 #6856]  INFO -- : No new episodes to add to <The Player>
-I, [2015-10-29T17:11:19.864595 #6856]  INFO -- : No new episodes to add to <Limitless>
-I, [2015-10-29T17:11:19.931760 #6856]  INFO -- : No new episodes to add to <Narcos>
-D, [2015-11-22T19:07:26.851274 #11778] DEBUG -- : Connecting to the database
-D, [2015-11-22T19:07:26.965316 #11778] DEBUG -- : Creating tables... 
-E, [2015-11-22T19:07:26.965871 #11778] ERROR -- : Exception in create_tables : SQLite3::NotADatabaseException: file is encrypted or is not a database
-D, [2015-11-22T19:07:26.966044 #11778] DEBUG -- : ...completed
-E, [2015-11-22T19:07:30.143797 #11778] ERROR -- : Exception in nextEpisodes : SQLite3::NotADatabaseException: file is encrypted or is not a database
-D, [2015-11-22T19:07:51.070940 #11883] DEBUG -- : Connecting to the database
-D, [2015-11-22T19:07:51.092346 #11883] DEBUG -- : Creating tables... 
-E, [2015-11-22T19:07:51.092664 #11883] ERROR -- : Exception in create_tables : SQLite3::NotADatabaseException: file is encrypted or is not a database
-D, [2015-11-22T19:07:51.092778 #11883] DEBUG -- : ...completed
-D, [2015-11-22T19:09:22.272422 #12596] DEBUG -- : Connecting to the database
-D, [2015-11-22T19:09:22.293802 #12596] DEBUG -- : Creating tables... 
-D, [2015-11-22T19:09:22.466010 #12596] DEBUG -- : ...completed
-I, [2015-11-22T19:09:29.986144 #12596]  INFO -- : Trying to add show <Limitless>
-I, [2015-11-22T19:09:30.196656 #12596]  INFO -- : Added episode <Pilot>
-I, [2015-11-22T19:09:30.246711 #12596]  INFO -- : Added episode <Badge! Gun!>
-I, [2015-11-22T19:09:30.296668 #12596]  INFO -- : Added episode <The Legend of Marcos Ramos>
-I, [2015-11-22T19:09:30.371690 #12596]  INFO -- : Added episode <Page 44>
-I, [2015-11-22T19:09:30.421746 #12596]  INFO -- : Added episode <Personality Crisis>
-I, [2015-11-22T19:09:30.471861 #12596]  INFO -- : Added episode <Side Effects May Include...>
-I, [2015-11-22T19:09:30.538578 #12596]  INFO -- : Added episode <Brian Finch's Black Op>
-I, [2015-11-22T19:09:30.605136 #12596]  INFO -- : Added episode <When Pirates Pirate Pirates>
-I, [2015-11-22T19:09:30.671803 #12596]  INFO -- : Added episode <Headquarters!>
-I, [2015-11-22T19:09:30.738448 #12596]  INFO -- : Added episode <Arm-Ageddon>
-I, [2015-11-22T19:09:30.788460 #12596]  INFO -- : Added episode <TBA>
-I, [2015-11-22T19:09:30.788596 #12596]  INFO -- : ...completed
-D, [2015-11-23T18:55:31.526905 #4461] DEBUG -- : Connecting to the database
-D, [2015-11-23T18:55:31.686814 #4461] DEBUG -- : ...completed
-D, [2015-11-23T19:21:07.125313 #4624] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:21:07.144570 #4624] DEBUG -- : ...completed
-I, [2015-11-23T19:21:12.573278 #4624]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:21:12.810870 #4624]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:21:12.860946 #4624]  INFO -- : Added episode <America>
-I, [2015-11-23T19:21:12.919346 #4624]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:21:12.977753 #4624]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:21:13.027652 #4624]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:21:13.085954 #4624]  INFO -- : Added episode <God>
-I, [2015-11-23T19:21:13.144321 #4624]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:21:13.202730 #4624]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:21:13.261053 #4624]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:21:13.335884 #4624]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:21:13.394472 #4624]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:21:13.452601 #4624]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:21:13.452722 #4624]  INFO -- : ...completed
-W, [2015-11-23T19:21:24.480185 #4624]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T19:21:24.966624 #4624] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:26:04.681581 #4662] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:26:04.700971 #4662] DEBUG -- : ...completed
-W, [2015-11-23T19:26:11.113880 #4662]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T19:26:11.403680 #4662] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:26:29.365059 #4664] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:26:29.384320 #4664] DEBUG -- : ...completed
-E, [2015-11-23T19:26:33.466425 #4664] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-W, [2015-11-23T19:28:15.183804 #4664]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T19:28:15.466178 #4664] ERROR -- : Exception in get_show_id trying to get <Quantico[A>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Quantico%1B%5BA -- unhandled response
-E, [2015-11-23T19:28:15.467286 #4664] ERROR -- : Exception in get_episode_id trying to get <Quantico[A>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:28:23.554691 #4669] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:28:23.574268 #4669] DEBUG -- : ...completed
-E, [2015-11-23T19:28:32.176331 #4669] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:29:07.142946 #4675] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:29:07.162503 #4675] DEBUG -- : ...completed
-E, [2015-11-23T19:29:10.175506 #4675] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:30:05.190506 #4679] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:30:05.211108 #4679] DEBUG -- : ...completed
-W, [2015-11-23T19:30:09.341964 #4679]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T19:30:09.647644 #4679] ERROR -- : Exception in get_episode_id trying to get <quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:30:30.265255 #4683] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:30:30.284464 #4683] DEBUG -- : ...completed
-E, [2015-11-23T19:30:34.534025 #4683] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:31:59.870610 #4697] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:31:59.889380 #4697] DEBUG -- : ...completed
-W, [2015-11-23T19:32:03.107115 #4697]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T19:32:03.404683 #4697] ERROR -- : Exception in get_episode_id trying to get <QUantico>'s id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T19:33:20.809926 #4697] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T19:33:20.811240 #4697] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:33:49.282268 #4703] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:33:49.301315 #4703] DEBUG -- : ...completed
-E, [2015-11-23T19:33:52.497921 #4703] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:34:25.646631 #4792] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:34:25.666353 #4792] DEBUG -- : ...completed
-E, [2015-11-23T19:34:29.433545 #4792] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:38:35.969615 #4895] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:38:35.989376 #4895] DEBUG -- : ...completed
-E, [2015-11-23T19:38:38.891814 #4895] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:38:57.518525 #4897] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:38:57.537821 #4897] DEBUG -- : ...completed
-E, [2015-11-23T19:39:00.428603 #4897] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:39:28.635542 #4900] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:39:28.654866 #4900] DEBUG -- : ...completed
-E, [2015-11-23T19:39:32.010015 #4900] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s id : undefined method `[]' for nil:NilClass
-D, [2015-11-23T19:40:59.648842 #4911] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:40:59.668458 #4911] DEBUG -- : ...completed
-D, [2015-11-23T19:41:30.626810 #4916] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:41:30.645962 #4916] DEBUG -- : ...completed
-I, [2015-11-23T19:41:41.051438 #4916]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:41:41.118026 #4916]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:41:41.218038 #4916]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:41:41.276329 #4916]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:41:41.334738 #4916]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:41:41.392986 #4916]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:41:41.451396 #4916]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:41:41.551403 #4916]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:41:41.609739 #4916]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:41:41.668020 #4916]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:41:41.726354 #4916]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:41:41.809758 #4916]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:41:41.876473 #4916]  INFO -- : Deleting entry with id <2114> from dataset 
-I, [2015-11-23T19:41:48.633357 #4916]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:41:48.852726 #4916]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:41:48.911013 #4916]  INFO -- : Added episode <America>
-I, [2015-11-23T19:41:48.961101 #4916]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:41:49.011190 #4916]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:41:49.061149 #4916]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:41:49.119462 #4916]  INFO -- : Added episode <God>
-I, [2015-11-23T19:41:49.177694 #4916]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:41:49.252911 #4916]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:41:49.303260 #4916]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:41:49.386156 #4916]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:41:49.436249 #4916]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:41:49.494447 #4916]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:41:49.494610 #4916]  INFO -- : ...completed
-D, [2015-11-23T19:43:03.263314 #5040] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:43:03.282425 #5040] DEBUG -- : ...completed
-W, [2015-11-23T19:43:06.203103 #5040]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T19:43:06.525044 #5040]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:43:06.591522 #5040]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:43:06.650109 #5040]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:43:06.716520 #5040]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:43:06.775074 #5040]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:43:06.841601 #5040]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:43:06.925029 #5040]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:43:07.000081 #5040]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:43:07.066831 #5040]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:43:07.125016 #5040]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:43:07.191697 #5040]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:43:07.241700 #5040]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:43:07.291664 #5040]  INFO -- : Deleting entry with id <2114> from dataset 
-I, [2015-11-23T19:43:08.717613 #5040]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:43:08.942003 #5040]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:43:09.017176 #5040]  INFO -- : Added episode <America>
-I, [2015-11-23T19:43:09.067012 #5040]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:43:09.117126 #5040]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:43:09.183869 #5040]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:43:09.250403 #5040]  INFO -- : Added episode <God>
-I, [2015-11-23T19:43:09.317213 #5040]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:43:09.375613 #5040]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:43:09.433828 #5040]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:43:09.492183 #5040]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:43:09.550415 #5040]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:43:09.608892 #5040]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:43:09.609061 #5040]  INFO -- : ...completed
-D, [2015-11-23T19:44:03.530387 #5048] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:44:03.550214 #5048] DEBUG -- : ...completed
-W, [2015-11-23T19:44:08.033423 #5048]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T19:44:08.377959 #5048]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:44:08.444627 #5048]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:44:08.511392 #5048]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:44:08.594575 #5048]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:44:08.661269 #5048]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:44:08.736413 #5048]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:44:08.802944 #5048]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:44:08.869641 #5048]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:44:08.927957 #5048]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:44:08.994736 #5048]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:44:09.044615 #5048]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:44:09.094805 #5048]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:44:09.170136 #5048]  INFO -- : Deleting entry with id <2114> from dataset 
-I, [2015-11-23T19:44:12.053960 #5048]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:44:12.270397 #5048]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:44:12.337062 #5048]  INFO -- : Added episode <America>
-I, [2015-11-23T19:44:12.403598 #5048]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:44:12.486966 #5048]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:44:12.553809 #5048]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:44:12.620456 #5048]  INFO -- : Added episode <God>
-I, [2015-11-23T19:44:12.678844 #5048]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:44:12.737003 #5048]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:44:12.812862 #5048]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:44:12.870575 #5048]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:44:12.928742 #5048]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:44:13.003858 #5048]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:44:13.004032 #5048]  INFO -- : ...completed
-D, [2015-11-23T19:45:51.561593 #5081] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:45:51.581035 #5081] DEBUG -- : ...completed
-W, [2015-11-23T19:45:53.476165 #5081]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T19:45:53.831120 #5081]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:45:53.881313 #5081]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:45:53.930985 #5081]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:45:53.989310 #5081]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:45:54.047665 #5081]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:45:54.106136 #5081]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:45:54.164368 #5081]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:45:54.222662 #5081]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:45:54.281197 #5081]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:45:54.339460 #5081]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:45:54.397868 #5081]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:45:54.456089 #5081]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:45:54.514546 #5081]  INFO -- : Deleting entry with id <2114> from dataset 
-I, [2015-11-23T19:45:57.145124 #5081]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:45:57.373375 #5081]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:45:57.431651 #5081]  INFO -- : Added episode <America>
-I, [2015-11-23T19:45:57.489926 #5081]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:45:57.556798 #5081]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:45:57.615186 #5081]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:45:57.681647 #5081]  INFO -- : Added episode <God>
-I, [2015-11-23T19:45:57.756861 #5081]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:45:57.840102 #5081]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:45:57.898528 #5081]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:45:57.948496 #5081]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:45:58.015278 #5081]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:45:58.131924 #5081]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:45:58.132108 #5081]  INFO -- : ...completed
-W, [2015-11-23T19:48:39.101678 #5081]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T19:48:39.613001 #5081]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:48:39.687950 #5081]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:48:39.746348 #5081]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:48:39.804540 #5081]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:48:39.863069 #5081]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:48:39.921244 #5081]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:48:39.979713 #5081]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:48:40.037974 #5081]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:48:40.096479 #5081]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:48:40.171417 #5081]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:48:40.229827 #5081]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:48:40.288033 #5081]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:48:40.346508 #5081]  INFO -- : Deleting entry with id <2114> from dataset 
-D, [2015-11-23T19:48:45.145862 #5102] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:48:45.165316 #5102] DEBUG -- : ...completed
-I, [2015-11-23T19:48:50.259346 #5102]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:48:50.490231 #5102]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:48:50.540070 #5102]  INFO -- : Added episode <America>
-I, [2015-11-23T19:48:50.606772 #5102]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:48:50.665151 #5102]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:48:50.740054 #5102]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:48:50.798384 #5102]  INFO -- : Added episode <God>
-I, [2015-11-23T19:48:50.856781 #5102]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:48:50.923564 #5102]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:48:50.998392 #5102]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:48:51.056848 #5102]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:48:51.123467 #5102]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:48:51.182130 #5102]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:48:51.182266 #5102]  INFO -- : ...completed
-W, [2015-11-23T19:50:23.096737 #5102]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T19:50:23.608513 #5102]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:50:23.666703 #5102]  INFO -- : Deleting entry with id <209150> from dataset 
-I, [2015-11-23T19:50:23.725025 #5102]  INFO -- : Deleting entry with id <209151> from dataset 
-I, [2015-11-23T19:50:23.791772 #5102]  INFO -- : Deleting entry with id <209152> from dataset 
-I, [2015-11-23T19:50:23.850230 #5102]  INFO -- : Deleting entry with id <267348> from dataset 
-I, [2015-11-23T19:50:23.916868 #5102]  INFO -- : Deleting entry with id <365300> from dataset 
-I, [2015-11-23T19:50:23.975211 #5102]  INFO -- : Deleting entry with id <394067> from dataset 
-I, [2015-11-23T19:50:24.033585 #5102]  INFO -- : Deleting entry with id <401013> from dataset 
-I, [2015-11-23T19:50:24.125159 #5102]  INFO -- : Deleting entry with id <453268> from dataset 
-I, [2015-11-23T19:50:24.208637 #5102]  INFO -- : Deleting entry with id <461951> from dataset 
-I, [2015-11-23T19:50:24.266814 #5102]  INFO -- : Deleting entry with id <461952> from dataset 
-I, [2015-11-23T19:50:24.350277 #5102]  INFO -- : Deleting entry with id <471071> from dataset 
-I, [2015-11-23T19:50:24.408652 #5102]  INFO -- : Deleting entry with id <2114> from dataset 
-D, [2015-11-23T19:50:26.510969 #5120] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:50:26.531285 #5120] DEBUG -- : ...completed
-I, [2015-11-23T19:50:29.761662 #5120]  INFO -- : Trying to add show <Quantico>
-I, [2015-11-23T19:50:29.992929 #5120]  INFO -- : Added episode <Run>
-I, [2015-11-23T19:50:30.051421 #5120]  INFO -- : Added episode <America>
-I, [2015-11-23T19:50:30.109633 #5120]  INFO -- : Added episode <Cover>
-I, [2015-11-23T19:50:30.176503 #5120]  INFO -- : Added episode <Kill>
-I, [2015-11-23T19:50:30.234844 #5120]  INFO -- : Added episode <Found>
-I, [2015-11-23T19:50:30.293121 #5120]  INFO -- : Added episode <God>
-I, [2015-11-23T19:50:30.351472 #5120]  INFO -- : Added episode <Go>
-I, [2015-11-23T19:50:30.443114 #5120]  INFO -- : Added episode <Over>
-I, [2015-11-23T19:50:30.501540 #5120]  INFO -- : Added episode <Guilty>
-I, [2015-11-23T19:50:30.559875 #5120]  INFO -- : Added episode <Quantico>
-I, [2015-11-23T19:50:30.618210 #5120]  INFO -- : Added episode <Inside>
-I, [2015-11-23T19:50:30.676608 #5120]  INFO -- : Added episode <TBA>
-I, [2015-11-23T19:50:30.676726 #5120]  INFO -- : ...completed
-D, [2015-11-23T19:52:16.107845 #5132] DEBUG -- : Connecting to the database
-D, [2015-11-23T19:52:16.126814 #5132] DEBUG -- : ...completed
-I, [2015-11-23T19:52:21.048623 #5132]  INFO -- : Deleting entry with id <167671> from dataset 
-I, [2015-11-23T19:52:21.436779 #5132]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-11-23T19:52:21.529967 #5132]  INFO -- : No new episodes to add to <Limitless>
-I, [2015-11-23T19:52:32.759244 #5132]  INFO -- : Deleting entry with id <211775> from dataset 
-I, [2015-11-23T19:52:32.817553 #5132]  INFO -- : Deleting entry with id <212079> from dataset 
-I, [2015-11-23T19:52:32.875913 #5132]  INFO -- : Deleting entry with id <277890> from dataset 
-I, [2015-11-23T19:52:32.934176 #5132]  INFO -- : Deleting entry with id <295551> from dataset 
-I, [2015-11-23T19:52:32.992657 #5132]  INFO -- : Deleting entry with id <295552> from dataset 
-I, [2015-11-23T19:52:33.050952 #5132]  INFO -- : Deleting entry with id <313794> from dataset 
-I, [2015-11-23T19:52:33.125895 #5132]  INFO -- : Deleting entry with id <361474> from dataset 
-I, [2015-11-23T19:52:33.184314 #5132]  INFO -- : Deleting entry with id <394059> from dataset 
-I, [2015-11-23T19:52:33.242693 #5132]  INFO -- : Deleting entry with id <401017> from dataset 
-I, [2015-11-23T19:52:33.300902 #5132]  INFO -- : Deleting entry with id <414658> from dataset 
-I, [2015-11-23T19:52:33.301419 #5132]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
-I, [2015-11-23T19:52:34.404378 #5132]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-11-23T19:52:34.510016 #5132]  INFO -- : No new episodes to add to <Limitless>
-E, [2015-11-23T22:58:40.454293 #2775] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T23:00:43.790210 #2887] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T23:01:50.372420 #2919] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T23:02:45.154802 #2992] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass
-E, [2015-11-23T23:04:02.670726 #3079] ERROR -- : Exception in get_episode_id trying to get <Quantico>'s S1E13 id : undefined method `[]' for nil:NilClass [NoMethodError]
-E, [2015-11-23T23:04:26.165471 #3162] ERROR -- : Exception in add_show trying to add <dfsighsogrds> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=dfsighsogrds -- unhandled response [Mechanize::ResponseCodeError]
-W, [2015-11-23T23:05:14.979554 #3165]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-11-23T23:05:15.240308 #3165] ERROR -- : Exception in get_show_id trying to get <sdkfhusagf>'s id : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=sdkfhusagf -- unhandled response [Mechanize::ResponseCodeError]
-W, [2015-11-23T23:05:15.241610 #3165]  WARN -- : Couldn't delete entry with id <>. Entry not found.
-E, [2015-11-23T23:06:22.847755 #3170] ERROR -- : Exception importing file <asdiahsda> : No such file or directory @ rb_sysopen - asdiahsda [Errno::ENOENT]
-I, [2015-11-23T23:08:49.783938 #3303]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
-I, [2015-11-23T23:08:50.239820 #3303]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-11-23T23:08:50.334832 #3303]  INFO -- : No new episodes to add to <Into The Badlands>
-I, [2015-11-23T23:08:50.436078 #3303]  INFO -- : No new episodes to add to <Limitless>
-W, [2015-11-23T23:09:00.719667 #3303]  WARN -- : Show wasn't found in the database. Searching online.
-W, [2015-11-23T23:09:01.194026 #3303]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-11-23T23:09:03.653035 #3303]  INFO -- : The episode id 484938wasn't deleted because it's the last one.
-I, [2015-11-23T23:09:03.759480 #3303]  INFO -- : No new episodes to add to <Quantico>
-I, [2015-11-23T23:09:03.856399 #3303]  INFO -- : No new episodes to add to <Into The Badlands>
-I, [2015-11-23T23:09:03.957897 #3303]  INFO -- : No new episodes to add to <Limitless>
-E, [2015-11-24T00:02:05.755081 #5102] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
-E, [2015-11-24T00:02:35.181513 #5104] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
-E, [2015-11-24T00:03:05.220677 #5108] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
-E, [2015-11-24T00:03:19.527484 #5110] ERROR -- : Exception importing from myEpisodes : undefined method `username=' for nil:NilClass [NoMethodError]
-W, [2015-12-08T00:05:54.745268 #23715]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-12-08T00:07:15.171109 #23721] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+# Logfile created on 2016-01-29 20:49:22 +0100 by logger.rb/47272
+E, [2016-01-29T20:49:42.182775 #6035] ERROR -- : Exception in add_show trying to add <kdjsfhguyg> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=kdjsfhguyg -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T21:13:49.537092 #15070] ERROR -- : Exception in add_show trying to add <2 Broke Girls
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:49.734178 #15070] ERROR -- : Exception in add_show trying to add <30 Rock
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:49.935273 #15070] ERROR -- : Exception in add_show trying to add <A Touch of Cloth
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:50.122039 #15070] ERROR -- : Exception in add_show trying to add <Alcatraz
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:50.375129 #15070] ERROR -- : Exception in add_show trying to add <American Gods
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:50.560248 #15070] ERROR -- : Exception in add_show trying to add <Archer
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:50.735772 #15070] ERROR -- : Exception in add_show trying to add <Arrow
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:50.933401 #15070] ERROR -- : Exception in add_show trying to add <Awkward
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:51.133882 #15070] ERROR -- : Exception in add_show trying to add <Baccano!
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:51.375435 #15070] ERROR -- : Exception in add_show trying to add <Bad Education
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:51.564950 #15070] ERROR -- : Exception in add_show trying to add <Banshee
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:51.760710 #15070] ERROR -- : Exception in add_show trying to add <Being Human (UK)
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:07:19.843481 #23721] ERROR -- : Exception in add_show trying to add <Black Cat
-> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Black%20Cat -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:07:36.501928 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
-E, [2015-12-08T00:09:23.908946 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <Gravity Falls> : invalid date
-E, [2015-12-08T00:09:59.550740 #23721] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+E, [2016-01-29T21:13:51.961889 #15070] ERROR -- : Exception in add_show trying to add <Better Call Saul
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:52.145471 #15070] ERROR -- : Exception in add_show trying to add <Billions
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:52.342923 #15070] ERROR -- : Exception in add_show trying to add <Black Books
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:52.546680 #15070] ERROR -- : Exception in add_show trying to add <Black Cat
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:52.756240 #15070] ERROR -- : Exception in add_show trying to add <Black Mirror
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:52.943528 #15070] ERROR -- : Exception in add_show trying to add <Black Sails
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:53.147569 #15070] ERROR -- : Exception in add_show trying to add <Blindspot
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:53.354857 #15070] ERROR -- : Exception in add_show trying to add <Blue Mountain State
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:53.549411 #15070] ERROR -- : Exception in add_show trying to add <Bored to Death
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:53.746481 #15070] ERROR -- : Exception in add_show trying to add <Boss
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:53.933674 #15070] ERROR -- : Exception in add_show trying to add <Breaking Bad
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:13:54.130316 #15070] ERROR -- : Exception in add_show trying to add <Breaking In
+> : undefined method `where' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:15:32.680705 #15185] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+E, [2016-01-29T21:16:00.170699 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+E, [2016-01-29T21:17:21.511691 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+W, [2016-01-29T21:18:15.736540 #15185]  WARN -- : The show <Heroes Reborn> is already in the database
+E, [2016-01-29T21:18:21.328411 #15185] ERROR -- : Exception in add_show trying to add <House of Cards (US)
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:10:33.208332 #23721] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+E, [2016-01-29T21:18:51.524347 #15185] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:11:14.542383 #23721] ERROR -- : Exception in add_show trying to add <Needless
-> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Needless -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:12:41.879835 #23721] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+E, [2016-01-29T21:19:11.836791 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+E, [2016-01-29T21:20:44.699309 #15185] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:13:30.294482 #23721] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+E, [2016-01-29T21:21:27.451927 #15185] ERROR -- : Exception in add_show trying to add <Tegami Bachi
 > : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
-E, [2015-12-08T00:13:30.747996 #23721] ERROR -- : Exception in load_episodes trying to add episodes for <The Americans> : invalid date
-E, [2015-12-08T00:16:01.713632 #23878] ERROR -- : Exception in add_show trying to add <Heroes
-> : undefined local variable or method `obj' for MyTV::Database:Class [NameError]
-E, [2015-12-08T00:16:38.570822 #23881] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
-E, [2015-12-08T00:18:19.653992 #23889] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
-W, [2015-12-08T00:20:09.875931 #23895]  WARN -- : Show wasn't found in the database. Searching online.
-E, [2015-12-08T00:20:18.745995 #23895] ERROR -- : Exception in load_episodes trying to add episodes for <Heroes> : no block given (yield)
-W, [2015-12-08T00:20:45.731676 #23898]  WARN -- : Show wasn't found in the database. Searching online.
-I, [2015-12-08T00:22:07.291228 #23898]  INFO -- : No new episodes to add to <Heroes>
-I, [2015-12-08T00:22:08.121537 #23898]  INFO -- : No new episodes to add to <Friends>
-W, [2015-12-08T00:24:35.917057 #23999]  WARN -- : Show wasn't found in the database. Searching online.
-W, [2015-12-08T00:25:21.755308 #23999]  WARN -- : Show wasn't found in the database. Searching online.
+I, [2016-01-29T21:23:14.478525 #15185]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:23:15.764130 #15185]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:23:18.170480 #15185]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:23:18.529165 #15185]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:23:19.047782 #15185]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:23:19.413275 #15185]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:23:19.777728 #15185]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:23:20.346967 #15185]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:23:21.238054 #15185]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:23:21.804327 #15185]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:23:22.161359 #15185]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:23:22.520732 #15185]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:23:22.728904 #15185]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:23:23.313627 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:23:23.315589 #15185]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:23:23.725521 #15185]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:23:24.114508 #15185]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:23:24.690528 #15185]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:23:25.233791 #15185]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:23:25.639321 #15185]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:23:25.827761 #15185]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:23:26.191303 #15185]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:23:26.387552 #15185]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:23:26.738359 #15185]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:23:27.295561 #15185]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:23:27.668353 #15185]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:23:27.872769 #15185]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:23:28.411385 #15185]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:23:28.629304 #15185]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:23:28.835116 #15185]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:23:29.578897 #15185]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:23:29.956393 #15185]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:23:30.524907 #15185]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:23:30.721871 #15185]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:23:30.911735 #15185]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:23:31.106581 #15185]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:23:31.304652 #15185]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:23:31.484208 #15185]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:23:31.663014 #15185]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:23:31.860828 #15185]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:23:32.217262 #15185]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:23:32.407398 #15185]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:23:32.789590 #15185]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:23:32.973297 #15185]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:23:33.345518 #15185]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:23:33.913190 #15185]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:23:34.311692 #15185]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:23:34.506152 #15185]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:23:34.688808 #15185]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:23:34.870117 #15185]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:23:35.074178 #15185]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:23:35.259710 #15185]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:23:35.448038 #15185]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:23:35.639660 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:23:35.642174 #15185]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:23:36.033465 #15185]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:23:36.217229 #15185]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:23:36.750177 #15185]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:23:36.937630 #15185]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:23:37.133244 #15185]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:23:37.319383 #15185]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:23:37.510791 #15185]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:23:37.710827 #15185]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:23:37.904274 #15185]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:23:38.280003 #15185]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:23:38.491191 #15185]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:23:38.701265 #15185]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:23:38.897613 #15185]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:23:39.108664 #15185]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:23:39.297594 #15185]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:23:39.485496 #15185]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:23:39.685881 #15185]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:23:39.882485 #15185]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:23:40.079307 #15185]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:23:41.059983 #15185]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:23:41.249483 #15185]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:23:41.445463 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:23:41.447597 #15185]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:23:41.634760 #15185]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:23:41.832449 #15185]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:23:42.026064 #15185]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:23:42.216202 #15185]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:23:42.586827 #15185]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:23:42.779041 #15185]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:23:42.972442 #15185]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:23:43.164819 #15185]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:23:43.351676 #15185]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:23:43.536864 #15185]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:23:43.734039 #15185]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:23:43.923575 #15185]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:23:44.115701 #15185]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:23:44.300716 #15185] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T21:23:44.528064 #15185]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:23:44.711093 #15185]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:23:44.889503 #15185]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:23:45.066786 #15185]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:23:45.629068 #15185]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:23:45.814744 #15185]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:23:46.049099 #15185]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:23:46.237599 #15185]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:23:46.422141 #15185]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:23:46.603542 #15185]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:23:46.822760 #15185]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:23:47.343236 #15185] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:23:47.533131 #15185]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:23:47.731104 #15185]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:23:47.920736 #15185]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:23:48.112067 #15185]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:23:48.301253 #15185]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:23:48.497080 #15185]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:23:48.685585 #15185]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:23:48.874996 #15185]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:23:49.062892 #15185]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:23:49.249754 #15185]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:23:49.433847 #15185]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:23:49.618932 #15185]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:23:49.803389 #15185]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:23:49.985993 #15185]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:23:50.167117 #15185]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:23:50.348149 #15185]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:23:50.531299 #15185]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:23:50.752720 #15185]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:23:50.941918 #15185]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:23:51.133852 #15185]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:23:51.319608 #15185]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:23:51.501881 #15185]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:23:51.683711 #15185]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:23:52.074251 #15185]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:23:52.266218 #15185]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:23:52.455372 #15185]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:23:52.673201 #15185]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:23:52.858540 #15185]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:23:53.046426 #15185]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:23:53.237537 #15185]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:23:53.457852 #15185]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:23:53.631851 #15185]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:23:53.840997 #15185]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:23:54.020176 #15185]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:23:54.201460 #15185]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:23:54.391544 #15185]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:23:54.573533 #15185]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:23:54.755960 #15185] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:23:54.943010 #15185]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:23:55.131573 #15185]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:23:55.321878 #15185]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:23:55.510686 #15185]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:23:55.700980 #15185]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:23:55.896371 #15185]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:23:56.085905 #15185]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:23:56.313983 #15185]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:23:56.502249 #15185] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:23:56.701300 #15185]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:23:56.900391 #15185]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:23:57.086990 #15185]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:23:57.304988 #15185]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:23:57.498096 #15185]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:23:57.687558 #15185]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:23:57.878683 #15185]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:23:58.064581 #15185]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:23:58.248683 #15185]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:23:58.434947 #15185]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:23:58.625640 #15185]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:23:58.813814 #15185]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:23:59.005933 #15185]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:23:59.196884 #15185]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:23:59.381165 #15185]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:23:59.568226 #15185]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:23:59.800687 #15185]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:23:59.989491 #15185]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:24:00.177625 #15185] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:24:00.395369 #15185]  WARN -- : The show <Scandal> is already in the database
+W, [2016-01-29T21:24:00.573049 #15185]  WARN -- : The show <Sherlock> is already in the database
+W, [2016-01-29T21:24:00.784485 #15185]  WARN -- : The show <Silicon Valley> is already in the database
+W, [2016-01-29T21:24:00.966982 #15185]  WARN -- : The show <Smash> is already in the database
+W, [2016-01-29T21:24:01.150226 #15185]  WARN -- : The show <Spartacus> is already in the database
+W, [2016-01-29T21:24:01.337977 #15185]  WARN -- : The show <Spartacus: Gods of the Arena> is already in the database
+W, [2016-01-29T21:24:01.521471 #15185]  WARN -- : The show <Suits> is already in the database
+W, [2016-01-29T21:24:01.704914 #15185]  WARN -- : The show <Supernatural> is already in the database
+E, [2016-01-29T21:24:01.884682 #15185] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:24:02.099965 #15185]  WARN -- : The show <The Americans> is already in the database
+W, [2016-01-29T21:24:02.289196 #15185]  WARN -- : The show <The Big Bang Theory> is already in the database
+W, [2016-01-29T21:24:02.479209 #15185]  WARN -- : The show <The Blacklist> is already in the database
+W, [2016-01-29T21:24:02.704955 #15185]  WARN -- : The show <The Crimson Petal and the White> is already in the database
+W, [2016-01-29T21:24:02.888025 #15185]  WARN -- : The show <The Good Wife> is already in the database
+W, [2016-01-29T21:24:03.073409 #15185]  WARN -- : The show <The IT Crowd> is already in the database
+W, [2016-01-29T21:24:03.295427 #15185]  WARN -- : The show <The League> is already in the database
+W, [2016-01-29T21:24:03.487487 #15185]  WARN -- : The show <The Magicians> is already in the database
+W, [2016-01-29T21:24:03.676636 #15185]  WARN -- : The show <The Newsroom> is already in the database
+W, [2016-01-29T21:24:03.899296 #15185]  WARN -- : The show <The Originals> is already in the database
+W, [2016-01-29T21:24:04.088491 #15185]  WARN -- : The show <The Player> is already in the database
+W, [2016-01-29T21:24:04.273406 #15185]  WARN -- : The show <The Secret Circle> is already in the database
+W, [2016-01-29T21:24:04.458207 #15185]  WARN -- : The show <The Vampire Diaries> is already in the database
+W, [2016-01-29T21:24:04.773887 #15185]  WARN -- : The show <The Walking Dead> is already in the database
+W, [2016-01-29T21:24:05.110571 #15185]  WARN -- : The show <True Blood> is already in the database
+W, [2016-01-29T21:24:05.300573 #15185]  WARN -- : The show <Turn> is already in the database
+W, [2016-01-29T21:24:05.488480 #15185]  WARN -- : The show <White Collar> is already in the database
+I, [2016-01-29T21:24:06.112467 #15185]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:24:06.349607 #15185]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:24:07.497404 #15185]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:24:07.722305 #15185]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:24:08.109887 #15185]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:24:08.331926 #15185]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:24:08.544752 #15185]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:24:09.432913 #15185]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:24:10.290215 #15185]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:24:11.015112 #15185]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:24:11.384555 #15185]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:24:11.766741 #15185]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:24:11.980260 #15185]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:24:12.688945 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:24:12.692393 #15185]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:24:12.918557 #15185]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:24:13.301429 #15185]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:24:13.722976 #15185]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:24:14.095025 #15185]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:24:14.348918 #15185]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:24:14.553486 #15185]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:24:14.789530 #15185]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:24:15.003407 #15185]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:24:15.215112 #15185]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:24:15.586158 #15185]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:24:15.819697 #15185]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:24:16.040596 #15185]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:24:16.424632 #15185]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:24:16.652548 #15185]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:24:16.862056 #15185]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:24:17.255617 #15185]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:24:17.480817 #15185]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:24:17.854112 #15185]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:24:18.061929 #15185]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:24:18.267102 #15185]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:24:18.464637 #15185]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:24:18.665079 #15185]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:24:18.855510 #15185]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:24:19.044997 #15185]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:24:19.256446 #15185]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:24:19.488583 #15185]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:24:19.683941 #15185]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:24:19.924276 #15185]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:24:20.116590 #15185]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:24:20.342149 #15185]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:24:20.615385 #15185]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:24:20.874551 #15185]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:24:21.068084 #15185]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:24:21.259239 #15185]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:24:21.452944 #15185]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:24:21.673269 #15185]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:24:21.877961 #15185]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:24:22.081276 #15185]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:24:22.281013 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:24:22.284978 #15185]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:24:22.543338 #15185]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:24:22.744042 #15185]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:24:23.109008 #15185]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:24:23.296247 #15185]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:24:23.546534 #15185]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:24:23.737686 #15185]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:24:24.119116 #15185]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:24:24.514338 #15185]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:24:24.897352 #15185]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:24:25.502536 #15185]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:24:25.882673 #15185]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:24:26.276277 #15185]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:24:26.666078 #15185]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:24:27.069453 #15185]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:24:27.252233 #15185]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:24:27.626838 #15185]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:24:27.851562 #15185]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:24:28.245160 #15185]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:24:28.446549 #15185]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:24:29.128952 #15185]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:24:29.329360 #15185]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:24:29.534669 #15185] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:24:29.538138 #15185]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:24:29.728771 #15185]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:24:29.924895 #15185]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:24:30.117275 #15185]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:24:30.315001 #15185]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:24:30.778018 #15185]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:24:30.968241 #15185]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:24:31.160410 #15185]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:24:31.349002 #15185]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:24:31.537141 #15185]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:24:31.731029 #15185]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:24:31.931874 #15185]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:24:32.131702 #15185]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:24:32.321413 #15185]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:24:32.491762 #15185] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:27:04.862210 #17466] ERROR -- : Exception importing file <testshows.txt> : wrong number of arguments (4 for 3) [ArgumentError]
+I, [2016-01-29T21:27:05.688358 #17466]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:27:05.908733 #17466]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:27:06.512220 #17466]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:27:06.718056 #17466]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:27:06.932881 #17466]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:27:07.136194 #17466]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:27:07.336742 #17466]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:27:07.581342 #17466]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:27:07.994955 #17466]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:27:08.397687 #17466]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:27:08.628051 #17466]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:27:08.860701 #17466]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:27:09.079482 #17466]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:27:09.467105 #17466] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:27:09.470028 #17466]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:27:09.692782 #17466]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:27:09.934576 #17466]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:27:10.222561 #17466]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:27:10.484706 #17466]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:27:10.737297 #17466]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:27:10.934222 #17466]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:27:11.164145 #17466]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:27:11.366922 #17466]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:27:11.587792 #17466]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:27:11.844060 #17466]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:27:12.065538 #17466]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:27:12.280021 #17466]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:27:12.706137 #17466]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:27:12.908339 #17466]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:27:13.116248 #17466]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:27:13.490156 #17466]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:27:13.700462 #17466]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:27:14.046479 #17466]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:27:14.236432 #17466]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:27:14.428619 #17466]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:27:14.624526 #17466]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:27:14.824555 #17466]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:27:15.012087 #17466]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:27:15.194763 #17466]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:27:15.398298 #17466]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:27:15.626911 #17466]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:27:15.818789 #17466]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:27:16.053402 #17466]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:27:16.237365 #17466]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:27:16.449458 #17466]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:27:16.712763 #17466]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:27:16.985349 #17466]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:27:17.169514 #17466]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:27:17.360349 #17466]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:27:17.553983 #17466]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:27:17.760887 #17466]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:27:17.941631 #17466]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:27:18.128208 #17466]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:27:18.309274 #17466] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:27:18.313664 #17466]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:27:18.549680 #17466]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:27:18.732036 #17466]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:27:19.092667 #17466]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:27:19.277356 #17466]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:27:19.472280 #17466]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:27:19.658293 #17466]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:27:19.856884 #17466]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:27:20.055336 #17466]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:27:20.243891 #17466]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:27:20.480831 #17466]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:27:20.683433 #17466]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:27:20.883857 #17466]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:27:21.073665 #17466]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:27:21.277030 #17466]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:27:21.465539 #17466]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:27:21.652476 #17466]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:27:21.851308 #17466]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:27:22.041288 #17466]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:27:22.224428 #17466]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:27:22.866005 #17466]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:27:23.051782 #17466]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:27:23.246895 #17466] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:27:23.250380 #17466]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:27:23.430865 #17466]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:27:23.622076 #17466]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:27:23.812641 #17466]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:27:24.006229 #17466]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:27:24.309587 #17466]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:27:24.500915 #17466]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:27:24.692557 #17466]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:27:24.867553 #17466]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:27:25.041786 #17466]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:27:25.216569 #17466]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:27:25.403915 #17466]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:27:25.590418 #17466]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:27:25.774278 #17466]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:27:25.956608 #17466] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]
+E, [2016-01-29T21:27:25.986987 #17466] ERROR -- : Exception importing file <testshows.txt> : wrong number of arguments (4 for 3) [ArgumentError]
+I, [2016-01-29T21:27:26.274654 #17466]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:27:26.501362 #17466]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:27:26.942342 #17466]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:27:27.162904 #17466]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:27:27.386282 #17466]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:27:27.596410 #17466]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:27:27.802905 #17466]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:27:28.052268 #17466]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:27:28.402269 #17466]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:27:28.715239 #17466]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:27:28.935758 #17466]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:27:29.777802 #17466]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:27:29.996641 #17466]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:27:30.558910 #17466] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:27:30.561319 #17466]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:27:30.780058 #17466]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:27:31.027474 #17466]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:27:31.427141 #17466]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:27:31.692717 #17466]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:27:31.947346 #17466]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:27:32.152174 #17466]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:27:32.388583 #17466]  INFO -- : No new episodes to add to <House of Lies>
+W, [2016-01-29T21:27:34.579326 #17469]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:27:34.758368 #17469]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:27:34.939923 #17469]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:27:35.121325 #17469]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:27:35.307039 #17469]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:27:35.491499 #17469]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:27:35.671580 #17469]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:27:35.850127 #17469]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:27:36.027607 #17469]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:27:36.207588 #17469]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:27:36.389358 #17469]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:27:36.583194 #17469] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:27:36.767490 #17469]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:27:36.950803 #17469]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:27:37.134826 #17469]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:27:37.319328 #17469]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:27:37.502434 #17469]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:27:37.687666 #17469]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:27:37.874158 #17469]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:27:38.057761 #17469]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:27:38.239342 #17469]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:27:38.418877 #17469]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:27:38.599169 #17469]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:27:39.086962 #17469]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:27:39.266051 #17469]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:27:39.448066 #17469]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:27:39.630438 #17469]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:27:39.814853 #17469]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:27:39.997610 #17469]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:27:40.176805 #17469]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:27:40.356605 #17469]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:27:40.541068 #17469]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:27:40.729706 #17469]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:27:40.910892 #17469]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:27:41.089010 #17469]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:27:41.263230 #17469]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:27:41.439173 #17469]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:27:41.616406 #17469]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:27:41.796810 #17469]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:27:41.975320 #17469]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:27:42.154506 #17469]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:27:42.337276 #17469]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:27:42.523313 #17469]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:27:42.703758 #17469]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:27:42.881551 #17469]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:27:43.063109 #17469]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:27:43.244574 #17469]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:27:43.427241 #17469]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:27:43.610482 #17469]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:27:43.791295 #17469] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:27:43.981225 #17469]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:27:44.164569 #17469]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:27:44.347303 #17469]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:27:44.534703 #17469]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:27:44.721589 #17469]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:27:44.906360 #17469]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:27:45.086347 #17469]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:27:45.269675 #17469]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:27:45.449306 #17469] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:27:45.630228 #17469]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:27:45.812564 #17469]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:27:45.993577 #17469]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:27:46.178001 #17469]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:27:46.362933 #17469]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:27:46.548747 #17469]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:27:46.732330 #17469]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:27:46.914810 #17469]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:27:47.096509 #17469]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:27:47.281146 #17469]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:27:47.464906 #17469]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:27:47.646784 #17469]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:27:47.830381 #17469]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:27:48.011732 #17469]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:27:48.195960 #17469]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:27:48.380646 #17469]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:27:48.562568 #17469]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:27:48.747079 #17469]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:27:48.929587 #17469] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:27:50.710065 #17692]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:27:50.890318 #17692]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:27:51.073479 #17692]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:27:51.260989 #17692]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:27:51.449154 #17692]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:27:51.634629 #17692]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:27:51.818532 #17692]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:27:52.004282 #17692]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:27:52.193600 #17692]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:27:52.386188 #17692]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:27:52.568335 #17692]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:27:52.748043 #17692] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:27:52.933077 #17692]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:27:53.120430 #17692]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:27:53.305030 #17692]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:27:53.489568 #17692]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:27:53.675224 #17692]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:27:53.861132 #17692]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:27:54.050089 #17692]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:27:54.239477 #17692]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:27:54.427117 #17692]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:27:54.612879 #17692]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:27:54.796352 #17692]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:27:54.977733 #17692]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:27:55.157742 #17692]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:27:55.341907 #17692]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:27:55.527755 #17692]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:27:55.711184 #17692]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:27:55.890179 #17692]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:27:56.072180 #17692]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:27:56.250029 #17692]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:27:56.429935 #17692]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:27:56.608334 #17692]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:27:56.786857 #17692]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:27:56.964959 #17692]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:27:57.142350 #17692]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:27:57.319017 #17692]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:27:57.883489 #17692]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:27:58.067101 #17692]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:27:58.257040 #17692]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:27:58.442454 #17692]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:27:58.623660 #17692]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:27:58.808216 #17692]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:27:58.995922 #17692]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:27:59.180226 #17692]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:27:59.364891 #17692]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:27:59.552760 #17692]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:27:59.739994 #17692]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:27:59.921426 #17692]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:28:00.106528 #17692] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:00.306993 #17692]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:28:00.489057 #17692]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:28:00.675007 #17692]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:28:00.863740 #17692]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:28:01.051992 #17692]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:28:01.242023 #17692]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:28:01.429565 #17692]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:28:01.614755 #17692]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:28:01.798480 #17692] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:01.986558 #17692]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:28:02.170742 #17692]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:28:02.350475 #17692]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:28:02.528279 #17692]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:28:02.706535 #17692]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:28:02.886168 #17692]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:28:03.063435 #17692]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:28:03.243011 #17692]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:28:03.427537 #17692]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:28:03.614792 #17692]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:28:03.798712 #17692]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:28:03.982684 #17692]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:28:04.171794 #17692]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:28:04.357203 #17692]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:28:04.541781 #17692]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:28:04.712685 #17692]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:28:04.880589 #17692]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:28:05.049251 #17692]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:28:05.214821 #17692] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:05.385854 #17692]  WARN -- : The show <Scandal> is already in the database
+W, [2016-01-29T21:28:05.561513 #17692]  WARN -- : The show <Sherlock> is already in the database
+W, [2016-01-29T21:28:05.736129 #17692]  WARN -- : The show <Silicon Valley> is already in the database
+W, [2016-01-29T21:28:05.912380 #17692]  WARN -- : The show <Smash> is already in the database
+W, [2016-01-29T21:28:06.083250 #17692]  WARN -- : The show <Spartacus> is already in the database
+W, [2016-01-29T21:28:06.257595 #17692]  WARN -- : The show <Spartacus: Gods of the Arena> is already in the database
+W, [2016-01-29T21:28:06.432042 #17692]  WARN -- : The show <Suits> is already in the database
+W, [2016-01-29T21:28:06.602649 #17692]  WARN -- : The show <Supernatural> is already in the database
+E, [2016-01-29T21:28:06.770459 #17692] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:06.949723 #17692]  WARN -- : The show <The Americans> is already in the database
+W, [2016-01-29T21:28:07.129800 #17692]  WARN -- : The show <The Big Bang Theory> is already in the database
+W, [2016-01-29T21:28:07.310986 #17692]  WARN -- : The show <The Blacklist> is already in the database
+W, [2016-01-29T21:28:07.491446 #17692]  WARN -- : The show <The Crimson Petal and the White> is already in the database
+W, [2016-01-29T21:28:07.668317 #17692]  WARN -- : The show <The Good Wife> is already in the database
+W, [2016-01-29T21:28:07.844734 #17692]  WARN -- : The show <The IT Crowd> is already in the database
+W, [2016-01-29T21:28:08.020360 #17692]  WARN -- : The show <The League> is already in the database
+W, [2016-01-29T21:28:08.198590 #17692]  WARN -- : The show <The Magicians> is already in the database
+W, [2016-01-29T21:28:08.379391 #17692]  WARN -- : The show <The Newsroom> is already in the database
+W, [2016-01-29T21:28:08.557840 #17692]  WARN -- : The show <The Originals> is already in the database
+W, [2016-01-29T21:28:08.735100 #17692]  WARN -- : The show <The Player> is already in the database
+W, [2016-01-29T21:28:08.911786 #17692]  WARN -- : The show <The Secret Circle> is already in the database
+W, [2016-01-29T21:28:09.091666 #17692]  WARN -- : The show <The Vampire Diaries> is already in the database
+W, [2016-01-29T21:28:09.518441 #17692]  WARN -- : The show <The Walking Dead> is already in the database
+W, [2016-01-29T21:28:09.695170 #17692]  WARN -- : The show <True Blood> is already in the database
+W, [2016-01-29T21:28:09.877929 #17692]  WARN -- : The show <Turn> is already in the database
+W, [2016-01-29T21:28:10.062583 #17692]  WARN -- : The show <White Collar> is already in the database
+I, [2016-01-29T21:28:10.639050 #17692]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:28:10.868316 #17692]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:28:11.628089 #17692]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:28:11.843611 #17692]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:28:12.068634 #17692]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:28:12.283828 #17692]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:28:12.490907 #17692]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:28:12.865543 #17692]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:28:13.440684 #17692]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:28:13.968212 #17692]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:28:14.194101 #17692]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:28:14.429867 #17692]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:28:14.753317 #17692]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:28:15.188408 #17692] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:28:15.190358 #17692]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:28:15.407665 #17692]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:28:15.650233 #17692]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:28:16.034700 #17692]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:28:16.302813 #17692]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:28:16.558190 #17692]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:28:16.757640 #17692]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:28:16.986472 #17692]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:28:17.198234 #17692]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:28:17.410614 #17692]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:28:17.842269 #17692]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:28:18.065958 #17692]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:28:18.279632 #17692]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:28:18.665451 #17692]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:28:18.884580 #17692]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:28:19.089465 #17692]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:28:19.500518 #17692]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:28:19.727695 #17692]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:28:20.110628 #17692]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:28:20.310139 #17692]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:28:20.510453 #17692]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:28:20.708148 #17692]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:28:20.910387 #17692]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:28:21.098701 #17692]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:28:21.290354 #17692]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:28:21.501069 #17692]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:28:21.722640 #17692]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:28:21.904737 #17692]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:28:22.131871 #17692]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:28:22.316970 #17692]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:28:22.533305 #17692]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:28:22.904619 #17692]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:28:23.145950 #17692]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:28:23.323544 #17692]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:28:23.547818 #17692]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:28:23.937305 #17692]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:28:24.343941 #17692]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:28:24.728677 #17692]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:28:25.115630 #17692]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:28:25.292779 #17692] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:28:25.297035 #17692]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:28:25.724919 #17692]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:28:26.072180 #17692]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:28:26.695104 #17692]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:28:27.059390 #17692]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:28:27.242144 #17692]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:28:27.449049 #17692]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:28:27.628196 #17692]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:28:27.848523 #17692]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:28:28.264151 #17692]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:28:28.635943 #17692]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:28:28.837336 #17692]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:28:29.034936 #17692]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:28:29.215114 #17692]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:28:29.410147 #17692]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:28:29.587206 #17692]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:28:29.760808 #17692]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:28:29.940285 #17692]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:28:30.121120 #17692]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:28:30.302268 #17692]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:28:31.706319 #17692]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:28:31.916103 #17692]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:28:32.119009 #17692] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:28:32.121435 #17692]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:28:32.308012 #17692]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:28:32.511711 #17692]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:28:32.703701 #17692]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:28:32.916180 #17692]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:28:33.454893 #17692]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:28:33.639356 #17692]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:28:33.822870 #17692]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:28:34.004618 #17692]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:28:34.184742 #17692]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:28:34.362166 #17692]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:28:34.547467 #17692]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:28:34.729159 #17692]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:28:34.909666 #17692]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:28:35.082038 #17692] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T21:28:35.282107 #17692]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:28:35.448966 #17692]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:28:35.613767 #17692]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:28:35.780484 #17692]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:28:35.948376 #17692]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:28:36.118260 #17692]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:28:36.289329 #17692]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:28:36.687083 #17692]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:28:36.846121 #17692]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:28:37.009106 #17692]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:28:37.171521 #17692]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:28:37.328536 #17692] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:37.488464 #17692]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:28:37.657681 #17692]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:28:37.825195 #17692]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:28:37.990103 #17692]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:28:38.163925 #17692]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:28:38.330320 #17692]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:28:38.496978 #17692]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:28:38.662912 #17692]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:28:38.828474 #17692]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:28:38.993563 #17692]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:28:39.159289 #17692]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:28:39.322711 #17692]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:28:39.488379 #17692]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:28:39.650131 #17692]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:28:39.812034 #17692]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:28:39.978908 #17692]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:28:40.141446 #17692]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:28:40.302106 #17692]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:28:40.462188 #17692]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:28:40.620035 #17692]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:28:40.777511 #17692]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:28:40.934863 #17692]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:28:41.096503 #17692]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:28:41.261409 #17692]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:28:41.423711 #17692]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:28:41.588009 #17692]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:28:41.754484 #17692]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:28:41.925116 #17692]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:28:42.097607 #17692]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:28:42.270411 #17692]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:28:42.436990 #17692]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:28:42.607583 #17692]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:28:42.774014 #17692]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:28:42.940161 #17692]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:28:43.106730 #17692]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:28:43.274482 #17692]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:28:43.442989 #17692]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:28:43.609851 #17692] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:43.776462 #17692]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:28:43.944707 #17692]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:28:44.117450 #17692]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:28:44.284253 #17692]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:28:44.452584 #17692]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:28:44.622285 #17692]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:28:44.794560 #17692]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:28:44.968951 #17692]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:28:45.135849 #17692] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:45.303929 #17692]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:28:45.474157 #17692]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:28:45.642551 #17692]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:28:45.810822 #17692]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:28:45.977238 #17692]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:28:46.141978 #17692]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:28:46.306302 #17692]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:28:46.470508 #17692]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:28:46.632144 #17692]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:28:46.796243 #17692]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:28:46.960487 #17692]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:28:47.122809 #17692]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:28:47.290652 #17692]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:28:47.460191 #17692]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:28:47.629884 #17692]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:28:47.796342 #17692]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:28:47.963352 #17692]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:28:48.137065 #17692]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:28:48.296841 #17692] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:48.461600 #17692]  WARN -- : The show <Scandal> is already in the database
+W, [2016-01-29T21:28:48.621593 #17692]  WARN -- : The show <Sherlock> is already in the database
+W, [2016-01-29T21:28:48.784986 #17692]  WARN -- : The show <Silicon Valley> is already in the database
+W, [2016-01-29T21:28:48.951743 #17692]  WARN -- : The show <Smash> is already in the database
+W, [2016-01-29T21:28:49.119006 #17692]  WARN -- : The show <Spartacus> is already in the database
+W, [2016-01-29T21:28:49.285562 #17692]  WARN -- : The show <Spartacus: Gods of the Arena> is already in the database
+W, [2016-01-29T21:28:49.454905 #17692]  WARN -- : The show <Suits> is already in the database
+W, [2016-01-29T21:28:49.626938 #17692]  WARN -- : The show <Supernatural> is already in the database
+E, [2016-01-29T21:28:49.790750 #17692] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:28:49.958405 #17692]  WARN -- : The show <The Americans> is already in the database
+W, [2016-01-29T21:28:50.292622 #17692]  WARN -- : The show <The Big Bang Theory> is already in the database
+W, [2016-01-29T21:28:50.453566 #17692]  WARN -- : The show <The Blacklist> is already in the database
+W, [2016-01-29T21:28:50.615433 #17692]  WARN -- : The show <The Crimson Petal and the White> is already in the database
+W, [2016-01-29T21:28:50.773684 #17692]  WARN -- : The show <The Good Wife> is already in the database
+W, [2016-01-29T21:28:50.932556 #17692]  WARN -- : The show <The IT Crowd> is already in the database
+W, [2016-01-29T21:28:51.092745 #17692]  WARN -- : The show <The League> is already in the database
+W, [2016-01-29T21:28:51.250804 #17692]  WARN -- : The show <The Magicians> is already in the database
+W, [2016-01-29T21:28:51.410398 #17692]  WARN -- : The show <The Newsroom> is already in the database
+W, [2016-01-29T21:28:51.564494 #17692]  WARN -- : The show <The Originals> is already in the database
+W, [2016-01-29T21:28:51.718366 #17692]  WARN -- : The show <The Player> is already in the database
+W, [2016-01-29T21:28:51.877716 #17692]  WARN -- : The show <The Secret Circle> is already in the database
+W, [2016-01-29T21:28:52.037379 #17692]  WARN -- : The show <The Vampire Diaries> is already in the database
+W, [2016-01-29T21:28:52.198719 #17692]  WARN -- : The show <The Walking Dead> is already in the database
+W, [2016-01-29T21:28:52.358883 #17692]  WARN -- : The show <True Blood> is already in the database
+W, [2016-01-29T21:28:52.518300 #17692]  WARN -- : The show <Turn> is already in the database
+W, [2016-01-29T21:28:52.678387 #17692]  WARN -- : The show <White Collar> is already in the database
+I, [2016-01-29T21:28:53.216533 #17692]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:28:53.539282 #17692]  INFO -- : No new episodes to add to <Homeland>
+W, [2016-01-29T21:28:58.424302 #18155]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:28:58.608641 #18155]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:28:58.789533 #18155]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:28:58.968617 #18155]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:28:59.146152 #18155]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:28:59.322205 #18155]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:28:59.496780 #18155]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:28:59.672718 #18155]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:28:59.847266 #18155]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:29:00.019160 #18155]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:29:00.191791 #18155]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:29:00.366080 #18155] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:00.544389 #18155]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:29:00.724142 #18155]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:29:00.903136 #18155]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:29:01.083933 #18155]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:29:01.266707 #18155]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:29:01.444369 #18155]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:29:01.623293 #18155]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:29:01.804734 #18155]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:29:01.986713 #18155]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:29:02.167906 #18155]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:29:02.345784 #18155]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:29:02.522103 #18155]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:29:02.701067 #18155]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:29:02.880153 #18155]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:29:03.057769 #18155]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:29:03.234500 #18155]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:29:03.407088 #18155]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:29:03.584092 #18155]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:29:03.765137 #18155]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:29:03.942431 #18155]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:29:04.121864 #18155]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:29:04.298751 #18155]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:29:04.478514 #18155]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:29:04.656730 #18155]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:29:04.838895 #18155]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:29:05.022757 #18155]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:29:05.206941 #18155]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:29:05.385701 #18155]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:29:05.566851 #18155]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:29:05.745066 #18155]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:29:05.927942 #18155]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:29:06.112382 #18155]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:29:06.296414 #18155]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:29:06.476507 #18155]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:29:06.653162 #18155]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:29:06.831791 #18155]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:29:07.006548 #18155]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:29:07.181691 #18155] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:07.375081 #18155]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:29:07.552540 #18155]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:29:07.728710 #18155]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:29:07.903735 #18155]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:29:08.079111 #18155]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:29:08.253357 #18155]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:29:08.423499 #18155]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:29:08.599045 #18155]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:29:08.773152 #18155] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:08.954710 #18155]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:29:09.138264 #18155]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:29:09.316872 #18155]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:29:09.495026 #18155]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:29:09.673578 #18155]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:29:09.851827 #18155]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:29:10.031621 #18155]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:29:10.205596 #18155]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:29:10.378334 #18155]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:29:10.549446 #18155]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:29:10.719990 #18155]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:29:10.897812 #18155]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:29:11.079574 #18155]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:29:11.258012 #18155]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:29:11.436036 #18155]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:29:11.612829 #18155]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:29:11.790029 #18155]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:29:11.973683 #18155]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:29:12.156081 #18155] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:12.335127 #18155]  WARN -- : The show <Scandal> is already in the database
+W, [2016-01-29T21:29:12.503989 #18155]  WARN -- : The show <Sherlock> is already in the database
+W, [2016-01-29T21:29:12.670482 #18155]  WARN -- : The show <Silicon Valley> is already in the database
+W, [2016-01-29T21:29:12.835348 #18155]  WARN -- : The show <Smash> is already in the database
+W, [2016-01-29T21:29:13.001926 #18155]  WARN -- : The show <Spartacus> is already in the database
+W, [2016-01-29T21:29:13.176351 #18155]  WARN -- : The show <Spartacus: Gods of the Arena> is already in the database
+W, [2016-01-29T21:29:13.351571 #18155]  WARN -- : The show <Suits> is already in the database
+W, [2016-01-29T21:29:13.528027 #18155]  WARN -- : The show <Supernatural> is already in the database
+E, [2016-01-29T21:29:13.703292 #18155] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:13.885938 #18155]  WARN -- : The show <The Americans> is already in the database
+W, [2016-01-29T21:29:14.063071 #18155]  WARN -- : The show <The Big Bang Theory> is already in the database
+W, [2016-01-29T21:29:14.240508 #18155]  WARN -- : The show <The Blacklist> is already in the database
+W, [2016-01-29T21:29:14.417820 #18155]  WARN -- : The show <The Crimson Petal and the White> is already in the database
+W, [2016-01-29T21:29:14.593260 #18155]  WARN -- : The show <The Good Wife> is already in the database
+W, [2016-01-29T21:29:14.771008 #18155]  WARN -- : The show <The IT Crowd> is already in the database
+W, [2016-01-29T21:29:14.951657 #18155]  WARN -- : The show <The League> is already in the database
+W, [2016-01-29T21:29:15.134196 #18155]  WARN -- : The show <The Magicians> is already in the database
+W, [2016-01-29T21:29:15.313129 #18155]  WARN -- : The show <The Newsroom> is already in the database
+W, [2016-01-29T21:29:15.485927 #18155]  WARN -- : The show <The Originals> is already in the database
+W, [2016-01-29T21:29:15.657819 #18155]  WARN -- : The show <The Player> is already in the database
+W, [2016-01-29T21:29:15.829903 #18155]  WARN -- : The show <The Secret Circle> is already in the database
+W, [2016-01-29T21:29:16.003235 #18155]  WARN -- : The show <The Vampire Diaries> is already in the database
+W, [2016-01-29T21:29:16.444592 #18155]  WARN -- : The show <The Walking Dead> is already in the database
+W, [2016-01-29T21:29:16.626083 #18155]  WARN -- : The show <True Blood> is already in the database
+W, [2016-01-29T21:29:16.803315 #18155]  WARN -- : The show <Turn> is already in the database
+W, [2016-01-29T21:29:16.981926 #18155]  WARN -- : The show <White Collar> is already in the database
+I, [2016-01-29T21:29:17.550539 #18155]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:29:17.912859 #18155]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:29:18.793725 #18155]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:29:18.993103 #18155]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:29:19.200310 #18155]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:29:19.397308 #18155]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:29:19.589463 #18155]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:29:19.956729 #18155]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:29:20.638074 #18155]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:29:21.193261 #18155]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:29:21.419722 #18155]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:29:21.653884 #18155]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:29:21.874038 #18155]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:29:22.305761 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:29:22.307868 #18155]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:29:22.522388 #18155]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:29:22.759299 #18155]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:29:23.131807 #18155]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:29:23.387989 #18155]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:29:23.634807 #18155]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:29:23.830428 #18155]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:29:24.054616 #18155]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:29:24.260472 #18155]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:29:24.469882 #18155]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:29:24.740528 #18155]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:29:24.948291 #18155]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:29:25.145247 #18155]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:29:25.408566 #18155]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:29:25.625402 #18155]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:29:25.832463 #18155]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:29:26.233035 #18155]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:29:26.466915 #18155]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:29:26.744877 #18155]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:29:26.944332 #18155]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:29:27.140851 #18155]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:29:27.339051 #18155]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:29:27.543030 #18155]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:29:27.728600 #18155]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:29:27.904447 #18155]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:29:28.107210 #18155]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:29:28.330807 #18155]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:29:28.520665 #18155]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:29:28.755452 #18155]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:29:28.927357 #18155]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:29:29.131754 #18155]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:29:29.385060 #18155]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:29:29.631677 #18155]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:29:29.815631 #18155]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:29:30.002032 #18155]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:29:30.185485 #18155]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:29:30.385018 #18155]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:29:30.561988 #18155]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:29:30.743152 #18155]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:29:30.922303 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:29:30.924724 #18155]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:29:31.160532 #18155]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:29:31.341001 #18155]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:29:31.615860 #18155]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:29:31.800618 #18155]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:29:31.997432 #18155]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:29:32.186452 #18155]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:29:32.385015 #18155]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:29:32.585938 #18155]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:29:32.773715 #18155]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:29:33.014168 #18155]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:29:33.217113 #18155]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:29:33.420348 #18155]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:29:33.607999 #18155]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:29:33.815749 #18155]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:29:33.990475 #18155]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:29:34.151678 #18155]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:29:34.326871 #18155]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:29:34.499396 #18155]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:29:34.676866 #18155]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:29:35.290808 #18155]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:29:35.475500 #18155]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:29:35.667636 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:29:35.670902 #18155]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:29:35.845881 #18155]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:29:36.036028 #18155]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:29:36.223637 #18155]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:29:36.416711 #18155]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:29:36.850823 #18155]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:29:37.026212 #18155]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:29:37.206433 #18155]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:29:37.378500 #18155]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:29:37.552924 #18155]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:29:37.724982 #18155]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:29:37.909442 #18155]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:29:38.087256 #18155]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:29:38.263031 #18155]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:29:38.433603 #18155] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]
+W, [2016-01-29T21:29:38.643948 #18155]  WARN -- : The show <2 Broke Girls> is already in the database
+W, [2016-01-29T21:29:38.818125 #18155]  WARN -- : The show <30 Rock> is already in the database
+W, [2016-01-29T21:29:38.990656 #18155]  WARN -- : The show <A Touch of Cloth> is already in the database
+W, [2016-01-29T21:29:39.166061 #18155]  WARN -- : The show <Alcatraz> is already in the database
+W, [2016-01-29T21:29:39.337429 #18155]  WARN -- : The show <American Gods> is already in the database
+W, [2016-01-29T21:29:39.510698 #18155]  WARN -- : The show <Archer> is already in the database
+W, [2016-01-29T21:29:39.686487 #18155]  WARN -- : The show <Arrow> is already in the database
+W, [2016-01-29T21:29:40.134516 #18155]  WARN -- : The show <Awkward> is already in the database
+W, [2016-01-29T21:29:40.314914 #18155]  WARN -- : The show <Baccano> is already in the database
+W, [2016-01-29T21:29:40.493974 #18155]  WARN -- : The show <Bad Education> is already in the database
+W, [2016-01-29T21:29:40.684124 #18155]  WARN -- : The show <Banshee> is already in the database
+E, [2016-01-29T21:29:40.872051 #18155] ERROR -- : Exception in add_show trying to add <Being Human (UK)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Being%20Human%20(UK) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:41.065340 #18155]  WARN -- : The show <Better Call Saul> is already in the database
+W, [2016-01-29T21:29:41.480565 #18155]  WARN -- : The show <Billions> is already in the database
+W, [2016-01-29T21:29:41.660277 #18155]  WARN -- : The show <Black Books> is already in the database
+W, [2016-01-29T21:29:41.840482 #18155]  WARN -- : The show <Wind at My Back> is already in the database
+W, [2016-01-29T21:29:42.024869 #18155]  WARN -- : The show <Black Mirror> is already in the database
+W, [2016-01-29T21:29:42.208980 #18155]  WARN -- : The show <Black Sails> is already in the database
+W, [2016-01-29T21:29:42.395077 #18155]  WARN -- : The show <Blindspot> is already in the database
+W, [2016-01-29T21:29:42.581812 #18155]  WARN -- : The show <Blue Mountain State> is already in the database
+W, [2016-01-29T21:29:42.773659 #18155]  WARN -- : The show <Bored to Death> is already in the database
+W, [2016-01-29T21:29:42.965776 #18155]  WARN -- : The show <Boss> is already in the database
+W, [2016-01-29T21:29:43.157197 #18155]  WARN -- : The show <Breaking Bad> is already in the database
+W, [2016-01-29T21:29:43.348846 #18155]  WARN -- : The show <Breaking In> is already in the database
+W, [2016-01-29T21:29:43.541734 #18155]  WARN -- : The show <Camelot> is already in the database
+W, [2016-01-29T21:29:43.730370 #18155]  WARN -- : The show <Chuck> is already in the database
+W, [2016-01-29T21:29:43.916656 #18155]  WARN -- : The show <Code Geass> is already in the database
+W, [2016-01-29T21:29:44.106861 #18155]  WARN -- : The show <Comic Book Men> is already in the database
+W, [2016-01-29T21:29:44.300326 #18155]  WARN -- : The show <Community> is already in the database
+W, [2016-01-29T21:29:44.494066 #18155]  WARN -- : The show <Copper> is already in the database
+W, [2016-01-29T21:29:44.687201 #18155]  WARN -- : The show <Da Vinci's Demons> is already in the database
+W, [2016-01-29T21:29:44.877801 #18155]  WARN -- : The show <Marvel's Daredevil> is already in the database
+W, [2016-01-29T21:29:45.070560 #18155]  WARN -- : The show <Desperate Romantics> is already in the database
+W, [2016-01-29T21:29:45.262658 #18155]  WARN -- : The show <Dexter> is already in the database
+W, [2016-01-29T21:29:45.445715 #18155]  WARN -- : The show <Entourage> is already in the database
+W, [2016-01-29T21:29:45.622093 #18155]  WARN -- : The show <Fairy Tail> is already in the database
+W, [2016-01-29T21:29:45.803826 #18155]  WARN -- : The show <Fate/Stay Night> is already in the database
+W, [2016-01-29T21:29:45.992301 #18155]  WARN -- : The show <Fresh Meat> is already in the database
+W, [2016-01-29T21:29:46.181907 #18155]  WARN -- : The show <Friday Night Lights> is already in the database
+W, [2016-01-29T21:29:46.370832 #18155]  WARN -- : The show <Fringe> is already in the database
+W, [2016-01-29T21:29:46.559416 #18155]  WARN -- : The show <Game of Thrones> is already in the database
+W, [2016-01-29T21:29:46.748991 #18155]  WARN -- : The show <Gravity Falls> is already in the database
+W, [2016-01-29T21:29:46.938153 #18155]  WARN -- : The show <Gun X Sword> is already in the database
+W, [2016-01-29T21:29:47.129838 #18155]  WARN -- : The show <Halt and Catch Fire> is already in the database
+W, [2016-01-29T21:29:47.316614 #18155]  WARN -- : The show <Hard Knocks> is already in the database
+W, [2016-01-29T21:29:47.499102 #18155]  WARN -- : The show <Hell on Wheels> is already in the database
+W, [2016-01-29T21:29:47.681369 #18155]  WARN -- : The show <Heroes> is already in the database
+W, [2016-01-29T21:29:47.862967 #18155]  WARN -- : The show <Heroes Reborn> is already in the database
+W, [2016-01-29T21:29:48.046042 #18155]  WARN -- : The show <Homeland> is already in the database
+E, [2016-01-29T21:29:48.231671 #18155] ERROR -- : Exception in add_show trying to add <House of Cards (US)
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=House%20of%20Cards%20(US) -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:48.421947 #18155]  WARN -- : The show <House of Lies> is already in the database
+W, [2016-01-29T21:29:48.614489 #18155]  WARN -- : The show <How I Met Your Mother> is already in the database
+W, [2016-01-29T21:29:48.807045 #18155]  WARN -- : The show <How to Get Away with Murder> is already in the database
+W, [2016-01-29T21:29:48.994506 #18155]  WARN -- : The show <Demon King Daimao> is already in the database
+W, [2016-01-29T21:29:49.174995 #18155]  WARN -- : The show <Inside Men> is already in the database
+W, [2016-01-29T21:29:49.358409 #18155]  WARN -- : The show <Into the Badlands> is already in the database
+W, [2016-01-29T21:29:49.545327 #18155]  WARN -- : The show <John Doe> is already in the database
+W, [2016-01-29T21:29:49.737218 #18155]  WARN -- : The show <Jonathan Strange & Mr. Norrell> is already in the database
+E, [2016-01-29T21:29:49.918308 #18155] ERROR -- : Exception in add_show trying to add <Kaze no Stigma
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Kaze%20no%20Stigma -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:50.098692 #18155]  WARN -- : The show <Limitless> is already in the database
+W, [2016-01-29T21:29:50.280506 #18155]  WARN -- : The show <Madam Secretary> is already in the database
+W, [2016-01-29T21:29:50.463084 #18155]  WARN -- : The show <Marco Polo> is already in the database
+W, [2016-01-29T21:29:50.645809 #18155]  WARN -- : The show <Marseille> is already in the database
+W, [2016-01-29T21:29:50.833040 #18155]  WARN -- : The show <Marvel's Agent Carter> is already in the database
+W, [2016-01-29T21:29:51.023693 #18155]  WARN -- : The show <Marvel's Agents of S.H.I.E.L.D> is already in the database
+W, [2016-01-29T21:29:51.212166 #18155]  WARN -- : The show <Marvel's Jessica Jones> is already in the database
+W, [2016-01-29T21:29:51.398146 #18155]  WARN -- : The show <Misfits> is already in the database
+W, [2016-01-29T21:29:51.588038 #18155]  WARN -- : The show <Mob City> is already in the database
+W, [2016-01-29T21:29:51.777323 #18155]  WARN -- : The show <Modern Family> is already in the database
+W, [2016-01-29T21:29:51.968438 #18155]  WARN -- : The show <Mr. Robot> is already in the database
+W, [2016-01-29T21:29:52.161998 #18155]  WARN -- : The show <Narcos> is already in the database
+W, [2016-01-29T21:29:52.352064 #18155]  WARN -- : The show <Necessary Roughness> is already in the database
+W, [2016-01-29T21:29:52.543252 #18155]  WARN -- : The show <Needless> is already in the database
+W, [2016-01-29T21:29:52.735744 #18155]  WARN -- : The show <One Piece> is already in the database
+W, [2016-01-29T21:29:52.924447 #18155]  WARN -- : The show <Orange is the New Black> is already in the database
+W, [2016-01-29T21:29:53.113968 #18155]  WARN -- : The show <Pretty Little Liars> is already in the database
+W, [2016-01-29T21:29:53.303644 #18155]  WARN -- : The show <Quantico> is already in the database
+E, [2016-01-29T21:29:53.492499 #18155] ERROR -- : Exception in add_show trying to add <S-CRY-Ed
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=S-CRY-Ed -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:53.685070 #18155]  WARN -- : The show <Scandal> is already in the database
+W, [2016-01-29T21:29:53.877204 #18155]  WARN -- : The show <Sherlock> is already in the database
+W, [2016-01-29T21:29:54.063633 #18155]  WARN -- : The show <Silicon Valley> is already in the database
+W, [2016-01-29T21:29:54.248321 #18155]  WARN -- : The show <Smash> is already in the database
+W, [2016-01-29T21:29:54.434775 #18155]  WARN -- : The show <Spartacus> is already in the database
+W, [2016-01-29T21:29:54.626213 #18155]  WARN -- : The show <Spartacus: Gods of the Arena> is already in the database
+W, [2016-01-29T21:29:54.821306 #18155]  WARN -- : The show <Suits> is already in the database
+W, [2016-01-29T21:29:55.014633 #18155]  WARN -- : The show <Supernatural> is already in the database
+E, [2016-01-29T21:29:55.189444 #18155] ERROR -- : Exception in add_show trying to add <Tegami Bachi
+> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=Tegami%20Bachi -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-01-29T21:29:55.365009 #18155]  WARN -- : The show <The Americans> is already in the database
+W, [2016-01-29T21:29:55.545883 #18155]  WARN -- : The show <The Big Bang Theory> is already in the database
+W, [2016-01-29T21:29:55.732358 #18155]  WARN -- : The show <The Blacklist> is already in the database
+W, [2016-01-29T21:29:55.924590 #18155]  WARN -- : The show <The Crimson Petal and the White> is already in the database
+W, [2016-01-29T21:29:56.118004 #18155]  WARN -- : The show <The Good Wife> is already in the database
+W, [2016-01-29T21:29:56.310045 #18155]  WARN -- : The show <The IT Crowd> is already in the database
+W, [2016-01-29T21:29:56.500889 #18155]  WARN -- : The show <The League> is already in the database
+W, [2016-01-29T21:29:56.690180 #18155]  WARN -- : The show <The Magicians> is already in the database
+W, [2016-01-29T21:29:56.879709 #18155]  WARN -- : The show <The Newsroom> is already in the database
+W, [2016-01-29T21:29:57.070043 #18155]  WARN -- : The show <The Originals> is already in the database
+W, [2016-01-29T21:29:57.259875 #18155]  WARN -- : The show <The Player> is already in the database
+W, [2016-01-29T21:29:57.451650 #18155]  WARN -- : The show <The Secret Circle> is already in the database
+W, [2016-01-29T21:29:57.641843 #18155]  WARN -- : The show <The Vampire Diaries> is already in the database
+W, [2016-01-29T21:29:57.828199 #18155]  WARN -- : The show <The Walking Dead> is already in the database
+W, [2016-01-29T21:29:58.007045 #18155]  WARN -- : The show <True Blood> is already in the database
+W, [2016-01-29T21:29:58.183587 #18155]  WARN -- : The show <Turn> is already in the database
+W, [2016-01-29T21:29:58.362751 #18155]  WARN -- : The show <White Collar> is already in the database
+I, [2016-01-29T21:29:59.581765 #18155]  INFO -- : No new episodes to add to <Arrow>
+I, [2016-01-29T21:30:00.147248 #18155]  INFO -- : No new episodes to add to <Homeland>
+I, [2016-01-29T21:30:02.795981 #18155]  INFO -- : No new episodes to add to <Supernatural>
+I, [2016-01-29T21:30:03.585495 #18155]  INFO -- : No new episodes to add to <True Blood>
+I, [2016-01-29T21:30:04.136721 #18155]  INFO -- : No new episodes to add to <Marvel's Agents of S.H.I.E.L.D>
+I, [2016-01-29T21:30:04.509565 #18155]  INFO -- : No new episodes to add to <Madam Secretary>
+I, [2016-01-29T21:30:04.874915 #18155]  INFO -- : No new episodes to add to <How to Get Away with Murder>
+I, [2016-01-29T21:30:05.589952 #18155]  INFO -- : No new episodes to add to <The Originals>
+I, [2016-01-29T21:30:07.184428 #18155]  INFO -- : No new episodes to add to <The Vampire Diaries>
+I, [2016-01-29T21:30:08.794300 #18155]  INFO -- : No new episodes to add to <The Big Bang Theory>
+I, [2016-01-29T21:30:09.368345 #18155]  INFO -- : No new episodes to add to <The Blacklist>
+I, [2016-01-29T21:30:09.928948 #18155]  INFO -- : No new episodes to add to <The Walking Dead>
+I, [2016-01-29T21:30:10.307196 #18155]  INFO -- : No new episodes to add to <Hell on Wheels>
+E, [2016-01-29T21:30:11.558316 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Modern Family> : invalid date
+I, [2016-01-29T21:30:11.562054 #18155]  INFO -- : No new episodes to add to <Modern Family>
+I, [2016-01-29T21:30:11.941058 #18155]  INFO -- : No new episodes to add to <Game of Thrones>
+I, [2016-01-29T21:30:12.501565 #18155]  INFO -- : No new episodes to add to <Scandal>
+I, [2016-01-29T21:30:13.412267 #18155]  INFO -- : No new episodes to add to <The Good Wife>
+I, [2016-01-29T21:30:13.966825 #18155]  INFO -- : No new episodes to add to <2 Broke Girls>
+I, [2016-01-29T21:30:14.372225 #18155]  INFO -- : No new episodes to add to <Heroes>
+I, [2016-01-29T21:30:14.565103 #18155]  INFO -- : No new episodes to add to <Silicon Valley>
+I, [2016-01-29T21:30:14.932321 #18155]  INFO -- : No new episodes to add to <House of Lies>
+I, [2016-01-29T21:30:15.143351 #18155]  INFO -- : No new episodes to add to <The Newsroom>
+I, [2016-01-29T21:30:15.360083 #18155]  INFO -- : No new episodes to add to <The Americans>
+I, [2016-01-29T21:30:15.765459 #18155]  INFO -- : No new episodes to add to <Fringe>
+I, [2016-01-29T21:30:15.988284 #18155]  INFO -- : No new episodes to add to <Dexter>
+I, [2016-01-29T21:30:16.199088 #18155]  INFO -- : No new episodes to add to <Banshee>
+I, [2016-01-29T21:30:16.586169 #18155]  INFO -- : No new episodes to add to <Chuck>
+I, [2016-01-29T21:30:16.808288 #18155]  INFO -- : No new episodes to add to <Breaking Bad>
+I, [2016-01-29T21:30:17.024419 #18155]  INFO -- : No new episodes to add to <Orange is the New Black>
+I, [2016-01-29T21:30:17.457546 #18155]  INFO -- : No new episodes to add to <How I Met Your Mother>
+I, [2016-01-29T21:30:17.692108 #18155]  INFO -- : No new episodes to add to <Suits>
+I, [2016-01-29T21:30:18.072805 #18155]  INFO -- : No new episodes to add to <Pretty Little Liars>
+I, [2016-01-29T21:30:18.271525 #18155]  INFO -- : No new episodes to add to <Black Sails>
+I, [2016-01-29T21:30:18.472714 #18155]  INFO -- : No new episodes to add to <Turn>
+I, [2016-01-29T21:30:18.676245 #18155]  INFO -- : No new episodes to add to <Halt and Catch Fire>
+I, [2016-01-29T21:30:18.891352 #18155]  INFO -- : No new episodes to add to <Da Vinci's Demons>
+I, [2016-01-29T21:30:19.080169 #18155]  INFO -- : No new episodes to add to <Alcatraz>
+I, [2016-01-29T21:30:19.267185 #18155]  INFO -- : No new episodes to add to <Mob City>
+I, [2016-01-29T21:30:19.472860 #18155]  INFO -- : No new episodes to add to <Comic Book Men>
+I, [2016-01-29T21:30:19.702980 #18155]  INFO -- : No new episodes to add to <The League>
+I, [2016-01-29T21:30:19.892214 #18155]  INFO -- : No new episodes to add to <Bad Education>
+I, [2016-01-29T21:30:20.119664 #18155]  INFO -- : No new episodes to add to <Awkward>
+I, [2016-01-29T21:30:20.305234 #18155]  INFO -- : No new episodes to add to <Black Mirror>
+I, [2016-01-29T21:30:20.523172 #18155]  INFO -- : No new episodes to add to <Archer>
+I, [2016-01-29T21:30:20.898555 #18155]  INFO -- : No new episodes to add to <Community>
+I, [2016-01-29T21:30:21.161185 #18155]  INFO -- : No new episodes to add to <White Collar>
+I, [2016-01-29T21:30:21.357004 #18155]  INFO -- : No new episodes to add to <Sherlock>
+I, [2016-01-29T21:30:21.553162 #18155]  INFO -- : No new episodes to add to <Marvel's Agent Carter>
+I, [2016-01-29T21:30:21.750700 #18155]  INFO -- : No new episodes to add to <Spartacus: Gods of the Arena>
+I, [2016-01-29T21:30:21.967689 #18155]  INFO -- : No new episodes to add to <Gravity Falls>
+I, [2016-01-29T21:30:22.161112 #18155]  INFO -- : No new episodes to add to <Copper>
+I, [2016-01-29T21:30:22.355358 #18155]  INFO -- : No new episodes to add to <Smash>
+E, [2016-01-29T21:30:22.546232 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Breaking In> : invalid date
+I, [2016-01-29T21:30:22.549499 #18155]  INFO -- : No new episodes to add to <Breaking In>
+I, [2016-01-29T21:30:22.799052 #18155]  INFO -- : No new episodes to add to <30 Rock>
+I, [2016-01-29T21:30:23.001286 #18155]  INFO -- : No new episodes to add to <The IT Crowd>
+I, [2016-01-29T21:30:23.386561 #18155]  INFO -- : No new episodes to add to <Entourage>
+I, [2016-01-29T21:30:23.572795 #18155]  INFO -- : No new episodes to add to <Better Call Saul>
+I, [2016-01-29T21:30:23.939408 #18155]  INFO -- : No new episodes to add to <Necessary Roughness>
+I, [2016-01-29T21:30:24.133260 #18155]  INFO -- : No new episodes to add to <Marco Polo>
+I, [2016-01-29T21:30:24.521866 #18155]  INFO -- : No new episodes to add to <Spartacus>
+I, [2016-01-29T21:30:24.731760 #18155]  INFO -- : No new episodes to add to <Blue Mountain State>
+I, [2016-01-29T21:30:24.925371 #18155]  INFO -- : No new episodes to add to <Bored to Death>
+I, [2016-01-29T21:30:25.522392 #18155]  INFO -- : No new episodes to add to <Friday Night Lights>
+I, [2016-01-29T21:30:25.903723 #18155]  INFO -- : No new episodes to add to <Misfits>
+I, [2016-01-29T21:30:26.290420 #18155]  INFO -- : No new episodes to add to <The Secret Circle>
+I, [2016-01-29T21:30:26.672884 #18155]  INFO -- : No new episodes to add to <Boss>
+I, [2016-01-29T21:30:27.062319 #18155]  INFO -- : No new episodes to add to <Hard Knocks>
+I, [2016-01-29T21:30:27.244428 #18155]  INFO -- : No new episodes to add to <Camelot>
+I, [2016-01-29T21:30:27.446339 #18155]  INFO -- : No new episodes to add to <The Crimson Petal and the White>
+I, [2016-01-29T21:30:27.644182 #18155]  INFO -- : No new episodes to add to <Marvel's Daredevil>
+I, [2016-01-29T21:30:28.021575 #18155]  INFO -- : No new episodes to add to <Marvel's Jessica Jones>
+I, [2016-01-29T21:30:28.235329 #18155]  INFO -- : No new episodes to add to <Heroes Reborn>
+I, [2016-01-29T21:30:28.921905 #18155]  INFO -- : No new episodes to add to <One Piece>
+I, [2016-01-29T21:30:29.116795 #18155]  INFO -- : No new episodes to add to <Black Books>
+E, [2016-01-29T21:30:29.310917 #18155] ERROR -- : Exception in load_episodes trying to add episodes for <Fresh Meat> : invalid date
+I, [2016-01-29T21:30:29.313202 #18155]  INFO -- : No new episodes to add to <Fresh Meat>
+I, [2016-01-29T21:30:29.492132 #18155]  INFO -- : No new episodes to add to <Inside Men>
+I, [2016-01-29T21:30:29.681642 #18155]  INFO -- : No new episodes to add to <Blindspot>
+I, [2016-01-29T21:30:29.873918 #18155]  INFO -- : No new episodes to add to <Mr. Robot>
+I, [2016-01-29T21:30:30.070354 #18155]  INFO -- : No new episodes to add to <Fate/Stay Night>
+I, [2016-01-29T21:30:30.363801 #18155]  INFO -- : No new episodes to add to <Fairy Tail>
+I, [2016-01-29T21:30:30.552254 #18155]  INFO -- : No new episodes to add to <Quantico>
+I, [2016-01-29T21:30:30.732830 #18155]  INFO -- : No new episodes to add to <The Player>
+I, [2016-01-29T21:30:30.916454 #18155]  INFO -- : No new episodes to add to <Into the Badlands>
+I, [2016-01-29T21:30:31.102738 #18155]  INFO -- : No new episodes to add to <Jonathan Strange & Mr. Norrell>
+I, [2016-01-29T21:30:31.290085 #18155]  INFO -- : No new episodes to add to <A Touch of Cloth>
+I, [2016-01-29T21:30:31.488261 #18155]  INFO -- : No new episodes to add to <Limitless>
+I, [2016-01-29T21:30:31.682956 #18155]  INFO -- : No new episodes to add to <Narcos>
+I, [2016-01-29T21:30:31.866814 #18155]  INFO -- : No new episodes to add to <The Magicians>
+E, [2016-01-29T21:30:32.036178 #18155] ERROR -- : Exception in update : undefined method `[]' for nil:NilClass [NoMethodError]

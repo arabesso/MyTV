@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'benchmark'
+require_relative 'mytv'
+
+
+cli = MyTV::Cli.new
+
+Benchmark.bmbm do |bm|
+
+	bm.report("import:") do
+		MyTV::Import.import(cli.myShows, cli.episodes, "testshows.txt", false)
+	end
+
+	bm.report("update:") do
+		MyTV::Database.update(cli.myShows, cli.episodes)
+	end
+end

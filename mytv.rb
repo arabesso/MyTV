@@ -5,7 +5,6 @@ require 'mechanize'
 require 'nokogiri'
 require 'json'
 require 'logger' # debug, info, warn, error, fatal
-require 'benchmark'
 
 require_relative 'Web'
 require_relative 'TVShow'
@@ -21,6 +20,9 @@ module MyTV
 
 		$logger = Logger.new("test.log", "daily")
 		$logger.level = Logger::INFO
+		attr_reader :episodes
+		attr_reader :myShows
+
 
 		def initialize
 			$logger.debug "Connecting to the database"
@@ -128,7 +130,9 @@ module MyTV
 					help_text
 					
 				when /\Aaddshow\z/i
-					Database.add_show(@myShows, @episodes, params.join(" "))
+					@DB.transaction do
+						Database.add_show(@myShows, @episodes, params.join(" "))
+					end
 					puts
 
 				when /\Aremoveshow\z/i
@@ -200,6 +204,10 @@ module MyTV
 						Import.myepisodes_import(params[1], params[2])
 						Import.import(@myShows, @episodes, "shows.txt")
 					end
+					puts
+
+				when /\Aclear\z/i
+					Database.clear(@myShows, @episodes)
 					puts
 
 				when /\Aexit\z/i, /\Aq\z/i
