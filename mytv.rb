@@ -22,7 +22,7 @@ module MyTV
 		$logger.level = Logger::WARN
 		attr_reader :DB
 		attr_reader :episodes
-		attr_reader :myShows
+		attr_reader :my_shows
 
 
 		def initialize
@@ -37,12 +37,12 @@ module MyTV
 			@DB.temp_store = :memory
 
 			if (@DB.table_exists?(:TVShows) and @DB.table_exists?(:Episodes))
-				@myShows = @DB[:TVShows] 
+				@my_shows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			else
 				$logger.debug "Creating tables... "
 				create_tables
-				@myShows = @DB[:TVShows] 
+				@my_shows = @DB[:TVShows] 
 				@episodes = @DB[:Episodes]
 			end
 			$logger.debug "...completed"
@@ -134,26 +134,26 @@ module MyTV
 					
 				when /\Aaddshow\z/i
 					@DB.transaction do
-						Database.add_show(@myShows, @episodes, params.join(" "))
+						Database.add_show(@my_shows, @episodes, params.join(" "))
 					end
 					puts
 
 				when /\Aremoveshow\z/i
-					Database.remove_show(@myShows, @episodes, Database.get_show_id(@myShows, params.join(" ")))
+					Database.remove_show(@my_shows, @episodes, Database.get_show_id(@my_shows, params.join(" ")))
 					puts
 
 				when /\Aupdate\z/i
-					Database.update(@myShows, @episodes)
+					Database.update(@my_shows, @episodes)
 					puts
 
 				when /\Anexteps\z/i
-					print_next_episodes(@myShows, Database.next_episodes(@myShows, @episodes))
+					print_next_episodes(@my_shows, Database.next_episodes(@my_shows, @episodes))
 
 				when /\Awatch\z/i
 					if params.first == "-s" && params.size >=2 # watch -s Quantico 
-						showid = Database.get_show_id(@myShows, params.slice(1,params.size).join(" "))
+						showid = Database.get_show_id(@my_shows, params.slice(1,params.size).join(" "))
 						@DB.transaction do
-							Database.set_show_watched(@myShows, @episodes, showid)
+							Database.set_show_watched(@my_shows, @episodes, showid)
 						end
 						puts
 						next
@@ -167,7 +167,7 @@ module MyTV
 							range = eps.first .. eps.last
 							@DB.transaction do
 								range.each do |ep_number|
-									epid = Database.get_episode_id(@myShows, @episodes, params[1], ep_number, showname)
+									epid = Database.get_episode_id(@my_shows, @episodes, params[1], ep_number, showname)
 									Database.set_watched(@episodes, epid) unless epid.nil?
 								end
 							end
@@ -176,7 +176,7 @@ module MyTV
 
 						else #Watch only one episode. watch -e 1 3 Quantico
 
-							epid = Database.get_episode_id(@myShows, @episodes, params[1], params [2], showname)
+							epid = Database.get_episode_id(@my_shows, @episodes, params[1], params [2], showname)
 							Database.set_watched(@episodes, epid) unless epid.nil?
 							puts
 							next
@@ -188,7 +188,7 @@ module MyTV
 					help_text
 
 				when /\Aprint\z/i
-					(params.first == "-a")?Database.print_full(@myShows, @episodes):Database.print_shows(@myShows, @episodes)
+					(params.first == "-a")?Database.print_full(@my_shows, @episodes):Database.print_shows(@my_shows, @episodes)
 
 				when /\Adownload\z/i # download 1 2 Quantico
 					showname = params.slice(2, params.size).join(" ")
@@ -205,19 +205,19 @@ module MyTV
 
 					elsif params.first != "-e" 
 						@DB.transaction do
-							Import.import(@myShows, @episodes, params.join(" ").to_s)
+							Import.import(@my_shows, @episodes, params.join(" ").to_s)
 						end
 
 					else  # External importing import -e
 						Import.myepisodes_import(params[1], params[2])
 						@DB.transaction do
-							Import.import(@myShows, @episodes, "shows.txt")
+							Import.import(@my_shows, @episodes, "shows.txt")
 						end
 					end
 					puts
 
 				when /\Aclear\z/i
-					Database.clear(@myShows, @episodes)
+					Database.clear(@my_shows, @episodes)
 					puts
 
 				when /\Aexit\z/i, /\Aq\z/i

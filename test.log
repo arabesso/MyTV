@@ -229,3 +229,4 @@ E, [2016-01-29T23:36:02.501867 #9536] ERROR -- : Exception in get_show_id trying
 W, [2016-01-29T23:36:22.149398 #9536]  WARN -- : Show wasn't found in the database. Searching online.
 E, [2016-01-30T03:22:34.133005 #6124] ERROR -- : Exception in add_show trying to add <vnisdfhgibfd> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=vnisdfhgibfd -- unhandled response [Mechanize::ResponseCodeError]
 E, [2016-01-30T03:22:43.864411 #6236] ERROR -- : Exception in add_show trying to add <dsigfhyfudgs> : 404 => Net::HTTPNotFound for http://api.tvmaze.com/singlesearch/shows?q=dsigfhyfudgs -- unhandled response [Mechanize::ResponseCodeError]
+W, [2016-02-17T17:43:58.310417 #18029]  WARN -- : Show wasn't found in the database. Searching online.

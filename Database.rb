@@ -1,10 +1,10 @@
 module MyTV
 	class Database
 
-		# Add a new show and its episodes. Receives a string and the dataset myShows and episodes as parameters
-		def Database.add_show(dataset1, dataset2, showName, verbose=true)
+		# Add a new show and its episodes. Receives a string and the dataset my_shows and episodes as parameters
+		def Database.add_show(dataset1, dataset2, show_name, verbose=true)
 			# Finding the show
-			obj = Web.search_show(showName)
+			obj = Web.search_show(show_name)
 			$logger.debug "Trying to add show <#{obj['name']}>"
 
 			# Checks it's not in the database already
@@ -15,12 +15,12 @@ module MyTV
 				newshow = TVShow.new(obj['name'], obj['id'])
 				dataset1.insert(:id => newshow.id, :name => newshow.name)
 				Database.add_episodes(dataset2, newshow)
-				puts "Added show #{showName}" unless !verbose
+				puts "Added show #{show_name}" unless !verbose
 				$logger.debug "...completed"
 			end
 
 		rescue => e
-			$logger.error("Exception in add_show trying to add <#{showName}> : #{e.message} [#{e.class.to_s}]")
+			$logger.error("Exception in add_show trying to add <#{show_name}> : #{e.message} [#{e.class.to_s}]")
 			puts "Error: #{e.message} [#{e.class.to_s}]" unless !verbose
 		end
 
@@ -49,7 +49,7 @@ module MyTV
 		# Add only the new episodes to the database. Receives a TVShow and the dataset episodes as parameters
 		# PRIVATE=
 		# SLOW METHOD?
-		def Database.add_new_episodes (dataset, show, lastEpisodeS, lastEpisodeN)
+		def Database.add_new_episodes (dataset, show, last_episode_s, last_episode_n)
 			id = show.id
 			episodes = show.episodes
 
@@ -58,8 +58,8 @@ module MyTV
 			end
 			
 			# Quick check if there are new episodes
-			if episodes[-1].season > lastEpisodeS
-			elsif lastEpisodeS == episodes[-1].season && episodes[-1].number > lastEpisodeN
+			if episodes[-1].season > last_episode_s
+			elsif last_episode_s == episodes[-1].season && episodes[-1].number > last_episode_n
 			else
 				$logger.info "No new episodes to add to <#{show.name}>"
 				return
@@ -67,10 +67,10 @@ module MyTV
 			
 			# New episodes to add, full iteration:
 			episodes.each do |i|
-				if i.season > lastEpisodeS
+				if i.season > last_episode_s
 					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
 					$logger.debug "Added episode <#{i.title}>"
-				elsif lastEpisodeS == i.season && i.number > lastEpisodeN
+				elsif last_episode_s == i.season && i.number > last_episode_n
 					dataset.insert(:id => i.id, :title => i.title, :seasonNumber => i.season, :episodeNumber => i.number, :airdate => i.airdate, :watched => false, :show_id => id)
 					$logger.debug "Added episode <#{i.title}>"
 				end
@@ -134,18 +134,18 @@ module MyTV
 
 		# Removes a TVShow and all its episodes
 		# SLOW METHOD 
-		def Database.remove_show(dataset1, dataset2, showid)
+		def Database.remove_show(dataset1, dataset2, show_id)
 
 			# Remove episodes of that show
-			dataset2.where(:show_id => showid).each do |i|
+			dataset2.where(:show_id => show_id).each do |i|
 				Database.remove_entry(dataset2, i[:id])
 			end
 
 			# Removing the show
-			Database.remove_entry(dataset1, showid)
+			Database.remove_entry(dataset1, show_id)
 			
 		rescue => e
-			$logger.error("Exception in remove_show trying to remove show <#{showid}> : #{e.message} [#{e.class.to_s}]")
+			$logger.error("Exception in remove_show trying to remove show <#{show_id}> : #{e.message} [#{e.class.to_s}]")
 			puts "Error: #{e.message} [#{e.class.to_s}]"
 		
 		end
@@ -170,8 +170,8 @@ module MyTV
 
 		# NoMethodError when the episode id isn't found
 		def Database.get_episode_id(dataset1, dataset2, season, episode, show)
-			showid = Database.get_show_id(dataset1, show)
-			dataset2.where(:show_id => showid, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
+			show_id = Database.get_show_id(dataset1, show)
+			dataset2.where(:show_id => show_id, :seasonNumber => season, :episodeNumber => episode).to_a[0][:id]
 
 		rescue => e
 			$logger.error("Exception in get_episode_id trying to get <#{show}>'s S#{season}E#{episode} id : #{e.message} [#{e.class.to_s}]")
@@ -191,7 +191,7 @@ module MyTV
 
 		
 
-		# Returns a TVShow object. Receives the myShows dataset and the show id
+		# Returns a TVShow object. Receives the my_shows dataset and the show id
 		def Database.get_show (dataset, id)
 			tvshowdata = dataset.where(:id => id).to_a
 			TVShow.new(tvshowdata[0][:name], tvshowdata[0][:id])
@@ -202,12 +202,12 @@ module MyTV
 		
 		end
 
-		# Returns the episodes of a specific show id. Receives the episodes dataset and a showid as parameters
-		def Database.get_episodes(dataset, showID)
-			dataset.where(:show_id => showID)
+		# Returns the episodes of a specific show id. Receives the episodes dataset and a show_id as parameters
+		def Database.get_episodes(dataset, show_id)
+			dataset.where(:show_id => show_id)
 			
 		rescue => e
-			$logger.error("Exception in get_episodes trying to get episodes for show <#{showID}> : #{e.message} [#{e.class.to_s}]")
+			$logger.error("Exception in get_episodes trying to get episodes for show <#{show_id}> : #{e.message} [#{e.class.to_s}]")
 			puts "Error: #{e.message} [#{e.class.to_s}]"
 		
 		end
@@ -224,14 +224,14 @@ module MyTV
 
 		# Sets all the episodes of a tv show as watched
 		# SLOW METHOD?
-		def Database.set_show_watched(dataset1, dataset2, showid)
+		def Database.set_show_watched(dataset1, dataset2, show_id)
 
-			dataset2.where(:show_id => showid).to_a.each do |i|
+			dataset2.where(:show_id => show_id).to_a.each do |i|
 				Database.set_watched(dataset2, i[:id])
 			end
 
 		rescue => e
-			$logger.error("Exception in set_show_watched with show <#{showid}> : #{e.message} [#{e.class.to_s}]")
+			$logger.error("Exception in set_show_watched with show <#{show_id}> : #{e.message} [#{e.class.to_s}]")
 			puts "Error: #{e.message} [#{e.class.to_s}]"
 		
 		end
@@ -265,7 +265,7 @@ module MyTV
 			
 		end
 
-		# Prints general information about the shows in the DB. Receives myShows and episodes as parameters
+		# Prints general information about the shows in the DB. Receives my_shows and episodes as parameters
 		# SLOW METHOD?
 		def Database.print_shows(dataset1, dataset2)
 			dataset1.order(:name).each do |i|
@@ -274,7 +274,7 @@ module MyTV
 			puts
 		end
 
-		# Prints information about every show and episode stored in a readable format. Receives myShows and episodes as parameters
+		# Prints information about every show and episode stored in a readable format. Receives my_shows and episodes as parameters
 		def Database.print_full(dataset1, dataset2)
 			dataset1.order(:name).each do |show|
 				puts "TV Show <#{show[:name]}> (id #{show[:id].to_s})"

@@ -6,7 +6,7 @@ require_relative 'mytv'
 
 cli = MyTV::Cli.new
 
-MyTV::Database.clear(cli.myShows, cli.episodes)
+MyTV::Database.clear(cli.my_shows, cli.episodes)
 
 #Change to bmbm?
 Benchmark.bm do |bm|
@@ -14,20 +14,20 @@ Benchmark.bm do |bm|
 	# Tries to add a list of 104 shows
 	bm.report("import:") do
 		cli.DB.transaction do
-			MyTV::Import.import(cli.myShows, cli.episodes, "testshows.txt", false)
+			MyTV::Import.import(cli.my_shows, cli.episodes, "testshows.txt", false)
 		end
 	end
 
 	# Iterates over those 104 shows looking for updates
 	bm.report("update:") do
 		cli.DB.transaction do
-			MyTV::Database.update(cli.myShows, cli.episodes)
+			MyTV::Database.update(cli.my_shows, cli.episodes)
 		end
 	end
 
 	# Deletes all those shows
 	bm.report("clear:") do
-		MyTV::Database.clear(cli.myShows, cli.episodes)
+		MyTV::Database.clear(cli.my_shows, cli.episodes)
 	end
 
 end
