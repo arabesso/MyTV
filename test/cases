@@ -1,0 +1,6 @@
+deleting a show deletes all associated episodes
+a show shouldnt be in the DB after deleting it
+a show should be in the database after adding it
+number of shows decreases when removing shows
+number of shows increases when adding shows
+it should be empty when there are no shows

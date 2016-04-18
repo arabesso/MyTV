@@ -52,18 +52,19 @@ module MyTV
 		def create_tables
 			
 			@DB.create_table :TVShows do
-	  		Integer :id, :primary_key=>true #TVMAZE ID
+	  		Integer :show_id, :primary_key=>true #TVMAZE ID
 	  		String :name
 	  	end
 
 	  	@DB.create_table :Episodes do
-			  Integer :id, :primary_key=>true #tvmaze id
+			  Integer :ep_id, :primary_key=>true #tvmaze id
 			  String :title
-			  Integer :seasonNumber
-			  Integer :episodeNumber
+			  Integer :season_number
+			  Integer :episode_number
 			  Date :airdate
 			  Boolean :watched
-			  Integer :show_id #FOREIGN KEY REFERENCES TVSHOWS ID
+			  foreign_key :show_id, :TVShows ,:on_delete=>:cascade #FOREIGN KEY REFERENCES TVSHOWS ID
+			  #Integer :show_id
 			end
 
 		rescue => e
@@ -92,20 +93,20 @@ module MyTV
 			next_episodes = next_episodes.sort_by { |hsh| hsh[:airdate] }
 
 			next_episodes.each do |i|
-				if i[:seasonNumber]<10
-					seasonNumber = "0" + i[:seasonNumber].to_s
+				if i[:season_number]<10
+					season_number = "0" + i[:season_number].to_s
 				end
-				if i[:episodeNumber]<10
-					episodeNumber = "0" + i[:episodeNumber].to_s
+				if i[:episode_number]<10
+					episode_number = "0" + i[:episode_number].to_s
 				end
 				
-				showname = dataset1.where(:id => i[:show_id]).to_a[0][:name]
+				showname = dataset1.where(:show_id => i[:show_id]).to_a[0][:name]
 				if i[:airdate] == Date.today
-					data = "(!) S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+					data = "(!) S" + season_number + "E" + episode_number + " - " + i[:title] + " - " + i[:airdate].to_s
 				elsif i[:airdate] > Date.today
-					data = "... S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+					data = "... S" + season_number + "E" + episode_number + " - " + i[:title] + " - " + i[:airdate].to_s
 				else
-					data = "S" + seasonNumber + "E" + episodeNumber + " - " + i[:title] + " - " + i[:airdate].to_s
+					data = "S" + season_number + "E" + episode_number + " - " + i[:title] + " - " + i[:airdate].to_s
 				end
 				puts showname + "\t\t" + data
 
