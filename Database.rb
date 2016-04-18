@@ -101,7 +101,7 @@ module MyTV
 		# SLOW METHOD 
 		def Database.remove_show(shows, dataset2, show_id)
 			if shows.where(:show_id => show_id).count == 1
-				dataset.where(:show_id => show_id).delete
+				shows.where(:show_id => show_id).delete
 				$logger.debug "Deleting show with id <#{show_id.to_s}> from dataset "
 			else
 				$logger.warn "Couldn't delete show with id <#{show_id.to_s}>. Entry not found."
