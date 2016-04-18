@@ -27,7 +27,7 @@ module MyTV
 
 			file = File.open(filename, 'w')
 			shows.each do |i|
-				file.write(i.text + "\n")
+				file.puts(i.text)
 			end
 			file.close
 
